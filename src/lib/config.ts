@@ -15,7 +15,7 @@ export const TAROT_LIVE_IN_PERSON_URL = "https://buy.stripe.com/7sYdRbaeo7qx1bg5
 // ─── Astrology Readings ────────────────────────────────────────────────────────
 export const ASTRO_WRITTEN_NATAL_URL = "https://buy.stripe.com/eVq3cxdqAdOV9HM7bJ6Zy0x";  // $125
 export const ASTRO_WRITTEN_TRANSIT_URL = "https://buy.stripe.com/14A28tgCM3ah4nsfIf6Zy0y"; // $65
-export const ASTRO_ANNUAL_PROFECTIONS_URL = "https://buy.stripe.com/9B69AVcmw9yFcTY53B6Zy0s"; // $95  (Q3 launch — not yet exposed on booking page)
+export const ASTRO_ANNUAL_PROFECTIONS_URL = "https://buy.stripe.com/9B69AVcmw9yFcTY53B6Zy0s"; // $95
 export const ASTRO_LIVE_ZOOM_URL = "https://buy.stripe.com/eVq4gB9ak8uB7zE1Rp6Zy0z";      // $175
 export const ASTRO_LIVE_IN_PERSON_URL = "https://buy.stripe.com/cNicN73Q05ip6vAcw36Zy0A"; // $195
 

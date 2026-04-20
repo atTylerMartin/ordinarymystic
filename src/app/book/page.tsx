@@ -17,6 +17,7 @@ import {
   TAROT_LIVE_IN_PERSON_URL,
   ASTRO_WRITTEN_NATAL_URL,
   ASTRO_WRITTEN_TRANSIT_URL,
+  ASTRO_ANNUAL_PROFECTIONS_URL,
   ASTRO_LIVE_ZOOM_URL,
   ASTRO_LIVE_IN_PERSON_URL,
   COMBINED_LIVE_ZOOM_URL,
@@ -258,9 +259,9 @@ export default function BookingPage() {
               <p className="text-sm font-medium text-[var(--color-ink)]">$95</p>
             </CardHeader>
             <CardFooter>
-              <span className="inline-flex items-center gap-2 border border-[var(--color-rule)] px-4 py-2 text-[10px] font-semibold uppercase tracking-[0.25em] text-[var(--color-muted)]">
-                Coming Q3 2026
-              </span>
+              <Link href={ASTRO_ANNUAL_PROFECTIONS_URL} target="_blank">
+                <Button type="button" size="sm">Book Now</Button>
+              </Link>
             </CardFooter>
           </Card>
 
