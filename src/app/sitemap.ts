@@ -39,8 +39,8 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     "/tulsa-astrology-reading",
   ].map((path) => ({
     url: `${SITE_URL}${path}`,
-    changeFrequency: "weekly",
-    priority: path === "/" ? 1 : 0.7,
+    changeFrequency: "weekly" as const,
+    priority: path === "/" ? 1 : ["/book", "/tulsa-tarot-reading", "/tulsa-astrology-reading"].includes(path) ? 0.9 : 0.7,
   }));
 
   const blogRoutes: MetadataRoute.Sitemap = posts.map((post) => ({

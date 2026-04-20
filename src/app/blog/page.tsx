@@ -5,7 +5,7 @@ import { getAllBlogPosts } from "@/lib/content";
 import { SITE_URL } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "Blog",
+  title: "Tarot & Astrology Blog",
   description:
     "Short, grounded essays on tarot, astrology, and reflective practice, without the theatrics.",
   alternates: {

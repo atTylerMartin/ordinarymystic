@@ -28,7 +28,7 @@ import { getAllBlogPosts } from "@/lib/content";
 import { SITE_URL } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "Ordinary Mystic – Tarot & Astrology | Readings, Writing, and Tools",
+  title: { absolute: "Ordinary Mystic – Tarot & Astrology Readings" },
   description:
     "Readings, writing, and tools for finding meaning in the patterns of ordinary life. Tarot and astrology as structured thinking.",
   alternates: {

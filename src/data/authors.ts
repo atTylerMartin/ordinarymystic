@@ -15,8 +15,8 @@ export const AUTHORS: Record<string, AuthorProfile> = {
     "slug": "tyler-martin",
     "name": "Tyler, the Ordinary Mystic",
     "bio": "Practical astrology and tarot for skeptics who want signal over noise.",
-    "description": "Tyler writes grounded essays on astrology, tarot, and pattern recognition. His work translates symbolic systems into practical frameworks for decision-making, timing, and self-reflection.",
-    "image": "/favicon.png",
+    "description": "Tyler Martin is a tarot reader and astrologer based in Tulsa, Oklahoma. He practices Hellenistic astrology and writes grounded essays translating symbolic systems into practical frameworks for decision-making, timing, and self-reflection. His work is built for skeptics and serious practitioners who want signal over noise.",
+    "image": "/images/profile-img.png",
     "socials": [
       {
         "label": "YouTube",

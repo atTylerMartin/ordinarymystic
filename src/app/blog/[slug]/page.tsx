@@ -41,8 +41,15 @@ export async function generateMetadata({
 
   const fm = match.frontmatter;
 
+  // Skip " | Ordinary Mystic" suffix when the full title would exceed 60 chars
+  const SUFFIX_LEN = " | Ordinary Mystic".length;
+  const seoTitle =
+    fm.title.length + SUFFIX_LEN <= 60
+      ? fm.title
+      : { absolute: fm.title };
+
   return {
-    title: fm.title,
+    title: seoTitle,
     description: fm.description,
     alternates: {
       canonical: `${SITE_URL}/blog/${slug}`,
@@ -54,20 +61,11 @@ export async function generateMetadata({
       type: "article",
       publishedTime: fm.date,
       authors: [`${SITE_URL}/authors/${fm.author ?? "tyler-martin"}`],
-      images: [
-        {
-          url: fm.image ? `${SITE_URL}${fm.image}` : `${SITE_URL}/images/featured/horizon.png`,
-          width: 1200,
-          height: 630,
-          alt: fm.imageAlt ?? fm.title,
-        },
-      ],
     },
     twitter: {
       card: "summary_large_image",
       title: fm.title,
       description: fm.description,
-      images: [fm.image ? `${SITE_URL}${fm.image}` : `${SITE_URL}/images/featured/horizon.png`],
     },
   };
 }
@@ -168,10 +166,11 @@ export default async function BlogPostPage({
 
   const articleJsonLd = {
     "@context": "https://schema.org",
-    "@type": "Article",
+    "@type": "BlogPosting",
     headline: fm.title,
     description: fm.description,
     datePublished: fm.date,
+    dateModified: fm.date,
     mainEntityOfPage: absolutePostUrl,
     author: {
       "@type": "Person",
@@ -200,20 +199,6 @@ export default async function BlogPostPage({
   };
 
   const faq = fm.faq;
-  const faqJsonLd =
-    faq?.length &&
-    ({
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      mainEntity: faq.map((item) => ({
-        "@type": "Question",
-        name: item.question,
-        acceptedAnswer: {
-          "@type": "Answer",
-          text: item.answer,
-        },
-      })),
-    });
 
   return (
     <article>
@@ -226,13 +211,6 @@ export default async function BlogPostPage({
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
       />
-      {faqJsonLd ? (
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
-        />
-      ) : null}
-
       {/* HEADER */}
       <header className="mb-10 sm:mb-14">
         <nav className="flex flex-wrap items-center gap-x-2 gap-y-1 text-[10px] font-semibold uppercase tracking-[0.25em] text-[var(--color-muted)]">

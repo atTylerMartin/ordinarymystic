@@ -1,5 +1,5 @@
 ---
-title: "How to Keep a Tarot Journal (And Why Most People Do It Wrong)"
+title: "How to Keep a Tarot Journal"
 date: "2026-02-11"
 description: "Learn how keeping a tarot journal builds a personal card vocabulary no guidebook can teach you. Covers physical, printed, and digital methods—with honest trade-offs for each."
 author: "tyler-martin"
@@ -9,6 +9,7 @@ tags:
   - notion
   - tarot-for-beginners
 image: "/images/featured/journal.png"
+imageAlt: "Open journal and tarot cards for a tarot journaling practice"
 ctaEyebrow: "Ready to build a real tracking system?"
 ctaTitle: "Explore the Ordinary Mystic tarot tools"
 ctaBody: "I've built two Notion-based journaling systems—one simple, one comprehensive—designed to help you surface patterns over time, not just log pulls."

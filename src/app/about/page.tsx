@@ -5,7 +5,7 @@ import { PageHeader } from "@/components/page-header";
 import { SITE_URL } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "About",
+  title: "About – Tarot Reader & Astrologer",
   description:
     "Who is Ordinary Mystic, why it exists, and how Tyler Martin approaches tarot, astrology, and building tools for serious practitioners.",
   alternates: {

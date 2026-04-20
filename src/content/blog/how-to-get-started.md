@@ -1,7 +1,8 @@
 ---
-title: "How to Get Started With Astrology & Tarot (Even If You're a Skeptic)"
+title: "How to Get Started With Astrology & Tarot"
 date: "2026-01-07"
 description: "Can a Christian skeptic find value in 'the woo'? Read how I used Hellenistic astrology and Tarot as tools for self-reflection and healing after divorce—without the superstition."
+author: "tyler-martin"
 category: "general-spirituality"
 tags:
   - astrology
@@ -9,6 +10,7 @@ tags:
   - how-to
   - practical-astrology
 image: "/images/featured/zodiac.png"
+imageAlt: "Zodiac wheel illustration for beginner astrology and tarot guide"
 ctaEyebrow: "Ready to go deeper?"
 ctaTitle: "Get a practical astrology reading"
 ctaBody: "I will walk through your chart in plain English and focus on the patterns that matter most right now."

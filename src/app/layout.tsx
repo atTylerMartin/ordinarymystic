@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Script from "next/script";
 import { Geist, Geist_Mono } from "next/font/google";
 import { Newsreader } from "next/font/google";
 import { SiteHeader } from "@/components/site-header";
@@ -45,21 +46,12 @@ export const metadata: Metadata = {
     url: siteUrl,
     siteName,
     type: "website",
-    images: [
-      {
-        url: "/images/featured/horizon.png",
-        width: 1200,
-        height: 630,
-        alt: `${siteName} – Tarot & Astrology`,
-      },
-    ],
   },
   twitter: {
     card: "summary_large_image",
     title: `${siteName} – Tarot & Astrology`,
     description:
       "Readings, writing, and tools for finding meaning in the patterns of ordinary life. Tarot and astrology as structured thinking.",
-    images: ["/images/featured/horizon.png"],
   },
   alternates: {
     canonical: "/",
@@ -75,21 +67,6 @@ export default function RootLayout({
     <html lang="en">
       <head>
         <PersonJsonLd />
-        {/* Google tag (gtag.js) */}
-        <script
-          async
-          src="https://www.googletagmanager.com/gtag/js?id=G-XF047BLMG9"
-        />
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-              window.dataLayer = window.dataLayer || [];
-              function gtag(){dataLayer.push(arguments);}
-              gtag('js', new Date());
-              gtag('config', 'G-XF047BLMG9');
-            `,
-          }}
-        />
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} ${newsreader.variable} min-h-screen antialiased`}
@@ -101,6 +78,16 @@ export default function RootLayout({
           <main className="flex-1 pt-10 pb-16">
             <Container>{children}</Container>
           </main>
+          <Script
+            src="https://www.googletagmanager.com/gtag/js?id=G-XF047BLMG9"
+            strategy="afterInteractive"
+          />
+          <Script id="google-analytics" strategy="afterInteractive">{`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-XF047BLMG9');
+          `}</Script>
           <footer
             className="py-16"
             style={{ backgroundColor: "#1a1614" }}
