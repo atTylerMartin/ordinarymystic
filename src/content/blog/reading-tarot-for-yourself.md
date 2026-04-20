@@ -44,9 +44,9 @@ None of this is fixed by willpower alone. You can't decide to be unbiased. But y
 
 **Commit to positional discipline.** Decide what each position in the spread means before you pull the cards. Write it down. Don't renegotiate the positions after the cards are drawn. If the outcome position shows the Five of Pentacles and you decided the outcome position represents "how this situation resolves," that's what it represents. The reading doesn't get a retrial because you drew something uncomfortable.
 
-**Time-box the interpretation.** Give yourself a fixed amount of time to interpret each card, say two or three minutes, and then move on. Write your interpretation down and don't revise it. The revision is usually where motivated reasoning enters. Your first, least-comfortable reading is usually the more accurate one. Not because it's more "true," but because the discomfort is often a signal that you've touched something real.
+**Time-box the interpretation.** Give yourself a fixed amount of time to interpret each card, say two or three minutes, and then move on. [Write your interpretation down](/blog/tarot-journal) and don't revise it. The revision is usually where motivated reasoning enters. Your first, least-comfortable reading is usually the more accurate one. Not because it's more "true," but because the discomfort is often a signal that you've touched something real.
 
-**Don't pull again.** If you're unhappy with a reading, sit with it rather than reaching for more cards. Dissatisfaction with a reading is information. Ask what it would mean if this reading were correct. Sometimes that question is more useful than any clarifying pull.
+**Don't pull again.** If you're unhappy with a reading, sit with it rather than [reaching for more cards](/blog/the-case-for-one-card). Dissatisfaction with a reading is information. Ask what it would mean if this reading were correct. Sometimes that question is more useful than any clarifying pull.
 
 ## It's Doable
 
@@ -55,3 +55,5 @@ Self-reading is genuinely harder. It requires a kind of discipline that reading 
 That discipline is worth developing. The practice of reading for yourself, done carefully, is one of the more honest forms of self-examination available, precisely because it requires you to hold something you didn't choose and ask what it might be saying. That's the core of what tarot does. You just have to work harder to not undo it.
 
 The question isn't whether you can read for yourself. The question is whether you're willing to be surprised by what you see.
+
+If you want a reading without the blind spots, [book a session](/tulsa-tarot-reading).
