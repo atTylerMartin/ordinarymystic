@@ -16,7 +16,7 @@ ctaLabel: "Book a Reading"
 ctaUrl: "/book"
 ---
 
-Most people learn their sun sign. Some learn their rising sign. A smaller number learn the elements: fire, earth, air, water. The modalities come after that, if at all, usually as an afterthought in a beginner's guide that moves on too quickly.
+Most people learn their [sun sign](/blog/why-sun-signs-arent-useless). Some learn their rising sign. A smaller number learn the elements: fire, earth, air, water. The modalities come after that, if at all, usually as an afterthought in a beginner's guide that moves on too quickly.
 
 This is a mistake. The modalities are arguably more useful than the elements as a practical tool for understanding how someone actually operates, not what they're made of, but how they move.
 
@@ -72,7 +72,7 @@ A chart with most planets in mutable signs (Gemini, Virgo, Sagittarius, Pisces) 
 
 A predominantly cardinal chart starts more things than it finishes, generates ideas faster than it can execute them, and tends to be at its best in situations that need someone to step into a vacuum.
 
-Most charts are mixed. The point isn't to type-cast but to notice where the weight falls, because that's where the characteristic mode of operation tends to show up most plainly.
+Most [charts](/blog/how-to-read-a-birth-chart) are mixed. The point isn't to type-cast but to notice where the weight falls, because that's where the characteristic mode of operation tends to show up most plainly.
 
 ## Why This Gets Overlooked
 
@@ -83,3 +83,5 @@ But the modalities answer a different and often more useful question. Elements d
 Neither mode is better. A chart full of fixed signs will build things and hold positions. A chart full of mutable signs will navigate flux and stay loose. A cardinal chart will keep starting. All of it is useful in the right circumstances. The question is whether the mode you lead with is matched to the life you're actually living, and if not, where you might need to compensate.
 
 That's the practical value of modality work: not a label, but a map of where the friction is likely to come from.
+
+If you want to see where your own modality weight falls, [book a chart reading](/book).
