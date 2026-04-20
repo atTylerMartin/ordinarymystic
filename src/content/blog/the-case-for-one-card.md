@@ -1,7 +1,7 @@
 ---
-title: "The Case for One Card"
+title: "One-Card Tarot: The Case for Less"
 date: "2026-02-25"
-description: "Bigger spreads aren't more thorough. They're usually more noise. Here's why a single card, read properly, beats a ten-card spread."
+description: "Bigger spreads aren't more thorough. They're usually more noise. Here's why a single tarot card, read properly, beats a ten-card spread."
 author: "tyler-martin"
 category: "tarot"
 tags:
@@ -18,7 +18,7 @@ ctaUrl: "/tools"
 
 Pull ten cards and something strange happens. You're still looking at card three when you're supposed to be thinking about card seven, and by the time you reach position ten (the "final outcome," the one that's supposed to tie everything together), the original question has blurred into background noise. You're not reading anymore. You're managing.
 
-This is the central problem with large spreads. They feel rigorous. They look complete. And for most of the questions people actually bring to a tarot deck, they produce more confusion than clarity.
+This is the central problem with large spreads. They feel rigorous. They look complete. And for most of the questions people actually bring to a [tarot deck](/blog/what-a-tarot-deck-is-for), they produce more confusion than clarity.
 
 ## Why People Reach for Big Spreads
 
@@ -44,7 +44,7 @@ The first step is the question. Not a vague intention, not a mood, not "what do 
 
 A useful question is specific and personal. "What am I not seeing about this situation with [person]?" "What is the real obstacle here?" "Where is my attention most usefully placed right now?" These are questions with an actual subject and an actual angle. They can be answered.
 
-Pull the card. Look at the image before you look up anything. What's in it? What's the figure doing, and how do you feel about it? What's your first, unfiltered response? Write it down if that's useful. The meaning you construct from direct contact with the image will be more relevant to your actual situation than any general interpretation.
+Pull the card. Look at the image before you look up anything. What's in it? What's the figure doing, and how do you feel about it? What's your first, unfiltered response? [Write it down](/tools) if that's useful. The meaning you construct from direct contact with the image will be more relevant to your actual situation than any general interpretation.
 
 Then, if you want to, check what you know or can find about the card's traditional meanings. Not to replace what you noticed, but to add to it. Sometimes there's a relevant layer you missed. Sometimes what you already thought is confirmed and sharpened. Neither outcome is wrong.
 
