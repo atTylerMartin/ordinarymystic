@@ -19,7 +19,7 @@ ctaUrl: "/tools"
 
 There's a version of tarot practice that stays shallow indefinitely. You pull a card, you look up the meaning in a book or app, you get a response that was written for ten thousand different people in ten thousand different situations, and you close the browser tab.
 
-That's fine for casual curiosity. It's not fine if you actually want to read cards well.
+That's fine for casual curiosity. It's not fine if you actually want to [read cards well](/blog/reading-tarot-for-yourself).
 
 The gap between "knowing the definitions" and "being able to read" is built card by card, reading by reading, over time. And the only way to close that gap systematically is to keep a record of what you're doing and what you're seeing.
 
@@ -69,7 +69,7 @@ Pre-printed journals are good for complete beginners who need scaffolding. They'
 
 ### 3. Digital Journaling (Notion or Similar)
 
-I've been building systems in Notion professionally for over a decade. My tarot practice runs on it entirely, and the reason is simple: searchability.
+I've been [building systems in Notion](/tools) professionally for over a decade. My tarot practice runs on it entirely, and the reason is simple: searchability.
 
 When I want to study the High Priestess, I can pull every reading I've ever done involving that card in one query. I can filter by year, by spread type, by the question category, by outcome. I can look at pairings—what other cards tend to appear when she shows up.
 
