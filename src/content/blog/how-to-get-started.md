@@ -1,5 +1,5 @@
 ---
-title: "How to Get Started With Astrology and Tarot"
+title: "Astrology and Tarot: How to Get Started"
 date: "2026-01-07"
 description: "Where to start with astrology and tarot if you're skeptical. A practical entry point using Hellenistic astrology, from a former nonbeliever."
 author: "tyler-martin"
@@ -16,6 +16,7 @@ ctaTitle: "Get a practical astrology reading"
 ctaBody: "I will walk through your chart in plain English and focus on the patterns that matter most right now."
 ctaLabel: "See Reading Options"
 ctaUrl: "/book"
+methodology: "Hellenistic whole-sign houses (Chris Brennan / The Astrology Podcast)"
 ---
 
 I grew up in a world where "the occult" was a binary: either you followed God, or you were messing with something dangerous. No middle ground, and definitely no seat at the table for a birth chart.
@@ -49,7 +50,7 @@ I didn't blame a planet. I used a planet as a lens.
 Most beginners quit because they try to learn everything at once. Don't do that. Here's the short version of what actually works:
 
 **1. Get your birth chart.**
-Pull it free from [astro.com](https://astro.com). You'll need your birth date, time, and location. The time matters—it sets your rising sign and house placements.
+Pull it free from [astro.com](https://astro.com). You'll need your birth date, time, and location. The time matters—it sets your rising sign and [house placements](/blog/what-the-houses-actually-describe).
 
 **2. Commit to one system.**
 Don't bounce between modern, Vedic, and Hellenistic. Pick one and go deep. I studied **Hellenistic Astrology** through Chris Brennan and *The Astrology Podcast*. By committing to a single rigorous system, the whole thing became logical and consistent instead of a grab-bag of vibes.
@@ -58,7 +59,7 @@ Don't bounce between modern, Vedic, and Hellenistic. Pick one and go deep. I stu
 Sun (identity), Moon (emotional processing), and Rising (how you move through the world). Master those before you touch anything else.
 
 **4. Kill the superstition.**
-You don't have to be gifted your first deck. You don't need to shuffle three times with your left hand. If a ritual helps you feel grounded, use it. If it's just gatekeeping, throw it out.
+You don't have to be gifted your [first deck](/blog/what-a-tarot-deck-is-for). You don't need to shuffle three times with your left hand. If a ritual helps you feel grounded, use it. If it's just gatekeeping, throw it out.
 
 **5. Leave the guilt at the door.**
 I still go to an Episcopal church every Sunday. My faith is central to my life. The Wise Men followed the stars. God, as far as I can tell, is a fan of symbols—the Bible is packed with them. Astrology is just another tool for reading the universe God built.
@@ -70,3 +71,5 @@ You don't have to believe the stars are magic to find value in them. You just ha
 The personal story, the patterns, the timing—it's all data. Astrology gives you a framework to organize it. Use it the same way you'd use a therapist's reframe or a good book: as a mirror, not a verdict.
 
 Sometimes, to see what's happening in your own heart, you have to look somewhere outside yourself first.
+
+If you want someone to walk through your chart with you, [book a reading](/book).
