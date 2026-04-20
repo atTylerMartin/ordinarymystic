@@ -25,7 +25,7 @@ This is a mistake. If signs describe the *what* of a chart, houses describe the 
 
 The twelve houses are divisions of the sky as it appeared at the exact time and place of your birth. As the Earth rotates, the entire zodiac wheels overhead across the course of a day, rising in the east and setting in the west. The moment you were born, a particular degree of the zodiac was crossing the eastern horizon. That degree is the Ascendant, the starting point of the first house. The houses are sections of the sky mapped around that pivot.
 
-This is why birth time matters so much. Two people born on the same day in the same city but three hours apart will have the same Sun sign, the same planetary positions within a degree or two, and completely different house placements. The houses change faster than anything else in the chart.
+This is why [birth time matters](/blog/why-birth-time) so much. Two people born on the same day in the same city but three hours apart will have the same Sun sign, the same planetary positions within a degree or two, and completely different house placements. The houses change faster than anything else in the chart.
 
 There are several competing methods for dividing those houses, known as house systems. Placidus is the most common in modern Western astrology; Whole Sign is the method most associated with Hellenistic practice. The differences are real and worth understanding eventually, but they are not the entry point. What matters first is grasping what houses *do* before getting into which system carves them most accurately.
 
@@ -51,4 +51,4 @@ A chart without houses is a list of psychological tendencies. A chart with house
 
 This is also why charts are most useful when read in full rather than picked apart for individual placements. A planet in a house is a starting point, not a verdict. What sign does the planet occupy? What sign rules that house? Is the planet supported or under pressure from other planets? These layers build on one another, and the house is the frame that tells you which part of a person's life they illuminate.
 
-Casual astrology, the horoscope column kind, mostly ignores houses altogether. It works at the sign level, which is why it stays general. If you want to use a chart to understand something real about a specific person in a specific life, houses are not optional.
+Casual astrology, the horoscope column kind, mostly ignores houses altogether. It works at the sign level, which is why it stays general. If you want to use a chart to understand something real about a specific person in a specific life, houses are not optional. If you want help [reading yours](/book), that's what a chart reading is for.
