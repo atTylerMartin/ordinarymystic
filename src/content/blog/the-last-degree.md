@@ -1,5 +1,5 @@
 ---
-title: "The Last Degree"
+title: "The Anaretic Degree: Uranus at 29 Taurus"
 date: "2026-04-18"
 description: "Uranus at 29 degrees Taurus sits on the threshold between eras. What the anaretic degree reveals about endings we didn't plan for."
 author: "tyler-martin"
@@ -16,6 +16,7 @@ planets:
 signs:
   - taurus
   - gemini
+methodology: "Hellenistic whole-sign houses (Chris Brennan / The Astrology Podcast)"
 ctaEyebrow: "Want to see where this lands in your chart?"
 ctaTitle: "Book a birth chart reading"
 ctaBody: "I'll walk through your chart in plain English, focusing on the patterns that matter most right now."
@@ -57,10 +58,10 @@ If that period felt strange in ways that were hard to locate - a quickening in h
 
 The retrograde return to Taurus wasn't a reversal. It was an extension. From November through this past February, Uranus moving back through familiar ground gave us another pass at the Taurus curriculum: what we own, what we owe, what we've built that can hold weight and what we've built that was always provisional. The message wasn't "you failed the first time." It was closer to: here's the chapter again, with everything you've learned since July. Read it differently.
 
-That extension is nearly over. Uranus re-enters Gemini on April 25, 2026, and will not return to Taurus again in this century. Whatever the retrograde was asking you to resolve in the material domain - the financial restructuring, the question of what's worth holding onto, the relationship between security and control - those questions don't disappear when the ingress happens. They just stop being the active subject.
+That extension is nearly over. Uranus re-enters Gemini on April 25, 2026 - part of [the larger pattern of outer-planet ingresses](/blog/the-long-arrivals) - and will not return to Taurus again in this century. Whatever the retrograde was asking you to resolve in the material domain - the financial restructuring, the question of what's worth holding onto, the relationship between security and control - those questions don't disappear when the ingress happens. They just stop being the active subject.
 
 ## Staying in the doorway
 
 The temptation at an anaretic degree is to rush. To force the ending, to make the change happen faster because the anticipation is worse than the thing itself. Traditional astrologers noted this - the urgency of the 29th degree often produces premature action, the desperate grab at closure.
 
-The harder thing is to stay in the doorway for a moment. To notice what the last eight years actually did to you. Not the headlines - the personal version. What shifted in how you think about money, about your body, about what counts as solid ground. Uranus doesn't ask permission, but it does leave a record. The anaretic degree is the last chance to read it before the page turns.
+The harder thing is to stay in the doorway for a moment. To notice what the last eight years actually did to you. Not the headlines - the personal version. What shifted in how you think about money, about your body, about what counts as solid ground. Uranus doesn't ask permission, but it does leave a record. The anaretic degree is the last chance to read it before the page turns. If you want to see where this transit lands in your own chart, [book a reading](/book).
