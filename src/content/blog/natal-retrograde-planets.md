@@ -9,9 +9,15 @@ tags:
   - birth-chart
   - retrograde
   - chart-reading
+methodology: "Hellenistic whole-sign houses (Chris Brennan / The Astrology Podcast)"
+ctaEyebrow: "Curious about your retrogrades?"
+ctaTitle: "Book a birth chart reading"
+ctaBody: "I'll walk through your chart in plain English, including any natal retrogrades and what they mean for your specific placements."
+ctaLabel: "Book a Reading"
+ctaUrl: "/book"
 ---
 
-Every few weeks, someone learns they have Mercury retrograde in their natal chart and wonders what they've done wrong. They've been reading the transit warnings, the don't-sign-contracts memos, the guides to surviving communications chaos, and now they're wondering if they're permanently stuck in that.
+Every few weeks, someone learns they have Mercury retrograde in their [natal chart](/blog/how-to-read-a-birth-chart) and wonders what they've done wrong. They've been reading the transit warnings, the don't-sign-contracts memos, the guides to surviving communications chaos, and now they're wondering if they're permanently stuck in that.
 
 They aren't. The two things are almost entirely unrelated.
 
@@ -66,3 +72,5 @@ A natal retrograde is descriptive. It tells you something about the texture of h
 The more useful question isn't "what's wrong with my retrograde Mercury" but "what does it look like when this faculty works at its best?" The answer will probably involve depth, patience with process, and some acceptance that certain things take longer than they appear to for other people. That's not a defect. It's a shape.
 
 Most character descriptions, if taken literally as warnings, would sound alarming. The point of the symbolic language is to be more precise about what's actually there, not to assign blame for it.
+
+If you want to know what your natal retrogrades mean alongside everything else in your chart, [a reading is the most direct way to find out](/book).

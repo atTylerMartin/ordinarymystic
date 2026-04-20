@@ -1,5 +1,5 @@
 ---
-title: "The Two Malefics"
+title: "Mars Conjunct Saturn in Aries: The Two Malefics"
 date: "2026-04-19"
 description: "Mars and Saturn meet at 7 degrees Aries. What the conjunction of the two traditional malefics reveals about force, limit, and the cost of action."
 author: "tyler-martin"
@@ -16,6 +16,12 @@ planets:
   - saturn
 signs:
   - aries
+methodology: "Hellenistic whole-sign houses (Chris Brennan / The Astrology Podcast)"
+ctaEyebrow: "Want to see where this lands in your chart?"
+ctaTitle: "Book a birth chart reading"
+ctaBody: "I'll walk through your chart in plain English, including how the Mars-Saturn conjunction activates your specific placements."
+ctaLabel: "Book a Reading"
+ctaUrl: "/book"
 ---
 
 Everyone who's ever thrown a punch at a wall knows the lesson. Not the pain (that comes after, obvious and deserved) but the thing the pain reveals: the realization, somewhere between the cocked fist and the drywall, that you weren't actually angry at the wall.
@@ -53,3 +59,5 @@ Mars-Saturn asks something similar. Not optimism, not pessimism, but a specific 
 The answer might be worth the collision. Some walls are meant to be hit. Some limits exist to be tested, and what survives the test is stronger for having met it. Mars-Saturn has historically produced durable achievements precisely because the conjunction burns away everything that was filler, leaving only the load-bearing material.
 
 But you have to be willing to look at the filler. That's the harder part. The malefics aren't offering growth. They're offering clarity, and clarity has always cost what it costs.
+
+If you want to see where this conjunction falls in your chart, [book a birth chart reading](/book).

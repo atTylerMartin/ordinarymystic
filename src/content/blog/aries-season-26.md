@@ -1,7 +1,7 @@
 ---
 title: "Aries Season 2026: Dates, Transits & Rising Sign Guide"
 date: "2026-03-21"
-description: "Aries season 2026 (Mar 20–Apr 19): Mars-Saturn-Neptune pileup, Mercury risks, Venus-Jupiter relief, Uranus in Gemini, plus rising-sign forecast with whole-sign houses."
+description: "Aries season 2026 runs Mar 20 to Apr 19. Mars-Saturn-Neptune pileup, Mercury risks, Venus-Jupiter relief, plus a rising-sign forecast."
 author: "tyler-martin"
 imageAlt: "Aries Season 2026 astrology forecast"
 category: "astrology"
@@ -18,6 +18,14 @@ tags:
 planets:
   - saturn
   - jupiter
+  - mars
+  - mercury
+  - neptune
+  - venus
+  - uranus
+signs:
+  - aries
+methodology: "Hellenistic whole-sign houses (Chris Brennan / The Astrology Podcast)"
 image: "/images/featured/aries-season-2026.png"
 faq:
   - question: "When does Aries season 2026 start and end?"

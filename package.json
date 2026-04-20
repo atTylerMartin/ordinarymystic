@@ -25,6 +25,7 @@
     "remark-heading-id": "^1.0.1",
     "remark-html": "^16.0.1",
     "resend": "^6.12.0",
+    "stripe": "^22.0.2",
     "tailwind-merge": "^3.5.0"
   },
   "devDependencies": {
@@ -37,6 +38,6 @@
     "eslint-config-next": "16.1.6",
     "tailwindcss": "^4",
     "ts-node": "^10.9.2",
-    "typescript": "^5"
+    "typescript": "^5.9.3"
   }
 }

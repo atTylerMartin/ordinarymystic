@@ -9,6 +9,11 @@ tags:
   - court-cards
   - tarot-technique
   - reading-practice
+ctaEyebrow: "Want a personal reading?"
+ctaTitle: "Book a tarot reading in Tulsa"
+ctaBody: "Bring a real question. I'll pull the cards and walk through what they're showing, in plain English."
+ctaLabel: "Book a Reading"
+ctaUrl: "/tulsa-tarot-reading"
 ---
 
 Most people find court cards confusing, and they usually blame themselves for it. They assume they haven't studied enough, haven't memorized the right keywords, haven't sat with the cards long enough. But the confusion is structural. It's baked into the most common way court cards get taught.
@@ -45,6 +50,8 @@ Or the Page of Wands appears in a position about what's needed right now. Rather
 
 The court card can still refer to another person. But now when it does, you're reading that person's mode of operating, which tells you something about how to engage with them, not just who they are.
 
+If you read solo and want to build this kind of attention into your practice, [Reading Tarot for Yourself](/blog/reading-tarot-for-yourself) covers the broader approach.
+
 ## Applying It to Yourself
 
 One of the most useful questions to bring to a court card is: is this a mode you're already in, a mode you're being asked to shift into, or a mode you're resisting?
@@ -52,6 +59,8 @@ One of the most useful questions to bring to a court card is: is this a mode you
 Pulling the Queen of Swords in a position about what you're bringing to a situation reads differently depending on context. If you've been avoiding a direct conversation, it might be naming what's needed: precision, honesty, the willingness to say the true thing without softening it. If you've been over-relying on intellectual clarity at the expense of other information, it might be naming something to examine rather than reinforce.
 
 The card doesn't tell you which of those is true. That's your job. But it gives you a specific concept to work with, a particular shape of behavior to hold up against the situation and ask whether it fits.
+
+If you want to work through court cards with someone else in the room, [book a tarot reading](/tulsa-tarot-reading) and bring the question that's been stuck.
 
 ## The Sixteen Modes
 
