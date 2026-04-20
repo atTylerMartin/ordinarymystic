@@ -52,10 +52,12 @@ The argument for reversals is that they add information. That's only true if you
 
 ## Choosing Your Framework
 
-Pick one of the three frameworks above. Write it down. Apply it to the next twenty cards you draw, regardless of whether it produces the reading you expected. Notice what it forces you to see that inversion-as-instinct would have overlooked.
+Pick one of the three frameworks above. [Write it down](/blog/tarot-journal). Apply it to the next twenty cards you draw, regardless of whether it produces the reading you expected. Notice what it forces you to see that inversion-as-instinct would have overlooked.
 
 The reversal system you choose matters less than the act of choosing one and holding to it. A reading where every reversal means "blockage" is more honest than a reading where reversals mean whatever makes the narrative cohere. The first is a system. The second is confirmation bias wearing a tarot-shaped costume.
 
 If you find that applying your system consistently produces readings that feel flat or forced, that's useful information. It may mean the framework doesn't suit how you work, or it may mean you've been reading in a way that prioritizes feel over rigor. Both are worth knowing.
 
 What reversals actually tell you is this: you've landed in a position that your system has something to say about. What your system says depends entirely on whether you have one.
+
+If you want to see what disciplined reversal reading looks like in practice, [book a tarot session in Tulsa](/tulsa-tarot-reading).
