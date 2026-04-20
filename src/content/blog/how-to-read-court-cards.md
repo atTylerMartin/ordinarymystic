@@ -9,6 +9,11 @@ tags:
   - court-cards
   - tarot-technique
   - reading-practice
+ctaEyebrow: "Want a personal reading?"
+ctaTitle: "Book a tarot reading in Tulsa"
+ctaBody: "Bring a real question. I'll pull the cards and walk through what they're showing, in plain English."
+ctaLabel: "Book a Reading"
+ctaUrl: "/tulsa-tarot-reading"
 ---
 
 Most people find court cards confusing, and they usually blame themselves for it. They assume they haven't studied enough, haven't memorized the right keywords, haven't sat with the cards long enough. But the confusion is structural. It's baked into the most common way court cards get taught.

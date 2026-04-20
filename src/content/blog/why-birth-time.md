@@ -1,7 +1,7 @@
 ---
-title: "Why Birth Time Matters in Astrology: The Power of Your Rising Sign"
+title: "Why Birth Time Matters in Astrology"
 date: "2026-01-28"
-description: "Does birth time really matter in astrology? Learn why an accurate birth time is essential for your rising sign, house placements, and your chart's interpretive accuracy."
+description: "An accurate birth time changes everything in a chart reading. Learn why your rising sign, house placements, and timing techniques all depend on it."
 author: "tyler-martin"
 category: "astrology"
 tags:
@@ -10,6 +10,7 @@ tags:
   - birth-chart
   - birth-time
 image: "/images/featured/horizon.png"
+imageAlt: "Horizon at sunrise representing the astrological Ascendant"
 ctaEyebrow: "Have your birth data ready?"
 ctaTitle: "Book a chart reading with verified timing"
 ctaBody: "Bring your exact birth time and location, and I will map your chart with practical context you can actually use."

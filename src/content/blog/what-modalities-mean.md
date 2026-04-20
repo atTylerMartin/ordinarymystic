@@ -1,7 +1,7 @@
 ---
 title: "What the Modalities Actually Mean"
 date: "2026-04-08"
-description: "Cardinal, fixed, mutable. Not just zodiac trivia — the modalities describe how someone moves through situations, and they're more useful than most people realize."
+description: "Cardinal, fixed, mutable. The modalities describe how someone moves through situations, and they're more practical than most people realize."
 author: "tyler-martin"
 category: "astrology"
 tags:
@@ -9,6 +9,11 @@ tags:
   - birth-chart
   - modalities
   - chart-reading
+ctaEyebrow: "Want to see this in your chart?"
+ctaTitle: "Book a birth chart reading"
+ctaBody: "I'll walk through your chart in plain English, including where your modality weight falls and what it means."
+ctaLabel: "Book a Reading"
+ctaUrl: "/book"
 ---
 
 Most people learn their sun sign. Some learn their rising sign. A smaller number learn the elements: fire, earth, air, water. The modalities come after that, if at all, usually as an afterthought in a beginner's guide that moves on too quickly.

@@ -1,7 +1,7 @@
 ---
 title: "The Conjunction at Zero"
 date: "2026-01-31"
-description: "Saturn and Neptune have been circling each other since last spring. They both retreated, spent the fall in Pisces, and are now returning to Aries — where they'll meet exactly in February."
+description: "Saturn and Neptune meet at zero degrees Aries in February 2026. What the rare conjunction reveals about vision, structure, and commitment."
 author: "tyler-martin"
 category: "astrology"
 tags:
@@ -16,6 +16,13 @@ planets:
   - neptune
 signs:
   - aries
+  - pisces
+methodology: "Hellenistic whole-sign houses (Chris Brennan / The Astrology Podcast)"
+ctaEyebrow: "Want to see where this lands in your chart?"
+ctaTitle: "Book a birth chart reading"
+ctaBody: "I'll walk through your chart in plain English, including how the Saturn-Neptune conjunction activates your specific placements."
+ctaLabel: "Book a Reading"
+ctaUrl: "/book"
 ---
 
 Neptune crossed into Aries last March. Saturn followed in May. For a few weeks in early summer, they were within a few degrees of each other in the first sign of the zodiac, two slow-moving planets converging on the same small patch of sky — and then both of them turned around.

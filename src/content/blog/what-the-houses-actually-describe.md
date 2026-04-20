@@ -1,7 +1,7 @@
 ---
 title: "What the Houses Actually Describe"
 date: "2026-01-21"
-description: "The houses are the most practical part of a birth chart. They tell you where things happen, not just what kind of person you are."
+description: "The twelve houses are the most practical part of any birth chart. They map where in your life each planet's themes actually play out."
 author: "tyler-martin"
 category: "astrology"
 tags:
@@ -9,6 +9,12 @@ tags:
   - birth-chart
   - houses
   - chart-reading
+methodology: "Hellenistic whole-sign houses (Chris Brennan / The Astrology Podcast)"
+ctaEyebrow: "Want to see your houses in action?"
+ctaTitle: "Book a birth chart reading"
+ctaBody: "I'll walk through your chart house by house in plain English, focusing on the areas of life that matter most right now."
+ctaLabel: "Book a Reading"
+ctaUrl: "/book"
 ---
 
 Most people who get interested in astrology spend their first few years almost entirely in the signs. They learn that Scorpio is intense and that Gemini is scattered and that Virgo has opinions about how you load the dishwasher. They might pick up the planets: Venus for love, Saturn for discipline, Mars for conflict and drive. But the houses stay fuzzy, a background element, something that feels technical and not quite necessary.

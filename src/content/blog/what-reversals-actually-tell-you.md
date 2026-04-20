@@ -1,7 +1,7 @@
 ---
 title: "What Reversals Actually Tell You"
 date: "2026-01-14"
-description: "Reversed tarot cards aren't bad omens. They're positional data — and most readers use them inconsistently."
+description: "Reversed tarot cards aren't bad omens. Three defensible frameworks for reading reversals, and why picking one matters more than which you choose."
 author: "tyler-martin"
 category: "tarot"
 tags:
@@ -9,6 +9,11 @@ tags:
   - tarot-reversals
   - tarot-technique
   - reading-practice
+ctaEyebrow: "Want a personal reading?"
+ctaTitle: "Book a tarot reading in Tulsa"
+ctaBody: "Bring a real question. I'll pull the cards and walk through what they're showing, in plain English."
+ctaLabel: "Book a Reading"
+ctaUrl: "/tulsa-tarot-reading"
 ---
 
 Most readers treat reversed cards the way they treat a warning light on the dashboard: something has gone wrong. The card's meaning, which was neutral or positive upright, has now inverted into its opposite. The Six of Cups reversed is no longer warmth and memory — it's nostalgia that's curdling, an inability to move forward. The Sun reversed is diminished vitality, blocked joy.

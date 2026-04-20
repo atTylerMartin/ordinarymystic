@@ -9,6 +9,11 @@ tags:
   - tarot-practice
   - skeptics
   - reading-practice
+ctaEyebrow: "Ready to build your own practice?"
+ctaTitle: "Try the Ordinary Mystic tarot tools"
+ctaBody: "Notion-based tarot journaling systems designed to surface patterns over time, not just log pulls."
+ctaLabel: "Browse Tools"
+ctaUrl: "/tools"
 ---
 
 Most of the time, when you sit down to think through a problem, you think the same thoughts you've already thought. You trace the same paths. You arrive at the same conclusions, or the same stuck places, because that's what thinking does when left to its own devices. It follows the grooves.

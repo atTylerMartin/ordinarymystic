@@ -9,6 +9,11 @@ tags:
   - tarot-spreads
   - tarot-technique
   - reading-practice
+ctaEyebrow: "Ready to build your own practice?"
+ctaTitle: "Try the Ordinary Mystic tarot tools"
+ctaBody: "Notion-based tarot journaling systems designed to surface patterns over time, not just log pulls."
+ctaLabel: "Browse Tools"
+ctaUrl: "/tools"
 ---
 
 Pull ten cards and something strange happens. You're still looking at card three when you're supposed to be thinking about card seven, and by the time you reach position ten (the "final outcome," the one that's supposed to tie everything together), the original question has blurred into background noise. You're not reading anymore. You're managing.

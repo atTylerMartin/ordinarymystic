@@ -9,6 +9,11 @@ tags:
   - self-reading
   - tarot-technique
   - reading-practice
+ctaEyebrow: "Want a personal reading?"
+ctaTitle: "Book a tarot reading in Tulsa"
+ctaBody: "Bring a real question. I'll pull the cards and walk through what they're showing, in plain English."
+ctaLabel: "Book a Reading"
+ctaUrl: "/tulsa-tarot-reading"
 ---
 
 The spread is laid out in front of you. You already know what you're hoping to see. You recognize one of the cards as a "good" sign for the situation you're asking about, and you feel a small, quiet relief. Then you look at the card in the outcome position and it's not what you wanted, so you start rethinking whether you assigned the positions correctly.

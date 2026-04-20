@@ -11,6 +11,16 @@ tags:
   - anaretic-degree
   - mundane-astrology
   - uranus-ingress
+planets:
+  - uranus
+signs:
+  - taurus
+  - gemini
+ctaEyebrow: "Want to see where this lands in your chart?"
+ctaTitle: "Book a birth chart reading"
+ctaBody: "I'll walk through your chart in plain English, focusing on the patterns that matter most right now."
+ctaLabel: "Book a Reading"
+ctaUrl: "/book"
 ---
 
 There's a particular kind of restlessness that arrives not at the start of a change, but just before one. The bags are packed but the door isn't open yet. The lease is signed but you're still sleeping in the old apartment. You know the thing is ending. You don't yet know what the next thing feels like.

@@ -9,6 +9,12 @@ tags:
   - birth-chart
   - retrograde
   - chart-reading
+methodology: "Hellenistic whole-sign houses (Chris Brennan / The Astrology Podcast)"
+ctaEyebrow: "Curious about your retrogrades?"
+ctaTitle: "Book a birth chart reading"
+ctaBody: "I'll walk through your chart in plain English, including any natal retrogrades and what they mean for your specific placements."
+ctaLabel: "Book a Reading"
+ctaUrl: "/book"
 ---
 
 Every few weeks, someone learns they have Mercury retrograde in their natal chart and wonders what they've done wrong. They've been reading the transit warnings, the don't-sign-contracts memos, the guides to surviving communications chaos, and now they're wondering if they're permanently stuck in that.

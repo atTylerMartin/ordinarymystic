@@ -9,6 +9,11 @@ tags:
   - sun-signs
   - birth-chart
   - chart-reading
+ctaEyebrow: "Want to see beyond your sun sign?"
+ctaTitle: "Book a birth chart reading"
+ctaBody: "I'll walk through your full chart in plain English, not just the sun sign. The patterns that actually matter."
+ctaLabel: "Book a Reading"
+ctaUrl: "/book"
 ---
 
 Ask someone who studies astrology seriously what they think of sun sign columns, and you'll usually get a specific kind of face. Not contempt, exactly. More like fatigue. The face of someone explaining, again, that the newspaper horoscope is to astrology what a Rorschach inkblot caption is to psychotherapy.

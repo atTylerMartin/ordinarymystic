@@ -1,7 +1,7 @@
 ---
 title: "How to Start Making Sense of a Birth Chart"
 date: "2026-03-04"
-description: "A birth chart isn't a list of facts to memorize. It's a pattern to read. Here's where to start and what to look for."
+description: "A birth chart isn't a list of facts to memorize. It's a pattern to read. Here's where to actually start and how to find coherence."
 author: "tyler-martin"
 category: "astrology"
 tags:
@@ -9,6 +9,11 @@ tags:
   - birth-chart
   - chart-reading
   - beginners
+ctaEyebrow: "Ready for your own chart?"
+ctaTitle: "Book a birth chart reading"
+ctaBody: "I'll walk through your chart in plain English, focusing on the patterns that actually matter for your life right now."
+ctaLabel: "Book a Reading"
+ctaUrl: "/book"
 ---
 
 Most people approach a birth chart the wrong way. They open a report, land on a list of placements, and start reading from the top: Sun in Capricorn, Moon in Scorpio, Mercury in Sagittarius, Venus in Aquarius. They look each one up, accumulate a pile of adjectives, and then try to make a person out of the pile. They end up with something that sounds like a character sheet written by a committee, full of contradictions and very little coherence.

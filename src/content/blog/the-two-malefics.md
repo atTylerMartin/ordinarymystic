@@ -16,6 +16,12 @@ planets:
   - saturn
 signs:
   - aries
+methodology: "Hellenistic whole-sign houses (Chris Brennan / The Astrology Podcast)"
+ctaEyebrow: "Want to see where this lands in your chart?"
+ctaTitle: "Book a birth chart reading"
+ctaBody: "I'll walk through your chart in plain English, including how the Mars-Saturn conjunction activates your specific placements."
+ctaLabel: "Book a Reading"
+ctaUrl: "/book"
 ---
 
 Everyone who's ever thrown a punch at a wall knows the lesson. Not the pain (that comes after, obvious and deserved) but the thing the pain reveals: the realization, somewhere between the cocked fist and the drywall, that you weren't actually angry at the wall.

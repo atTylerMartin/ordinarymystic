@@ -24,6 +24,12 @@ signs:
   - aries
   - aquarius
   - gemini
+  - pisces
+ctaEyebrow: "Want to see where this lands in your chart?"
+ctaTitle: "Book a birth chart reading"
+ctaBody: "I'll walk through your chart in plain English, including how these outer-planet sign changes activate your specific placements."
+ctaLabel: "Book a Reading"
+ctaUrl: "/book"
 ---
 
 Neptune is at 29 degrees Pisces today. It has been in Pisces for fourteen years.
