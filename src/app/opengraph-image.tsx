@@ -4,30 +4,31 @@ import { SITE_NAME, SITE_URL } from "@/lib/site";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
-async function loadNewsreaderFont(): Promise<ArrayBuffer | null> {
+// Google Fonts' css2 endpoint returns WOFF2 by default, which satori can't
+// parse ("Unsupported OpenType signature wOF2"). When you include a `text=`
+// subset parameter, Google returns a TTF subset containing just those glyphs,
+// which satori accepts.
+async function loadNewsreaderFont(text: string): Promise<ArrayBuffer | null> {
   try {
-    const css = await fetch(
-      "https://fonts.googleapis.com/css2?family=Newsreader:wght@400&display=swap",
-      {
-        headers: {
-          "User-Agent":
-            "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
-        },
-        next: { revalidate: 86400 },
-      },
-    ).then((r) => r.text());
+    const url = `https://fonts.googleapis.com/css2?family=Newsreader:wght@400&text=${encodeURIComponent(text)}`;
+    const css = await fetch(url, {
+      next: { revalidate: 86400 },
+    }).then((r) => r.text());
 
-    const url = css.match(/src: url\(([^)]+)\) format\('woff2'\)/)?.[1];
-    if (!url) return null;
+    const match = css.match(
+      /src: url\(([^)]+)\) format\('(?:truetype|opentype)'\)/,
+    );
+    if (!match) return null;
 
-    return fetch(url).then((r) => r.arrayBuffer());
+    return fetch(match[1]).then((r) => r.arrayBuffer());
   } catch {
     return null;
   }
 }
 
 export default async function OgImage() {
-  const fontData = await loadNewsreaderFont();
+  // SITE_NAME is the only text that renders in Newsreader on the home OG.
+  const fontData = await loadNewsreaderFont(SITE_NAME);
 
   return new ImageResponse(
     (
