@@ -1,5 +1,5 @@
 ---
-title: "How to Start Making Sense of a Birth Chart"
+title: "How to Read a Birth Chart"
 date: "2026-03-04"
 description: "A birth chart isn't a list of facts to memorize. It's a pattern to read. Here's where to actually start and how to find coherence."
 author: "tyler-martin"
@@ -30,7 +30,7 @@ Where is most of the weight? Most charts cluster planets visibly rather than dis
 
 Then move to the three placements that orient everything else: the Sun, Moon, and Ascendant. These aren't equally important in the same way. Each describes a different register.
 
-The Ascendant is the structure of the chart, literally and conceptually. It's the sign rising on the eastern horizon at the moment of birth, and it determines which sign occupies each house. It also describes how a person moves through the world before they've thought much about it, the immediate and somewhat automatic layer of personality that others encounter first. Reading a chart without taking the Ascendant seriously is like reading a building's blueprint without noting which way it faces.
+The Ascendant is the structure of the chart, literally and conceptually. It's the sign rising on the eastern horizon at [the moment of birth](/blog/why-birth-time), and it determines which sign occupies [each house](/blog/what-the-houses-actually-describe). It also describes how a person moves through the world before they've thought much about it, the immediate and somewhat automatic layer of personality that others encounter first. Reading a chart without taking the Ascendant seriously is like reading a building's blueprint without noting which way it faces.
 
 The Sun describes something more deliberate and harder to sustain: the organizing principle of identity over time, where a person's sense of vitality tends to be staked. It's less about what they're like in a room and more about what they're working toward, often without naming it as such.
 
@@ -67,3 +67,5 @@ The goal of reading a chart isn't to produce a complete psychological profile on
 Start with the big three as orientation. Look for where the weight of the chart falls. Find the through-lines in element and emphasis. Then, when you read individual placements, you're reading them as parts of something you already have a partial picture of, not as isolated entries in a database.
 
 A chart read this way starts to cohere. It becomes a person.
+
+If you want someone to walk through yours, [book a chart reading](/book).
