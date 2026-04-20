@@ -52,7 +52,7 @@ It means sitting with the image before looking anything up. The visual content o
 
 It means being willing to say "that doesn't land" and move on. Not every card you pull will be relevant. The randomness that makes the practice work also means some pulls are just noise. Forcing a reading out of a card that genuinely doesn't connect is a way to avoid the honesty the practice requires.
 
-And it means keeping a record. The journal is where the pattern-recognition actually happens. A single card on a single morning is low-signal. A month of cards, a year of cards, the same image appearing again in a different season of your life — that accumulation is where something becomes visible.
+And it means [keeping a record](/blog/tarot-journal). [The journal](/tools) is where the pattern-recognition actually happens. A single card on a single morning is low-signal. A month of cards, a year of cards, the same image appearing again in a different season of your life — that accumulation is where something becomes visible.
 
 ## Why the Frame Matters
 
