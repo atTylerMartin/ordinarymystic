@@ -9,6 +9,7 @@ tags:
   - sun-signs
   - birth-chart
   - chart-reading
+methodology: "Hellenistic whole-sign houses (Chris Brennan / The Astrology Podcast)"
 ctaEyebrow: "Want to see beyond your sun sign?"
 ctaTitle: "Book a birth chart reading"
 ctaBody: "I'll walk through your full chart in plain English, not just the sun sign. The patterns that actually matter."
@@ -52,13 +53,13 @@ Both positions are wrong.
 
 If you want astrology to function as something other than vague mood-matching, three placements do most of the heavy lifting: sun, moon, and rising.
 
-The rising sign (the Ascendant) is the starting point in Hellenistic practice. It determines your house system, your chart's dominant tone, the face you meet the world with. Two people born on the same day with the same sun sign but different birth times can have wildly different charts because the rising changes roughly every two hours.
+The rising sign (the Ascendant) is the starting point in Hellenistic practice. It determines your [house system](/blog/what-the-houses-actually-describe), your chart's dominant tone, the face you meet the world with. Two people born on the same day with the same sun sign but different [birth times](/blog/why-birth-time) can have wildly different charts because the rising changes roughly every two hours.
 
 The moon describes emotional need and instinct, what you reach for when you're depleted, how you self-regulate. It operates below the threshold of the sun's more deliberate expression.
 
 Together, the three form something like a coordinate system. The sun is your direction of travel. The moon is the fuel and the terrain you're moving through. The rising is the vehicle.
 
-You can work meaningfully with a chart using just these three. You cannot work meaningfully with a chart using just one.
+You can [work meaningfully with a chart](/book) using just these three. You cannot work meaningfully with a chart using just one.
 
 ## A case for the sun sign you can actually defend
 
