@@ -3,7 +3,7 @@
 // Auto-hide: Friday 2026-05-01 00:00:00 Central = 2026-05-01T05:00:00Z
 export const WEEKEND_PROMO_END = new Date("2026-05-01T05:00:00Z");
 
-export const WEEKEND_PROMO_ORIGINAL_PRICE = "$40";
+export const WEEKEND_PROMO_ORIGINAL_PRICE = "$45";
 export const WEEKEND_PROMO_DISCOUNTED_PRICE = "$25";
 
 export const WEEKEND_PROMO_END_DISPLAY = "April 30, 11:59pm CT";

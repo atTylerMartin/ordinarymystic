@@ -512,19 +512,19 @@ export default async function Home() {
             {[
               {
                 name: "Tarot",
-                price: "From $40",
+                price: "From $25",
                 description:
-                  "Structured readings around a specific question or theme. Written, recorded, or live.",
+                  "Quick pulls, full written spreads, recorded video, or live sessions via Zoom or in person.",
               },
               {
                 name: "Astrology",
-                price: "From $55",
+                price: "From $65",
                 description:
-                  "Natal chart interpretation and transit forecasting. Requires accurate birth time.",
+                  "Hellenistic natal chart interpretation and transit forecasting. Requires accurate birth time.",
               },
               {
                 name: "Combined",
-                price: "From $130",
+                price: "From $225",
                 description:
                   "Both systems in a single extended session. Chart for timing; cards for nuance.",
               },
