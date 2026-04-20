@@ -30,7 +30,7 @@ Uranus sits tonight at 29 degrees Taurus. In traditional astrology, the 29th deg
 
 Uranus has been in Taurus since 2018. Eight years is long enough to forget what came before it. When Uranus entered Taurus, Bitcoin was still a punchline at dinner parties, remote work was a perk reserved for freelancers, and the global supply chain was something most people had never thought about once. Uranus in Taurus changed how we related to security itself - financial, physical, ecological. It didn't announce these changes. It just made the old ground less solid, inch by inch, until we were standing on something different without quite noticing the shift.
 
-Now, at 29 degrees, that process is finishing. Not finished - finishing. The anaretic degree doesn't offer the clean break of an ingress. It's the threshold itself, and thresholds are uncomfortable places to stand. In Hellenistic thought, a planet at the final degree of a sign has exhausted the sign's resources. It has done what it came to do, but it hasn't yet started the next thing. It's all ending and no beginning.
+Now, at 29 degrees, that process is finishing. Not finished - finishing. The anaretic degree doesn't offer the clean break of an ingress. It's the threshold itself, and thresholds are uncomfortable places to stand. In the tradition, a planet at the final degree of a sign has exhausted the sign's resources. It has done what it came to do, but it hasn't yet started the next thing. It's all ending and no beginning.
 
 ## What Taurus holds at the end
 
