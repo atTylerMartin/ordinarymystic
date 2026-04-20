@@ -16,6 +16,7 @@ ctaTitle: "Book a chart reading with verified timing"
 ctaBody: "Bring your exact birth time and location, and I will map your chart with practical context you can actually use."
 ctaLabel: "Book a Reading"
 ctaUrl: "/book"
+methodology: "Hellenistic whole-sign houses (Chris Brennan / The Astrology Podcast)"
 ---
 
 I'll never forget my first professional astrology reading. I was wound tight with nerves and excitement. It was a recorded session for a client in England, and I wanted it to be perfect. I spent hours—and I mean *hours*—poring over her chart, researching ancient techniques, and meticulously recording a two-hour deep dive into her life's blueprint.
