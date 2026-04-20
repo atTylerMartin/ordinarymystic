@@ -27,6 +27,7 @@ signs:
   - gemini
   - scorpio
   - cancer
+methodology: "Hellenistic whole-sign houses (Chris Brennan / The Astrology Podcast)"
 faq:
   - question: "When does Taurus season 2026 start and end?"
     answer: "Taurus season 2026 begins on April 19, when the Sun enters 0 degrees Taurus. It ends on May 20, when the Sun moves into Gemini."
