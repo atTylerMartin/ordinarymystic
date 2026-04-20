@@ -25,6 +25,7 @@ planets:
   - uranus
 signs:
   - aries
+methodology: "Hellenistic whole-sign houses (Chris Brennan / The Astrology Podcast)"
 image: "/images/featured/aries-season-2026.png"
 faq:
   - question: "When does Aries season 2026 start and end?"
