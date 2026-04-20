@@ -181,7 +181,7 @@ Mercury square Jupiter on April 26 is the classic overreach aspect. Jupiter expa
 
 Mars square Jupiter on May 4 is the physical version of the same distortion. Mars is action, force, physical will. Jupiter makes it excessive. This aspect has a track record with overcommitment, physical overextension, and battles fought on more fronts than anyone can actually sustain. It can also produce genuine courage and conviction - Jupiter isn't malefic. But the square adds friction. The expansion meets resistance, and the impulse is to push harder rather than reassess.
 
-Both squares involve Jupiter in Cancer, where Jupiter is in exaltation (its strongest dignified position in traditional astrology). Jupiter in Cancer is genuinely potent: protective, nurturing, abundant in the domestic and emotional sphere. The issue isn't Jupiter's quality. The issue is that squares generate tension between two planets operating from incompatible angles. The growth wants to go one way. The action or communication wants to go another.
+Both squares involve Jupiter in Cancer, where Jupiter is in exaltation (the second-strongest dignity in traditional astrology, after domicile). Jupiter in Cancer is genuinely potent: protective, nurturing, abundant in the domestic and emotional sphere. The issue isn't Jupiter's quality. The issue is that squares generate tension between two planets operating from incompatible angles. The growth wants to go one way. The action or communication wants to go another.
 
 ---
 
