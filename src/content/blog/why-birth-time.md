@@ -43,7 +43,7 @@ Cancer Rising processes life through emotional intelligence, protective instinct
 
 And the Ascendant isn't the only thing moving. Your **Midheaven**—the point governing career, public reputation, and long-term ambition—shifts along with it. So does your **Imum Coeli**, the axis governing roots, family inheritance, and your private foundation. Together, these four angles anchor the twelve-house system that determines which area of life each planet is governing at any given time.
 
-Move those angles by ten minutes, and you can shift a planet from one house to the next. The planet governing your 7th house (relationships) becomes the planet governing your 8th (transformation, shared resources, inheritance). The thematic story of your chart changes underneath you.
+Move those angles by ten minutes, and you can shift a planet from one house to the next. The planet governing your 7th house (relationships) becomes the planet governing your 8th (death, shared resources, inheritance). The thematic story of your chart changes underneath you.
 
 In a two-hour window, the Rising Sign might stay in Cancer. But the structure beneath it is in constant motion. That's why "sometime in the morning" isn't a birth time. It's a bracket.
 
@@ -61,7 +61,7 @@ Here's where modern pop astrology has done the field a genuine disservice.
 
 We've become fixated on the Sun sign. "What's your sign?" almost always means the Sun sign—the position of the Sun on your birthday. Sun sign columns are cheap to produce because everyone born within a roughly 30-day window shares the same placement, regardless of where or when they were born. It scales easily. It also flattens the system significantly.
 
-Traditional astrology—specifically [Hellenistic practice, which is the framework I use](/blog/how-to-get-started-with-astrology)—operates from a different hierarchy. The Ascendant carries more interpretive weight than the Sun. It is the foundation from which the entire chart is built. Most house systems expand outward from it. The chart's ruling planet is determined by it. In traditional timing techniques like annual profections, the Ascendant is where you start the count every single year.
+Traditional astrology—specifically [Hellenistic practice, which is the framework I use](/blog/how-to-get-started-with-astrology)—operates from a different hierarchy. The Ascendant carries more interpretive weight than the Sun. In the ancient world, when someone was asked for their sign, they gave their rising sign, not their Sun sign. It is the foundation from which the entire chart is built. Most house systems expand outward from it. The chart's ruling planet is determined by it. In traditional timing techniques like annual profections, the Ascendant is where you start the count every single year.
 
 Here is how I think about the distinction: **the Sun is your core. The Ascendant is your context.**
 
