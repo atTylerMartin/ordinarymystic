@@ -36,6 +36,12 @@ So I pulled a Celtic Cross for her.
 
 ---
 
+<div class="video-embed">
+  <iframe src="https://www.youtube.com/embed/t2bu_-5Xl7o" title="Is Banana Bread Happy Here? A Tarot Reading" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</div>
+
+---
+
 <figure class="tarot-card">
   <img src="/cards/24-three-of-wands.webp" alt="Three of Wands" loading="lazy" />
   <figcaption>Three of Wands — Present</figcaption>
