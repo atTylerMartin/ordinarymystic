@@ -10,6 +10,11 @@ tags:
   - three-of-wands
   - three-of-cups
   - querent-app
+ctaEyebrow: "Book a Tarot Reading"
+ctaTitle: "Bring your own question to the cards."
+ctaBody: "One-on-one tarot readings — written, recorded, or live. Practical and grounded, specific to what's actually going on in your life."
+ctaLabel: "Book a Reading"
+ctaUrl: "/book"
 cards:
   - three-of-wands
   - five-of-swords
