@@ -32,6 +32,16 @@ I pulled cards on this last week. Not because I had answers. Because I was in it
 
 ---
 
+<figure class="tarot-card">
+  <img src="/cards/69-six-of-pentacles.webp" alt="Six of Pentacles" loading="lazy" />
+  <figcaption>Six of Pentacles — Present</figcaption>
+</figure>
+
+<figure class="tarot-card">
+  <img src="/cards/61-knight-of-swords.webp" alt="Knight of Swords" loading="lazy" />
+  <figcaption>Knight of Swords — Crossing</figcaption>
+</figure>
+
 The first two cards were the Six of Pentacles, crossed by the Knight of Swords.
 
 The Six of Pentacles is careful work. A figure holds a scale in one hand and distributes coins with the other -- measuring, accounting, trying to give without depleting. There's generosity in the card, but there's also attention. The scale only holds if you keep watching it.
@@ -41,6 +51,11 @@ What crosses it is the Knight of Swords. He doesn't look at scales. He's not bui
 These two cards can't coexist for long. The Knight of Swords will always win a race. The question is what happens to the scale when he does.
 
 ---
+
+<figure class="tarot-card">
+  <img src="/cards/05-the-hierophant.webp" alt="The Hierophant" loading="lazy" />
+  <figcaption>The Hierophant — Foundation</figcaption>
+</figure>
 
 The foundation card was the Hierophant.
 
@@ -52,19 +67,39 @@ Burnout often gets understood as personal failure. You should have managed thing
 
 ---
 
+<figure class="tarot-card">
+  <img src="/cards/29-eight-of-wands.webp" alt="Eight of Wands" loading="lazy" />
+  <figcaption>Eight of Wands — Recent Past</figcaption>
+</figure>
+
 The Eight of Wands sat in the recent past: wands in flight, nothing obstructing them, everything moving with momentum. This was working. You were fast, capable, delivering. People noticed.
 
 Which is the problem. You raised the baseline. The Hierophant noticed, and the Knight of Swords was dispatched accordingly.
 
-Three of Pentacles reversed in the expectations position: the collaborative work is starting to crack. Things that would have been handled are starting to slip -- not because you've stopped trying, but because you've been outrunning a sustainable pace long enough that the debt is coming due. What you're expecting, even dreading, is exactly this.
+<figure class="tarot-card reversed">
+  <img src="/cards/66-three-of-pentacles.webp" alt="Three of Pentacles reversed" loading="lazy" />
+  <figcaption>Three of Pentacles Reversed — Expectations</figcaption>
+</figure>
+
+Three of Pentacles reversed in the expectations position: the collaborative work is starting to crack. Things that would have been handled are starting to slip -- not because you've stopped trying, but because you've been outrunning a sustainable pace long enough that the debt is coming due.
 
 ---
+
+<figure class="tarot-card">
+  <img src="/cards/70-seven-of-pentacles.webp" alt="Seven of Pentacles" loading="lazy" />
+  <figcaption>Seven of Pentacles — Near Future</figcaption>
+</figure>
 
 Seven of Pentacles in the near future: a figure stands in front of a vine and looks at what's grown. There's no urgency in the card. It's the moment of assessment that has to happen before the next decision can be made -- not escape, not rest for its own sake, but the deliberate act of stopping to see where things actually stand.
 
 Before you can move forward, the reading suggests you have to stop moving long enough to look at what's there.
 
 ---
+
+<figure class="tarot-card">
+  <img src="/cards/57-eight-of-swords.webp" alt="Eight of Swords" loading="lazy" />
+  <figcaption>Eight of Swords — Fears</figcaption>
+</figure>
 
 The Eight of Swords sat in the fear position.
 
@@ -74,9 +109,19 @@ That fear is worth naming because it's what makes burnout so heavy. It isn't onl
 
 ---
 
+<figure class="tarot-card">
+  <img src="/cards/49-king-of-cups.webp" alt="King of Cups" loading="lazy" />
+  <figcaption>King of Cups — Outside Influence</figcaption>
+</figure>
+
 King of Cups as outside influence: someone in your life is holding something you can't hold right now. The King of Cups is not immune to rough water -- look at the waves behind him, the sea creature lurking at the edge of the card -- but he's learned not to be moved by it at the surface. He has a settled emotional weight that the situation cannot dislodge.
 
 Find this person. This is not a time to manage alone.
+
+<figure class="tarot-card">
+  <img src="/cards/14-temperance.webp" alt="Temperance" loading="lazy" />
+  <figcaption>Temperance — Hopes</figcaption>
+</figure>
 
 Temperance in the hopes position: not the hope of escape. Temperance is a slow, deliberate pour between two vessels. It takes its time; it doesn't spill. What the reading shows you hoping for isn't a reversal or a rescue -- it's the return of moderation. A pace that doesn't require constant accounting just to keep the scale level.
 
@@ -84,17 +129,20 @@ That's worth noticing. The hope is already proportionate to what's possible.
 
 ---
 
+<figure class="tarot-card">
+  <img src="/cards/08-strength.webp" alt="Strength" loading="lazy" />
+  <figcaption>Strength — Outcome</figcaption>
+</figure>
+
 The final card was Strength.
 
-The Strength card is the woman with the lion. She is not fighting it. She is not running. She has her hands around its open mouth, and she is calm. The lion is still a lion -- it has not been neutralized or tamed into something harmless -- but something in the relationship between them has shifted. She holds it differently than she could before.
+The Strength card is the woman with the lion. She is not fighting it. She is not running. She has her hands around its open mouth, and she is calm. The lion is still a lion -- it has not been neutralized -- but something in the relationship between them has shifted. She holds it differently than she could before.
 
 The outcome of this reading isn't relief from difficulty. It's a changed relationship to it. Strength doesn't arrive as the absence of pressure. It arrives as the ability to hold your own center while the pressure continues.
 
 To get there, one thing has to happen first: the part of you that has fused your identity to your output needs to come apart. The weight of the Three of Pentacles reversed isn't just work suffering -- it's the sense that *you* are suffering, that what you produce is what you are. When that bond loosens, the Eight of Swords loosens too. You start to see a way out of the circle.
 
 ---
-
-The night I recorded this reading, I ended with something short.
 
 *What's done is done. What's left undone has been left undone. Let it be.*
 

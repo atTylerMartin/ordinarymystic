@@ -484,3 +484,35 @@ body[data-site-live="true"]::before {
     box-shadow: inset 0 0 0 1px rgba(122, 46, 42, 0.35);
   }
 }
+
+/* --- Tarot card inline display --- */
+.tarot-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 2rem auto;
+  max-width: 220px;
+  gap: 0.65rem;
+}
+
+.tarot-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+  box-shadow: 0 4px 16px rgba(26, 22, 20, 0.18);
+  display: block;
+}
+
+.tarot-card.reversed img {
+  transform: rotate(180deg);
+}
+
+.tarot-card figcaption {
+  font-family: var(--font-sans);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--color-muted);
+  text-align: center;
+}
