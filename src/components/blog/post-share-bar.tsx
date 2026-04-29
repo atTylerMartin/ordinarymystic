@@ -1,36 +1,15 @@
 "use client";
 
 import { useState } from "react";
-import Link from "next/link";
-import { Copy, Facebook, Linkedin, Share2, Twitter } from "lucide-react";
+import { Copy, Share2 } from "lucide-react";
 
 type PostShareBarProps = {
   title: string;
   url: string;
 };
 
-export function PostShareBar({ title, url }: PostShareBarProps) {
+export function PostShareBar({ title: _title, url }: PostShareBarProps) {
   const [copied, setCopied] = useState(false);
-  const encodedUrl = encodeURIComponent(url);
-  const encodedTitle = encodeURIComponent(title);
-
-  const shareLinks = [
-    {
-      href: `https://twitter.com/intent/tweet?url=${encodedUrl}&text=${encodedTitle}`,
-      label: "Share on X",
-      icon: Twitter,
-    },
-    {
-      href: `https://www.facebook.com/sharer/sharer.php?u=${encodedUrl}`,
-      label: "Share on Facebook",
-      icon: Facebook,
-    },
-    {
-      href: `https://www.linkedin.com/sharing/share-offsite/?url=${encodedUrl}`,
-      label: "Share on LinkedIn",
-      icon: Linkedin,
-    },
-  ];
 
   async function copyLink() {
     await navigator.clipboard.writeText(url);
@@ -45,18 +24,6 @@ export function PostShareBar({ title, url }: PostShareBarProps) {
           <Share2 className="h-3.5 w-3.5" />
           Share
         </p>
-        {shareLinks.map(({ href, label, icon: Icon }) => (
-          <Link
-            key={label}
-            href={href}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-1 rounded-full border border-[var(--color-rule)] bg-[var(--color-bone-raised)] px-3 py-1.5 text-xs font-medium text-[var(--color-ink)] hover:bg-[var(--color-bone)]"
-          >
-            <Icon className="h-3.5 w-3.5" />
-            {label}
-          </Link>
-        ))}
         <button
           type="button"
           onClick={copyLink}

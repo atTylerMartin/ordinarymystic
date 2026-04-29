@@ -7,23 +7,9 @@ import {
 } from "lucide-react";
 import { NewsletterForm } from "@/components/newsletter-form";
 import { Button } from "@/components/button";
-import {
-  Card,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "@/components/card";
 import { Container } from "@/components/container";
 import { ScrollOnHash } from "@/components/scroll-on-hash";
-import {
-  DIGITAL_TAROT_APP_URL,
-  SITE_LIVE_MODE,
-  TIKTOK_LIVE_ASTROLOGY_URL,
-  TIKTOK_LIVE_TAROT_URL,
-  TIKTOK_URL,
-} from "@/lib/config";
-import { TarotCardsIcon } from "@/components/tarot-cards-icon";
+import { DIGITAL_TAROT_APP_URL } from "@/lib/config";
 import { getAllBlogPosts } from "@/lib/content";
 import { SITE_URL } from "@/lib/site";
 
@@ -64,32 +50,11 @@ export default async function Home() {
 
       {/* HERO */}
       <section
-        className={`relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen flex items-center overflow-hidden ${SITE_LIVE_MODE ? "hero-live-pulse" : ""}`}
+        className="relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen flex items-center overflow-hidden"
         aria-label="Hero"
         style={{ backgroundColor: "#1a1614" }}
       >
         <div className="relative z-10 w-full max-w-3xl mx-auto px-4 sm:px-6 py-28 sm:py-36 text-center">
-          {SITE_LIVE_MODE ? (
-            <Link
-              href={TIKTOK_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="mx-auto mb-8 inline-flex items-center gap-2 px-3 py-1.5 text-[10px] font-semibold uppercase tracking-[0.25em]"
-              style={{
-                color: "var(--color-bone)",
-                border: "1px solid var(--color-oxblood)",
-                backgroundColor: "rgba(122, 46, 42, 0.15)",
-              }}
-            >
-              <span
-                className="h-2 w-2 rounded-full animate-pulse"
-                style={{ backgroundColor: "var(--color-oxblood)" }}
-                aria-hidden
-              />
-              Live on TikTok
-            </Link>
-          ) : null}
-
           {/* SEO H1 — rendered as a newspaper flag kicker */}
           <h1 className="mx-auto flex max-w-xl items-center justify-center gap-3 px-2 text-center text-[10px] font-semibold uppercase tracking-[0.2em] text-[#9a8d7d] sm:gap-4 sm:px-0 sm:text-[11px] sm:tracking-[0.3em]">
             <span className="hidden h-px w-8 bg-[#3a312b] sm:block" aria-hidden />
@@ -133,82 +98,6 @@ export default async function Home() {
           </div>
         </div>
       </section>
-
-      {/* LIVE MODE — TikTok bookings */}
-      {SITE_LIVE_MODE ? (
-        <section
-          className={`relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen ${sectionPadding}`}
-          style={{ backgroundColor: "var(--color-bone-raised)" }}
-        >
-          <Container className="px-4 sm:px-6">
-            <div className="text-center">
-              <span className="inline-flex items-center gap-3 text-[10px] font-semibold uppercase tracking-[0.3em] text-[var(--color-oxblood)]">
-                <span className="h-px w-6 bg-[var(--color-oxblood)]" aria-hidden />
-                Live on TikTok
-                <span className="h-px w-6 bg-[var(--color-oxblood)]" aria-hidden />
-              </span>
-              <h2 className="mt-5 font-heading text-3xl font-semibold tracking-tight sm:text-4xl text-[var(--color-ink)]">
-                Book a Live Reading
-              </h2>
-            </div>
-            <div className="mx-auto mt-12 grid max-w-4xl gap-6 md:grid-cols-2">
-              <Card className="rounded-none">
-                <CardHeader className="space-y-3">
-                  <div
-                    className="flex h-10 w-10 items-center justify-center"
-                    style={{ backgroundColor: "var(--color-rule)", color: "var(--color-ink)" }}
-                  >
-                    <TarotCardsIcon className="h-5 w-5" />
-                  </div>
-                  <CardTitle className="font-heading text-xl font-semibold tracking-tight">
-                    Live Tarot Reading
-                  </CardTitle>
-                  <CardDescription>
-                    A focused tarot reading live in the TikTok room. One topic or one clear question in 20 minutes, with practical direction.
-                  </CardDescription>
-                  <p className="text-sm font-medium text-[var(--color-ink)]">
-                    20 minutes &middot;{" "}
-                    <span className="line-through text-[var(--color-muted)]">$20</span>{" "}
-                    <span className="font-bold text-[var(--color-oxblood)]">$1</span> with coupon code{" "}
-                    <span className="font-bold text-[var(--color-ink)]">LIVE</span>
-                  </p>
-                </CardHeader>
-                <CardFooter>
-                  <Link href={TIKTOK_LIVE_TAROT_URL} target="_blank" rel="noopener noreferrer">
-                    <Button type="button" size="sm" className="rounded-none">
-                      Book Now
-                    </Button>
-                  </Link>
-                </CardFooter>
-              </Card>
-              <Card className="rounded-none">
-                <CardHeader className="space-y-3">
-                  <div
-                    className="flex h-10 w-10 items-center justify-center"
-                    style={{ backgroundColor: "var(--color-rule)", color: "var(--color-ink)" }}
-                  >
-                    <TarotCardsIcon className="h-5 w-5" />
-                  </div>
-                  <CardTitle className="font-heading text-xl font-semibold tracking-tight">
-                    Live Astrology Reading
-                  </CardTitle>
-                  <CardDescription>
-                    A live 20-minute astrology reading in front of the room for one topic or question. An accurate birth time is required.
-                  </CardDescription>
-                  <p className="text-sm font-medium text-[var(--color-ink)]">20 minutes &middot; $20</p>
-                </CardHeader>
-                <CardFooter>
-                  <Link href={TIKTOK_LIVE_ASTROLOGY_URL} target="_blank" rel="noopener noreferrer">
-                    <Button type="button" size="sm" className="rounded-none">
-                      Book Now
-                    </Button>
-                  </Link>
-                </CardFooter>
-              </Card>
-            </div>
-          </Container>
-        </section>
-      ) : null}
 
       {/* BLOG */}
       <section
@@ -504,35 +393,29 @@ export default async function Home() {
               </h2>
             </div>
             <p className="md:col-span-7 text-base leading-relaxed text-[var(--color-muted)]">
-              One-on-one readings for people who want a structured conversation, not a performance. Tarot, astrology, or both, via Zoom or in person in Tulsa.
+              One-on-one readings for people who want a structured conversation, not a performance. Tarot or astrology, delivered as a written report or recorded video.
             </p>
           </div>
 
-          <div className="mt-12 border-y border-[var(--color-ink)] grid md:grid-cols-3 md:divide-x md:divide-[var(--color-rule)]">
+          <div className="mt-12 border-y border-[var(--color-ink)] grid md:grid-cols-2 md:divide-x md:divide-[var(--color-rule)]">
             {[
               {
                 name: "Tarot",
                 price: "From $25",
                 description:
-                  "Quick pulls, full written spreads, recorded video, or live sessions via Zoom or in person.",
+                  "Quick pulls, full written spreads, or recorded video readings. No birth data required.",
               },
               {
                 name: "Astrology",
                 price: "From $65",
                 description:
-                  "Hellenistic natal chart interpretation and transit forecasting. Requires accurate birth time.",
-              },
-              {
-                name: "Combined",
-                price: "From $225",
-                description:
-                  "Both systems in a single extended session. Chart for timing; cards for nuance.",
+                  "Hellenistic natal chart interpretation and transit forecasting, delivered as a written report. Requires accurate birth time.",
               },
             ].map((offer, index) => (
               <div
                 key={offer.name}
                 className={`p-7 md:p-8 flex flex-col gap-4 ${
-                  index < 2 ? "border-b md:border-b-0 border-[var(--color-rule)]" : ""
+                  index < 1 ? "border-b md:border-b-0 border-[var(--color-rule)]" : ""
                 }`}
               >
                 <div className="flex items-baseline justify-between gap-3">

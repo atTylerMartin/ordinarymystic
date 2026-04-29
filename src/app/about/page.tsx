@@ -27,7 +27,7 @@ const faqs = [
   {
     question: "What happens in a reading?",
     answer:
-      "We start by clarifying your questions and context. From there, we look at cards or your chart together, translating symbolism into clear language and practical takeaways. You can ask follow-up questions at any point, since it's a dialogue, not a monologue.",
+      "You send your question and context. I work through the cards or your chart, translate the symbolism into clear language and practical takeaways, and deliver everything as a written report or recorded video you can revisit. No call, no scheduling.",
   },
   {
     question: "Who is this for?",
@@ -62,7 +62,7 @@ const workItems = [
     eyebrow: "Readings",
     title: "Work With Me",
     description:
-      "One-on-one sessions where we work through your questions together. Collaborative, grounded, practical.",
+      "Written and recorded video readings on your question and context. Grounded, structured, practical.",
     href: "/book",
     cta: "See Options",
   },

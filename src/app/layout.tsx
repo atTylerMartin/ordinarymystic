@@ -7,7 +7,7 @@ import { SiteHeader } from "@/components/site-header";
 import { WeekendPromoBanner } from "@/components/weekend-promo-banner";
 import { Container } from "@/components/container";
 import { PersonJsonLd } from "@/components/seo/person-json-ld";
-import { DIGITAL_TAROT_APP_URL, SITE_LIVE_MODE, TIKTOK_URL } from "@/lib/config";
+import { DIGITAL_TAROT_APP_URL, SITE_LIVE_MODE } from "@/lib/config";
 import { SITE_NAME, SITE_URL } from "@/lib/site";
 import "./globals.css";
 
@@ -170,26 +170,6 @@ export default function RootLayout({
                         className="text-[#9a8d7d] transition-colors hover:text-[var(--color-bone)]"
                       >
                         Email
-                      </a>
-                    </li>
-                    <li>
-                      <a
-                        href="https://www.youtube.com/@OrdinaryMysticReadings"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-[#9a8d7d] transition-colors hover:text-[var(--color-bone)]"
-                      >
-                        YouTube
-                      </a>
-                    </li>
-                    <li>
-                      <a
-                        href={TIKTOK_URL}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-[#9a8d7d] transition-colors hover:text-[var(--color-bone)]"
-                      >
-                        TikTok
                       </a>
                     </li>
                   </ul>

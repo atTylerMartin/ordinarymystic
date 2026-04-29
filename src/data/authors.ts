@@ -17,16 +17,7 @@ export const AUTHORS: Record<string, AuthorProfile> = {
     "bio": "Practical astrology and tarot for skeptics who want signal over noise.",
     "description": "Tyler Martin is a tarot reader and astrologer based in Tulsa, Oklahoma. He practices Hellenistic astrology and writes grounded essays translating symbolic systems into practical frameworks for decision-making, timing, and self-reflection. His work is built for skeptics and serious practitioners who want signal over noise.",
     "image": "/images/profile-img.png",
-    "socials": [
-      {
-        "label": "YouTube",
-        "url": "https://www.youtube.com/@OrdinaryMysticReadings"
-      },
-      {
-        "label": "TikTok",
-        "url": "https://www.tiktok.com/@ordinarymysticreadings"
-      }
-    ]
+    "socials": []
   }
 };
 

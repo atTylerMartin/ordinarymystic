@@ -40,7 +40,7 @@ export default function ThankYouPage() {
           <p className="font-medium text-[var(--color-ink)]">What happens next</p>
           <p>You&apos;ll receive a payment receipt from Stripe.</p>
           <p>I&apos;ll follow up within 24–48 hours with details specific to your reading.</p>
-          <p>For live sessions, we&apos;ll confirm scheduling at that point.</p>
+          <p>Your written report or recorded video will be delivered by email.</p>
         </div>
 
         <Link href="/">
