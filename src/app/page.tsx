@@ -2,12 +2,9 @@ import Link from "next/link";
 import Image from "next/image";
 import type { Metadata } from "next";
 import {
-  ArrowRight,
-  CalendarDays,
   ChevronRight,
   FileText,
   ExternalLink,
-  Heart,
 } from "lucide-react";
 import { TarotCardsIcon } from "@/components/tarot-cards-icon";
 import { Button } from "@/components/button";
@@ -69,15 +66,30 @@ export default async function Home() {
             Practical tarot and astrology without the woo. Affordable readings and resources for bringing the mystical into your ordinary life.
           </p>
           <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
-            <a href="#book">
+            <a
+              href="https://cash.app/$ordinarymystic"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <Button
                 type="button"
                 size="lg"
                 className="bg-white text-[#151326] hover:bg-slate-100 focus-visible:ring-white focus-visible:ring-offset-[#151326]"
-                leftIcon={<CalendarDays className="h-4 w-4" />}
-                rightIcon={<ArrowRight className="h-4 w-4" />}
               >
-                Book a reading
+                Pay via Cash App
+              </Button>
+            </a>
+            <a
+              href="https://paypal.me/ordinarymystic"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Button
+                type="button"
+                size="lg"
+                className="bg-white text-[#151326] hover:bg-slate-100 focus-visible:ring-white focus-visible:ring-offset-[#151326]"
+              >
+                Pay via PayPal
               </Button>
             </a>
           </div>
@@ -172,7 +184,7 @@ export default async function Home() {
           <h2 className="mt-2 font-heading text-center text-3xl font-black tracking-tight text-slate-900 sm:text-4xl">
             Sittings &amp; Engagements
           </h2>
-          <div className="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+          <div className="mx-auto mt-10 grid max-w-3xl gap-6 md:grid-cols-2">
             <Card>
               <CardHeader className="space-y-3">
                 <div className="flex h-10 w-10 items-center justify-center rounded-full bg-[#2d2a4a] text-white">
@@ -192,40 +204,12 @@ export default async function Home() {
                 <div className="flex h-10 w-10 items-center justify-center rounded-full bg-[#2d2a4a] text-white">
                   <FileText className="h-5 w-5" />
                 </div>
-                <CardTitle>Written Reading</CardTitle>
+                <CardTitle>Written or Recorded Reading</CardTitle>
                 <CardDescription>
-                  Send your question. You receive a careful, considered reading as a written document.
+                  Send your question. You receive a careful, considered reading delivered as a written document or a recorded video, your choice.
                 </CardDescription>
                 <p className="text-sm font-medium text-slate-700">
                   Delivered in 5 to 7 days · $50
-                </p>
-              </CardHeader>
-            </Card>
-            <Card>
-              <CardHeader className="space-y-3">
-                <div className="flex h-10 w-10 items-center justify-center rounded-full bg-[#2d2a4a] text-white">
-                  <CalendarDays className="h-5 w-5" />
-                </div>
-                <CardTitle>Private Event</CardTitle>
-                <CardDescription>
-                  Readings for guests at parties, dinners, and corporate functions. I bring everything; you bring the room.
-                </CardDescription>
-                <p className="text-sm font-medium text-slate-700">
-                  Two-hour minimum · $135/hour · +$25 per guest over 8
-                </p>
-              </CardHeader>
-            </Card>
-            <Card>
-              <CardHeader className="space-y-3">
-                <div className="flex h-10 w-10 items-center justify-center rounded-full bg-[#2d2a4a] text-white">
-                  <Heart className="h-5 w-5" />
-                </div>
-                <CardTitle>Wedding</CardTitle>
-                <CardDescription>
-                  A reader on hand for cocktail or reception hours. A calm corner of the room and a memorable conversation for your guests.
-                </CardDescription>
-                <p className="text-sm font-medium text-slate-700">
-                  Two hours included · from $450
                 </p>
               </CardHeader>
             </Card>
