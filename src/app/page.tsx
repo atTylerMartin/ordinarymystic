@@ -5,10 +5,9 @@ import {
   ArrowRight,
   CalendarDays,
   ChevronRight,
-  Video,
   FileText,
   ExternalLink,
-  Sparkles,
+  Heart,
 } from "lucide-react";
 import { TarotCardsIcon } from "@/components/tarot-cards-icon";
 import { Button } from "@/components/button";
@@ -24,13 +23,8 @@ import { ScrollOnHash } from "@/components/scroll-on-hash";
 import {
   CONTACT_EMAIL,
   DIGITAL_TAROT_APP_URL,
-  LIVE_READINGS_URL,
-  RECORDED_READING_URL,
   SITE_LIVE_MODE,
-  TIKTOK_LIVE_ASTROLOGY_URL,
-  TIKTOK_LIVE_TAROT_URL,
   TIKTOK_URL,
-  WRITTEN_REPORT_URL,
 } from "@/lib/config";
 
 export const metadata: Metadata = {
@@ -165,140 +159,86 @@ export default async function Home() {
         </div>
       </section>
 
-      {SITE_LIVE_MODE ? (
-        <section
-          className={`relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen ${sectionPadding}`}
-          style={{ backgroundColor: "#faf8f6" }}
-        >
-          <Container className="px-4 sm:px-6">
-            <h2 className="font-heading text-center text-3xl font-black tracking-tight text-slate-900 sm:text-4xl">
-              Book a TikTok Live Reading
-            </h2>
-            <div className="mx-auto mt-10 grid max-w-4xl gap-6 md:grid-cols-2">
-              <Card>
-                <CardHeader className="space-y-3">
-                  <div className="flex h-10 w-10 items-center justify-center rounded-full bg-[#2d2a4a] text-white">
-                    <TarotCardsIcon className="h-5 w-5" />
-                  </div>
-                  <CardTitle>Live Tarot Reading</CardTitle>
-                  <CardDescription>
-                    A focused tarot reading live in the TikTok room. We&apos;ll keep it to one topic or one clear question in 20 minutes, with practical direction and no deep-dive detours.
-                  </CardDescription>
-                  <p className="text-sm font-medium text-slate-700">
-                    20 minutes · <span className="line-through text-slate-500">$20</span>{" "}
-                    <span className="font-bold text-rose-700">$0</span> with coupon code{" "}
-                    <span className="font-bold text-slate-900">LIVE</span>
-                  </p>
-                </CardHeader>
-                <CardFooter>
-                  <Link href={TIKTOK_LIVE_TAROT_URL} target="_blank" rel="noopener noreferrer">
-                    <Button type="button" size="sm">
-                      Book Now
-                    </Button>
-                  </Link>
-                </CardFooter>
-              </Card>
-              <Card>
-                <CardHeader className="space-y-3">
-                  <div className="flex h-10 w-10 items-center justify-center rounded-full bg-[#2d2a4a] text-white">
-                    <Sparkles className="h-5 w-5" />
-                  </div>
-                  <CardTitle>Live Astrology Reading</CardTitle>
-                  <CardDescription>
-                    A live 20-minute astrology reading in front of the room for one topic or one question. It&apos;s meant to be clear and concise, and an accurate birth time is required.
-                  </CardDescription>
-                  <p className="text-sm font-medium text-slate-700">20 minutes · $20</p>
-                </CardHeader>
-                <CardFooter>
-                  <Link href={TIKTOK_LIVE_ASTROLOGY_URL} target="_blank" rel="noopener noreferrer">
-                    <Button type="button" size="sm">
-                      Book Now
-                    </Button>
-                  </Link>
-                </CardFooter>
-              </Card>
-            </div>
-          </Container>
-        </section>
-      ) : null}
-
-      {/* SECTION: Book a Reading — warm off-white */}
+      {/* SECTION: Sittings & Engagements — warm off-white */}
       <section
         id="book"
         className={`relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen ${sectionPadding}`}
         style={{ backgroundColor: "#faf8f6" }}
       >
         <Container className="px-4 sm:px-6">
-          <h2 className="font-heading text-center text-3xl font-black tracking-tight text-slate-900 sm:text-4xl">
-            {SITE_LIVE_MODE ? "Book a Private Reading" : "Book a Reading"}
+          <p className="text-center text-sm font-medium uppercase tracking-widest text-slate-500">
+            Offerings
+          </p>
+          <h2 className="mt-2 font-heading text-center text-3xl font-black tracking-tight text-slate-900 sm:text-4xl">
+            Sittings &amp; Engagements
           </h2>
-          <div className="mt-10 grid gap-6 md:grid-cols-3">
+          <div className="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
             <Card>
               <CardHeader className="space-y-3">
                 <div className="flex h-10 w-10 items-center justify-center rounded-full bg-[#2d2a4a] text-white">
                   <TarotCardsIcon className="h-5 w-5" />
                 </div>
-                <CardTitle>Live Reading</CardTitle>
+                <CardTitle>Private Reading</CardTitle>
                 <CardDescription>
-                  One-on-one tarot or astrology in real time—via Zoom or in person in Tulsa, OK. Bring your questions and we&apos;ll work through them together.
+                  In person in Tulsa or by video. Bring a question or do not. Either works.
                 </CardDescription>
-                <p className="text-sm font-medium text-slate-700">1 hour · $60</p>
+                <p className="text-sm font-medium text-slate-700">
+                  15, 30, or 60 minutes · $25 / $65 / $100
+                </p>
               </CardHeader>
-              <CardFooter>
-                <Link href={LIVE_READINGS_URL} target="_blank">
-                  <Button type="button" size="sm">
-                    Book Now
-                  </Button>
-                </Link>
-              </CardFooter>
-            </Card>
-            <Card>
-              <CardHeader className="space-y-3">
-                <div className="flex h-10 w-10 items-center justify-center rounded-full bg-[#2d2a4a] text-white">
-                  <Video className="h-5 w-5" />
-                </div>
-                <CardTitle>Recorded Reading</CardTitle>
-                <CardDescription>
-                  A recorded reading you can watch on your own time. Send your question and context; receive a private video and notes.
-                </CardDescription>
-                <p className="text-sm font-medium text-slate-700">30 minutes · $30</p>
-              </CardHeader>
-              <CardFooter>
-                <Link href={RECORDED_READING_URL} target="_blank">
-                  <Button type="button" size="sm">
-                    Book Now
-                  </Button>
-                </Link>
-              </CardFooter>
             </Card>
             <Card>
               <CardHeader className="space-y-3">
                 <div className="flex h-10 w-10 items-center justify-center rounded-full bg-[#2d2a4a] text-white">
                   <FileText className="h-5 w-5" />
                 </div>
-                <CardTitle>Written Report</CardTitle>
+                <CardTitle>Written Reading</CardTitle>
                 <CardDescription>
-                  Your reading delivered as a PDF report. No video, no call. Ideal if you prefer to read and revisit at your own pace.
+                  Send your question. You receive a careful, considered reading as a written document.
                 </CardDescription>
-                <p className="text-sm font-medium text-slate-700">$15</p>
+                <p className="text-sm font-medium text-slate-700">
+                  Delivered in 5 to 7 days · $50
+                </p>
               </CardHeader>
-              <CardFooter>
-                <Link href={WRITTEN_REPORT_URL} target="_blank">
-                  <Button type="button" size="sm">
-                    Book Now
-                  </Button>
-                </Link>
-              </CardFooter>
+            </Card>
+            <Card>
+              <CardHeader className="space-y-3">
+                <div className="flex h-10 w-10 items-center justify-center rounded-full bg-[#2d2a4a] text-white">
+                  <CalendarDays className="h-5 w-5" />
+                </div>
+                <CardTitle>Private Event</CardTitle>
+                <CardDescription>
+                  Readings for guests at parties, dinners, and corporate functions. I bring everything; you bring the room.
+                </CardDescription>
+                <p className="text-sm font-medium text-slate-700">
+                  Two-hour minimum · $135/hour · +$25 per guest over 8
+                </p>
+              </CardHeader>
+            </Card>
+            <Card>
+              <CardHeader className="space-y-3">
+                <div className="flex h-10 w-10 items-center justify-center rounded-full bg-[#2d2a4a] text-white">
+                  <Heart className="h-5 w-5" />
+                </div>
+                <CardTitle>Wedding</CardTitle>
+                <CardDescription>
+                  A reader on hand for cocktail or reception hours. A calm corner of the room and a memorable conversation for your guests.
+                </CardDescription>
+                <p className="text-sm font-medium text-slate-700">
+                  Two hours included · from $450
+                </p>
+              </CardHeader>
             </Card>
           </div>
-          <p className="mt-8 text-center">
-            <Link
-              href="/book"
-              className="inline-flex items-center gap-1.5 text-sm font-medium text-slate-700 underline-offset-4 hover:text-slate-900 hover:underline"
+          <p className="mt-8 text-center text-sm text-slate-600">
+            To inquire or book, send via Cash App or PayPal above, or{" "}
+            <a
+              href={`mailto:${CONTACT_EMAIL}`}
+              className="font-medium text-slate-800 underline underline-offset-4 hover:text-slate-900"
             >
-              Learn More
-              <ChevronRight className="h-4 w-4" aria-hidden />
-            </Link>
+              email me
+            </a>
+            .
           </p>
         </Container>
       </section>
