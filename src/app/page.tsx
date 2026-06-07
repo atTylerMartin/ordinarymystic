@@ -261,14 +261,32 @@ export default async function Home() {
             </Card>
           </div>
           <p className="mt-8 text-center text-sm text-slate-600">
-            Prefer Cash App or PayPal? Buttons are in the header above &mdash; just{" "}
+            Prefer{" "}
+            <a
+              href="https://cash.app/$ordinarymystic"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-medium text-slate-800 underline underline-offset-4 hover:text-slate-900"
+            >
+              Cash App
+            </a>{" "}
+            or{" "}
+            <a
+              href="https://paypal.me/ordinarymystic"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-medium text-slate-800 underline underline-offset-4 hover:text-slate-900"
+            >
+              PayPal
+            </a>
+            . That&apos;s fine too. Just{" "}
             <a
               href={`mailto:${CONTACT_EMAIL}`}
               className="font-medium text-slate-800 underline underline-offset-4 hover:text-slate-900"
             >
               email me
             </a>{" "}
-            your details after.
+            your details after you submit payment. If you&apos;re on live, just let me know where you submitted the payment. Thanks!
           </p>
         </Container>
       </section>
