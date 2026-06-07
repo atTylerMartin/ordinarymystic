@@ -22,9 +22,6 @@ import {
   CONTACT_EMAIL,
   DIGITAL_TAROT_APP_URL,
   LIVE_MINI_URL,
-  PRIVATE_15_URL,
-  PRIVATE_30_URL,
-  PRIVATE_60_URL,
   SITE_LIVE_MODE,
   TIKTOK_URL,
   WRITTEN_RECORDED_URL,
@@ -198,7 +195,7 @@ export default async function Home() {
                 </div>
                 <CardTitle>Live Mini Reading</CardTitle>
                 <CardDescription>
-                  A quick on-stream pull during my TikTok live. Drop your handle and I&apos;ll pull a card for you on air.
+                  I&apos;ll spend 5&ndash;10 minutes with your question on my TikTok live, pulling as many cards as it takes. Quick pulls are free throughout the stream &mdash; this gets you a longer sit.
                 </CardDescription>
                 <p className="text-sm font-medium text-slate-700">$5</p>
               </CardHeader>
@@ -222,41 +219,16 @@ export default async function Home() {
                 </div>
                 <CardTitle>Private Reading</CardTitle>
                 <CardDescription>
-                  In person in Tulsa or by video. Bring a question or do not. Either works.
+                  Zoom or in person in Tulsa. Bring a question or don&apos;t &mdash; either works.
                 </CardDescription>
                 <p className="text-sm font-medium text-slate-700">
-                  15, 30, or 60 minutes
+                  15, 30, or 60 minutes · from $25
                 </p>
               </CardHeader>
-              <CardFooter className="mt-auto flex flex-col gap-2">
-                <Link
-                  href={PRIVATE_15_URL}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="w-full"
-                >
+              <CardFooter className="mt-auto">
+                <Link href="/book/private" className="w-full">
                   <Button type="button" size="sm" className="w-full">
-                    15 min · $25
-                  </Button>
-                </Link>
-                <Link
-                  href={PRIVATE_30_URL}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="w-full"
-                >
-                  <Button type="button" size="sm" className="w-full">
-                    30 min · $65
-                  </Button>
-                </Link>
-                <Link
-                  href={PRIVATE_60_URL}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="w-full"
-                >
-                  <Button type="button" size="sm" className="w-full">
-                    60 min · $100
+                    Book a Private Reading
                   </Button>
                 </Link>
               </CardFooter>
