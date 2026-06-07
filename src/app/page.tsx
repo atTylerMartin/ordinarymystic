@@ -279,14 +279,15 @@ export default async function Home() {
             >
               PayPal
             </a>
-            . That&apos;s fine too. Just{" "}
+            ? That&apos;s fine too. Just{" "}
             <a
               href={`mailto:${CONTACT_EMAIL}`}
               className="font-medium text-slate-800 underline underline-offset-4 hover:text-slate-900"
             >
               email me
             </a>{" "}
-            your details after you submit payment. If you&apos;re on live, just let me know where you submitted the payment. Thanks!
+            your details after you submit a payment.
+            {SITE_LIVE_MODE ? " If you're on TikTok live, just let me know where you submitted the payment. Thanks!" : ""}
           </p>
         </Container>
       </section>
