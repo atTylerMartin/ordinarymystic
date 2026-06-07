@@ -297,32 +297,18 @@ export default async function Home() {
         style={{ backgroundColor: "#eef1f5" }}
       >
         <Container className="px-4 sm:px-6">
-          <h2 className="font-heading text-center text-3xl font-black tracking-tight text-slate-900 sm:text-4xl">
+          <p className="text-center text-sm font-medium uppercase tracking-widest text-slate-500">
+            Resources
+          </p>
+          <h2 className="mt-2 font-heading text-center text-3xl font-black tracking-tight text-slate-900 sm:text-4xl">
             Tools to Support Your Readings
           </h2>
           <div className="mt-10 grid gap-6 md:grid-cols-3">
             <Card className="flex flex-col">
               <CardHeader className="space-y-2">
-                <CardTitle>Simple Tarot Journal</CardTitle>
+                <CardTitle>Tarot Notion Dashboard</CardTitle>
                 <CardDescription>
-                  A simple, searchable Notion template to log readings and card pulls, build a living card library, and surface past insights when you need them.
-                </CardDescription>
-                <p className="text-xs text-slate-500">Simple & searchable</p>
-                <p className="text-sm font-medium text-slate-700">$12</p>
-              </CardHeader>
-              <CardFooter className="mt-auto">
-                <Link href="https://ordinarymystic.gumroad.com/l/tarotjournal" target="_blank" rel="noopener noreferrer">
-                  <Button type="button" size="sm">
-                    Buy now
-                  </Button>
-                </Link>
-              </CardFooter>
-            </Card>
-            <Card className="flex flex-col">
-              <CardHeader className="space-y-2">
-                <CardTitle>Complete Tarot Dashboard</CardTitle>
-                <CardDescription>
-                  Advanced Notion system to track readings in full detail—upright and reversed cards, contextual meanings, and statistics so your practice deepens over time.
+                  Advanced Notion system to track readings in full detail&mdash;upright and reversed cards, contextual meanings, and statistics so your practice deepens over time.
                 </CardDescription>
                 <p className="text-xs text-slate-500">Advanced & flexible</p>
                 <p className="text-sm font-medium text-slate-700">$32</p>
@@ -337,7 +323,23 @@ export default async function Home() {
             </Card>
             <Card className="flex flex-col">
               <CardHeader className="space-y-2">
-                <CardTitle>Digital Tarot</CardTitle>
+                <CardTitle>Querent AI Tarot Tool</CardTitle>
+                <CardDescription>
+                  A full notetaking suite for tarot readings, with an AI companion that learns your reading style and card meanings over time. Transcribe sessions, take AI-assisted notes, save spreads, export readings, manage clients, and more.
+                </CardDescription>
+                <p className="text-xs text-slate-500">AI-powered web app</p>
+              </CardHeader>
+              <CardFooter className="mt-auto">
+                <Link href="https://querent.app" target="_blank" rel="noopener noreferrer">
+                  <Button type="button" size="sm" rightIcon={<ExternalLink className="h-4 w-4" />}>
+                    Try now
+                  </Button>
+                </Link>
+              </CardFooter>
+            </Card>
+            <Card className="flex flex-col">
+              <CardHeader className="space-y-2">
+                <CardTitle>Digital Tarot Deck Simulator</CardTitle>
                 <CardDescription>
                   A free online desktop simulator app to shuffle, pull, and rearrange Tarot cards. This website is in beta, and mobile view is not currently supported.
                 </CardDescription>
