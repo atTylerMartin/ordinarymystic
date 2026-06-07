@@ -10,10 +10,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
 
   const staticRoutes: MetadataRoute.Sitemap = [
     "",
-    "/book",
     "/tools",
-    "/about",
-    "/faq",
     "/tulsa-tarot-reading",
     "/tulsa-astrology-reading",
     "/login",

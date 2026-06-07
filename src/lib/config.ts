@@ -2,17 +2,15 @@
 // Set to true when you are live on TikTok.
 export const SITE_LIVE_MODE = true;
 export const TIKTOK_URL = "https://www.tiktok.com/@ordinarymysticreadings";
-export const TIKTOK_LIVE_TAROT_URL = "https://buy.stripe.com/bJe9AV86gh178DI53B6Zy04";
-export const TIKTOK_LIVE_ASTROLOGY_URL = "https://buy.stripe.com/7sY00lfyI6mt2fkcw36Zy03";
 
-export const LIVE_READINGS_URL =
-  "https://buy.stripe.com/eVq14p2LW129cTY53B6Zy01";
+// ─── Stripe Payment Links (live mode) ──────────────────────────────────────────
+// Created 2026-06-07 for the TikTok landing page.
 
-export const RECORDED_READING_URL =
-  "https://buy.stripe.com/7sYfZj4U47qx5rw3Zx6Zy02";
-
-export const WRITTEN_REPORT_URL =
-  "https://buy.stripe.com/28E8wR5Y8h17g6adA76Zy00";
+export const PRIVATE_15_URL = "https://buy.stripe.com/14A5kFaeocKR3joeEb6Zy0D"; // $25
+export const PRIVATE_30_URL = "https://buy.stripe.com/eVqfZj2LWcKR2fkgMj6Zy0E"; // $65
+export const PRIVATE_60_URL = "https://buy.stripe.com/6oU14pcmw3ah3jo7bJ6Zy0F"; // $100
+export const WRITTEN_RECORDED_URL = "https://buy.stripe.com/9B628t1HS6mtbPU53B6Zy0G"; // $60
+export const LIVE_MINI_URL = "https://buy.stripe.com/dRm6oJeuEdOVaLQdA76Zy0H"; // $5
 
 export const DIGITAL_TAROT_APP_URL = "https://digitaltarot.app";
 

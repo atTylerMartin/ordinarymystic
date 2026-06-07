@@ -5,6 +5,7 @@ import {
   ChevronRight,
   FileText,
   ExternalLink,
+  Video,
 } from "lucide-react";
 import { TarotCardsIcon } from "@/components/tarot-cards-icon";
 import { Button } from "@/components/button";
@@ -20,8 +21,13 @@ import { ScrollOnHash } from "@/components/scroll-on-hash";
 import {
   CONTACT_EMAIL,
   DIGITAL_TAROT_APP_URL,
+  LIVE_MINI_URL,
+  PRIVATE_15_URL,
+  PRIVATE_30_URL,
+  PRIVATE_60_URL,
   SITE_LIVE_MODE,
   TIKTOK_URL,
+  WRITTEN_RECORDED_URL,
 } from "@/lib/config";
 
 export const metadata: Metadata = {
@@ -171,7 +177,7 @@ export default async function Home() {
         </div>
       </section>
 
-      {/* SECTION: Sittings & Engagements — warm off-white */}
+      {/* SECTION: Book a Reading — warm off-white */}
       <section
         id="book"
         className={`relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen ${sectionPadding}`}
@@ -182,10 +188,34 @@ export default async function Home() {
             Offerings
           </p>
           <h2 className="mt-2 font-heading text-center text-3xl font-black tracking-tight text-slate-900 sm:text-4xl">
-            Sittings &amp; Engagements
+            Book a Reading
           </h2>
-          <div className="mx-auto mt-10 grid max-w-3xl gap-6 md:grid-cols-2">
-            <Card>
+          <div className="mx-auto mt-10 grid max-w-5xl gap-6 md:grid-cols-3">
+            <Card className="flex flex-col">
+              <CardHeader className="space-y-3">
+                <div className="flex h-10 w-10 items-center justify-center rounded-full bg-[#2d2a4a] text-white">
+                  <Video className="h-5 w-5" />
+                </div>
+                <CardTitle>Live Mini Reading</CardTitle>
+                <CardDescription>
+                  A quick on-stream pull during my TikTok live. Drop your handle and I&apos;ll pull a card for you on air.
+                </CardDescription>
+                <p className="text-sm font-medium text-slate-700">$5</p>
+              </CardHeader>
+              <CardFooter className="mt-auto">
+                <Link
+                  href={LIVE_MINI_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-full"
+                >
+                  <Button type="button" size="sm" className="w-full">
+                    Send $5 · Mini Reading
+                  </Button>
+                </Link>
+              </CardFooter>
+            </Card>
+            <Card className="flex flex-col">
               <CardHeader className="space-y-3">
                 <div className="flex h-10 w-10 items-center justify-center rounded-full bg-[#2d2a4a] text-white">
                   <TarotCardsIcon className="h-5 w-5" />
@@ -195,11 +225,43 @@ export default async function Home() {
                   In person in Tulsa or by video. Bring a question or do not. Either works.
                 </CardDescription>
                 <p className="text-sm font-medium text-slate-700">
-                  15, 30, or 60 minutes · $25 / $65 / $100
+                  15, 30, or 60 minutes
                 </p>
               </CardHeader>
+              <CardFooter className="mt-auto flex flex-col gap-2">
+                <Link
+                  href={PRIVATE_15_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-full"
+                >
+                  <Button type="button" size="sm" className="w-full">
+                    15 min · $25
+                  </Button>
+                </Link>
+                <Link
+                  href={PRIVATE_30_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-full"
+                >
+                  <Button type="button" size="sm" className="w-full">
+                    30 min · $65
+                  </Button>
+                </Link>
+                <Link
+                  href={PRIVATE_60_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-full"
+                >
+                  <Button type="button" size="sm" className="w-full">
+                    60 min · $100
+                  </Button>
+                </Link>
+              </CardFooter>
             </Card>
-            <Card>
+            <Card className="flex flex-col">
               <CardHeader className="space-y-3">
                 <div className="flex h-10 w-10 items-center justify-center rounded-full bg-[#2d2a4a] text-white">
                   <FileText className="h-5 w-5" />
@@ -209,20 +271,32 @@ export default async function Home() {
                   Send your question. You receive a careful, considered reading delivered as a written document or a recorded video, your choice.
                 </CardDescription>
                 <p className="text-sm font-medium text-slate-700">
-                  Delivered in 5 to 7 days · $50
+                  Delivered in 5 to 7 days · $60
                 </p>
               </CardHeader>
+              <CardFooter className="mt-auto">
+                <Link
+                  href={WRITTEN_RECORDED_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-full"
+                >
+                  <Button type="button" size="sm" className="w-full">
+                    Book · $60
+                  </Button>
+                </Link>
+              </CardFooter>
             </Card>
           </div>
           <p className="mt-8 text-center text-sm text-slate-600">
-            To inquire or book, send via Cash App or PayPal above, or{" "}
+            Prefer Cash App or PayPal? Buttons are in the header above &mdash; just{" "}
             <a
               href={`mailto:${CONTACT_EMAIL}`}
               className="font-medium text-slate-800 underline underline-offset-4 hover:text-slate-900"
             >
               email me
-            </a>
-            .
+            </a>{" "}
+            your details after.
           </p>
         </Container>
       </section>
