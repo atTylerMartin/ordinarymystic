@@ -1,6 +1,6 @@
 // LIVE MODE TOGGLE:
 // Set to true when you are live on TikTok.
-export const SITE_LIVE_MODE = true;
+export const SITE_LIVE_MODE = false;
 export const TIKTOK_URL = "https://www.tiktok.com/@ordinarymysticreadings";
 
 // ─── Stripe Payment Links (live mode) ──────────────────────────────────────────
