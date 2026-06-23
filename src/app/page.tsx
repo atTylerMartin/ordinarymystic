@@ -1,13 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import type { Metadata } from "next";
-import {
-  ChevronRight,
-  FileText,
-  ExternalLink,
-  Video,
-} from "lucide-react";
-import { TarotCardsIcon } from "@/components/tarot-cards-icon";
+import { ChevronRight, ExternalLink, Clock } from "lucide-react";
 import { Button } from "@/components/button";
 import {
   Card,
@@ -21,16 +15,63 @@ import { ScrollOnHash } from "@/components/scroll-on-hash";
 import {
   CONTACT_EMAIL,
   DIGITAL_TAROT_APP_URL,
-  LIVE_MINI_URL,
+  PRIVATE_15_URL,
+  PRIVATE_30_URL,
+  PRIVATE_60_URL,
+  RECORDED_15_URL,
+  RECORDED_30_URL,
+  RECORDED_60_URL,
   SITE_LIVE_MODE,
   TIKTOK_URL,
-  WRITTEN_RECORDED_URL,
 } from "@/lib/config";
+
+type Offering = {
+  duration: string;
+  focus: string;
+  summary: string;
+  liveUrl: string;
+  livePrice: number;
+  recordedUrl: string;
+  recordedPrice: number;
+};
+
+const OFFERINGS: Offering[] = [
+  {
+    duration: "15 minutes",
+    focus: "Tarot",
+    summary:
+      "A focused sit-down for a single question or topic. Tarot only.",
+    liveUrl: PRIVATE_15_URL,
+    livePrice: 25,
+    recordedUrl: RECORDED_15_URL,
+    recordedPrice: 10,
+  },
+  {
+    duration: "30 minutes",
+    focus: "Tarot and/or astrology",
+    summary:
+      "Room to look at a question from a few angles, or cover two related ones.",
+    liveUrl: PRIVATE_30_URL,
+    livePrice: 65,
+    recordedUrl: RECORDED_30_URL,
+    recordedPrice: 25,
+  },
+  {
+    duration: "60 minutes",
+    focus: "Tarot and/or astrology",
+    summary:
+      "A full reading — multiple questions, deeper exploration, no rush.",
+    liveUrl: PRIVATE_60_URL,
+    livePrice: 100,
+    recordedUrl: RECORDED_60_URL,
+    recordedPrice: 50,
+  },
+];
 
 export const metadata: Metadata = {
   title: "Ordinary Mystic Readings – Practical Tarot and Astrology Without the Woo",
   description:
-    "Practical tarot and astrology without the woo. Book a live reading (Zoom or Tulsa), a recorded reading, or a written PDF report.",
+    "Practical tarot and astrology without the woo. Book a live reading (Zoom or Tulsa) or a recorded reading — 15, 30, or 60 minutes.",
 };
 
 const sectionPadding = "py-16 sm:py-20";
@@ -188,77 +229,47 @@ export default async function Home() {
             Book a Reading
           </h2>
           <div className="mx-auto mt-10 grid max-w-5xl gap-6 md:grid-cols-3">
-            <Card className="flex flex-col">
-              <CardHeader className="space-y-3">
-                <div className="flex h-10 w-10 items-center justify-center rounded-full bg-[#2d2a4a] text-white">
-                  <Video className="h-5 w-5" />
-                </div>
-                <CardTitle>Live Mini Reading</CardTitle>
-                <CardDescription>
-                  I&apos;ll spend 5&ndash;10 minutes with your question on my TikTok live, pulling as many cards as it takes. Quick pulls are free throughout the stream &mdash; this gets you a longer sit.
-                </CardDescription>
-                <p className="text-sm font-medium text-slate-700">$5</p>
-              </CardHeader>
-              <CardFooter className="mt-auto">
-                <Link
-                  href={LIVE_MINI_URL}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="w-full"
-                >
-                  <Button type="button" size="sm" className="w-full">
-                    Send $5 · Mini Reading
-                  </Button>
-                </Link>
-              </CardFooter>
-            </Card>
-            <Card className="flex flex-col">
-              <CardHeader className="space-y-3">
-                <div className="flex h-10 w-10 items-center justify-center rounded-full bg-[#2d2a4a] text-white">
-                  <TarotCardsIcon className="h-5 w-5" />
-                </div>
-                <CardTitle>Private Reading</CardTitle>
-                <CardDescription>
-                  Zoom or in person in Tulsa. Bring a question or don&apos;t &mdash; either works.
-                </CardDescription>
-                <p className="text-sm font-medium text-slate-700">
-                  15, 30, or 60 minutes · from $25
-                </p>
-              </CardHeader>
-              <CardFooter className="mt-auto">
-                <Link href="/book/private" className="w-full">
-                  <Button type="button" size="sm" className="w-full">
-                    Book a Private Reading
-                  </Button>
-                </Link>
-              </CardFooter>
-            </Card>
-            <Card className="flex flex-col">
-              <CardHeader className="space-y-3">
-                <div className="flex h-10 w-10 items-center justify-center rounded-full bg-[#2d2a4a] text-white">
-                  <FileText className="h-5 w-5" />
-                </div>
-                <CardTitle>Written or Recorded Reading</CardTitle>
-                <CardDescription>
-                  Send your question. You receive a careful, considered reading delivered as a written document or a recorded video, your choice.
-                </CardDescription>
-                <p className="text-sm font-medium text-slate-700">
-                  Delivered in 5 to 7 days · $60
-                </p>
-              </CardHeader>
-              <CardFooter className="mt-auto">
-                <Link
-                  href={WRITTEN_RECORDED_URL}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="w-full"
-                >
-                  <Button type="button" size="sm" className="w-full">
-                    Book · $60
-                  </Button>
-                </Link>
-              </CardFooter>
-            </Card>
+            {OFFERINGS.map((opt) => (
+              <Card key={opt.duration} className="flex flex-col">
+                <CardHeader className="space-y-3">
+                  <div className="flex h-10 w-10 items-center justify-center rounded-full bg-[#2d2a4a] text-white">
+                    <Clock className="h-5 w-5" />
+                  </div>
+                  <CardTitle>{opt.duration}</CardTitle>
+                  <p className="text-xs font-medium uppercase tracking-wide text-slate-500">
+                    {opt.focus}
+                  </p>
+                  <CardDescription>{opt.summary}</CardDescription>
+                </CardHeader>
+                <CardFooter className="mt-auto flex-col justify-start gap-2">
+                  <Link
+                    href={opt.liveUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-full"
+                  >
+                    <Button type="button" size="sm" className="w-full">
+                      Book a live · ${opt.livePrice}
+                    </Button>
+                  </Link>
+                  <Link
+                    href={opt.recordedUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-full"
+                  >
+                    <Button
+                      type="button"
+                      size="sm"
+                      variant="outline"
+                      className="w-full"
+                    >
+                      Book a recording · ${opt.recordedPrice}
+                    </Button>
+                  </Link>
+                </CardFooter>
+              </Card>
+            ))}
           </div>
           <p className="mt-8 text-center text-sm text-slate-600">
             Prefer{" "}
@@ -287,7 +298,6 @@ export default async function Home() {
               email me
             </a>{" "}
             your details after you submit a payment.
-            {SITE_LIVE_MODE ? " If you're on TikTok live, just let me know where you submitted the payment. Thanks!" : ""}
           </p>
         </Container>
       </section>
