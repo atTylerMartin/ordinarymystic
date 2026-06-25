@@ -63,7 +63,7 @@ const OFFERINGS: Offering[] = [
     summary:
       "A full reading — multiple questions, deeper exploration, no rush.",
     liveUrl: PRIVATE_60_URL,
-    livePrice: 100,
+    livePrice: 125,
     recordedUrl: RECORDED_60_URL,
     recordedPrice: 50,
   },
@@ -72,7 +72,7 @@ const OFFERINGS: Offering[] = [
 export const metadata: Metadata = {
   title: "Ordinary Mystic Readings – Practical Tarot and Astrology Without the Woo",
   description:
-    "Practical tarot and astrology without the woo. Book a live reading (Zoom or Tulsa) or a recorded reading — 15, 30, or 60 minutes.",
+    "Practical tarot and astrology without the woo. Book a one-on-one reading (Zoom or Tulsa) or a recorded reading — 15, 30, or 60 minutes.",
 };
 
 const sectionPadding = "py-16 sm:py-20";
@@ -253,7 +253,7 @@ export default async function Home() {
                     className="w-full"
                   >
                     <Button type="button" size="sm" className="w-full">
-                      Book a live · ${opt.livePrice}
+                      Book a one-on-one · ${opt.livePrice}
                     </Button>
                   </Link>
                   <Link

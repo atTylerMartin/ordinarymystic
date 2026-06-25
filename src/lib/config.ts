@@ -7,7 +7,7 @@ export const TIKTOK_URL = "https://www.tiktok.com/@ordinarymysticreadings";
 // Live (Zoom or in-person Tulsa) — created 2026-06-07.
 export const PRIVATE_15_URL = "https://buy.stripe.com/14A5kFaeocKR3joeEb6Zy0D"; // $25
 export const PRIVATE_30_URL = "https://buy.stripe.com/eVqfZj2LWcKR2fkgMj6Zy0E"; // $65
-export const PRIVATE_60_URL = "https://buy.stripe.com/6oU14pcmw3ah3jo7bJ6Zy0F"; // $100
+export const PRIVATE_60_URL = "https://buy.stripe.com/dRmcN73Q07qx9HM0Nl6Zy0L"; // $125
 
 // Recorded readings — created 2026-06-23.
 export const RECORDED_15_URL = "https://buy.stripe.com/4gMfZjaeo4elbPU1Rp6Zy0I"; // $10
