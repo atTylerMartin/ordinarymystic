@@ -19,20 +19,21 @@ create index if not exists reviews_approved_created_idx
 
 alter table public.reviews enable row level security;
 
--- Anyone (publishable key → anon role) may read ONLY approved reviews.
+-- Anyone — logged in or not — may read ONLY approved reviews.
+-- (Both roles, so a signed-in admin/client still sees the public reviews.)
 drop policy if exists "Public can read approved reviews" on public.reviews;
 create policy "Public can read approved reviews"
   on public.reviews
   for select
-  to anon
+  to anon, authenticated
   using (status = 'approved');
 
--- Anyone (publishable key → anon role) may submit, but only as a pending review.
+-- Anyone — logged in or not — may submit, but only as a pending review.
 drop policy if exists "Public can submit pending reviews" on public.reviews;
 create policy "Public can submit pending reviews"
   on public.reviews
   for insert
-  to anon
+  to anon, authenticated
   with check (status = 'pending');
 
 -- No public update/delete policies → moderation happens via the Supabase
