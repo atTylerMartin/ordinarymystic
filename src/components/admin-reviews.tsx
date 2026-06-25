@@ -77,6 +77,28 @@ export function AdminReviews() {
     );
   }
 
+  const isAdmin = session.user.app_metadata?.role === "admin";
+  if (!isAdmin) {
+    return (
+      <Shell>
+        <div className="max-w-sm rounded-2xl border border-slate-200/80 bg-white p-6 shadow-md">
+          <p className="text-sm text-slate-700">
+            This account doesn’t have admin access.
+          </p>
+          <Button
+            type="button"
+            variant="outline"
+            size="sm"
+            className="mt-4"
+            onClick={() => supabase.auth.signOut()}
+          >
+            Sign out
+          </Button>
+        </div>
+      </Shell>
+    );
+  }
+
   return (
     <Shell>
       <Dashboard
