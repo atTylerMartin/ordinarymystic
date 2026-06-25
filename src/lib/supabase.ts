@@ -9,14 +9,20 @@ const anonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
  */
 export const isSupabaseConfigured = Boolean(url && anonKey);
 
+let client: SupabaseClient | null = null;
+
 /**
- * Anonymous, server-side Supabase client. Relies on Row Level Security:
- * the public may insert pending reviews and read approved ones. No user
- * session is persisted — this is used from server components / actions only.
+ * Anonymous Supabase client (publishable key → anon role). This site is a
+ * static export, so the browser talks to Supabase directly. Row Level Security
+ * lets the public insert pending reviews and read approved ones. Memoized to a
+ * single instance to avoid the "Multiple GoTrueClient instances" warning.
  */
 export function getSupabase(): SupabaseClient | null {
   if (!url || !anonKey) return null;
-  return createClient(url, anonKey, {
-    auth: { persistSession: false, autoRefreshToken: false },
-  });
+  if (!client) {
+    client = createClient(url, anonKey, {
+      auth: { persistSession: false, autoRefreshToken: false },
+    });
+  }
+  return client;
 }

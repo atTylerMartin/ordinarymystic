@@ -1,28 +1,82 @@
 "use client";
 
-import { useActionState, useState } from "react";
+import { useState, type FormEvent } from "react";
 import { Star } from "lucide-react";
 import { Button } from "@/components/button";
 import { cn } from "@/lib/utils";
-import {
-  submitReview,
-  type ReviewFormState,
-} from "@/app/actions/submit-review";
+import { getSupabase } from "@/lib/supabase";
 
-const initialState: ReviewFormState = { status: "idle", message: "" };
+const MAX_NAME = 80;
+const MIN_BODY = 10;
+const MAX_BODY = 1000;
 
 export function ReviewForm({ onSuccess }: { onSuccess?: () => void }) {
-  const [state, formAction, pending] = useActionState(
-    submitReview,
-    initialState,
-  );
   const [rating, setRating] = useState(0);
   const [hover, setHover] = useState(0);
+  const [pending, setPending] = useState(false);
+  const [error, setError] = useState("");
+  const [submitted, setSubmitted] = useState(false);
 
-  if (state.status === "success") {
+  async function handleSubmit(e: FormEvent<HTMLFormElement>) {
+    e.preventDefault();
+    setError("");
+
+    const form = e.currentTarget;
+    const data = new FormData(form);
+
+    // Honeypot: real users never fill this hidden field.
+    if (((data.get("company") as string) || "").trim() !== "") {
+      setSubmitted(true);
+      return;
+    }
+
+    const name = ((data.get("name") as string) || "").trim();
+    const body = ((data.get("body") as string) || "").trim();
+
+    if (!name || name.length > MAX_NAME) {
+      setError("Please enter your name.");
+      return;
+    }
+    if (!Number.isInteger(rating) || rating < 1 || rating > 5) {
+      setError("Please choose a star rating.");
+      return;
+    }
+    if (body.length < MIN_BODY) {
+      setError(`Please write at least ${MIN_BODY} characters.`);
+      return;
+    }
+    if (body.length > MAX_BODY) {
+      setError("That review is a little too long.");
+      return;
+    }
+
+    const supabase = getSupabase();
+    if (!supabase) {
+      setError("Reviews are temporarily unavailable. Please try again later.");
+      return;
+    }
+
+    setPending(true);
+    const { error: insertError } = await supabase
+      .from("reviews")
+      .insert({ name, rating, body, status: "pending" });
+    setPending(false);
+
+    if (insertError) {
+      console.error("Failed to submit review:", insertError.message);
+      setError("Something went wrong. Please try again in a moment.");
+      return;
+    }
+
+    setSubmitted(true);
+  }
+
+  if (submitted) {
     return (
       <div className="text-center">
-        <p className="text-sm font-medium text-slate-900">{state.message}</p>
+        <p className="text-sm font-medium text-slate-900">
+          Thank you! Your review was submitted and will appear once approved.
+        </p>
         {onSuccess && (
           <Button
             type="button"
@@ -38,7 +92,7 @@ export function ReviewForm({ onSuccess }: { onSuccess?: () => void }) {
   }
 
   return (
-    <form action={formAction}>
+    <form onSubmit={handleSubmit}>
       <h3 className="text-base font-semibold text-slate-900">
         Leave a review
       </h3>
@@ -64,7 +118,6 @@ export function ReviewForm({ onSuccess }: { onSuccess?: () => void }) {
           <span className="block text-sm font-medium text-slate-700">
             Your rating
           </span>
-          <input type="hidden" name="rating" value={rating || ""} />
           <div className="mt-1.5 flex items-center gap-1">
             {Array.from({ length: 5 }).map((_, i) => {
               const value = i + 1;
@@ -106,7 +159,7 @@ export function ReviewForm({ onSuccess }: { onSuccess?: () => void }) {
             name="name"
             type="text"
             required
-            maxLength={80}
+            maxLength={MAX_NAME}
             placeholder="First name or initials"
             className="mt-1.5 w-full rounded-lg border border-slate-300 px-3 py-2 text-sm text-slate-900 placeholder:text-slate-400 focus:border-slate-400 focus:outline-none focus:ring-2 focus:ring-slate-300"
           />
@@ -123,17 +176,15 @@ export function ReviewForm({ onSuccess }: { onSuccess?: () => void }) {
             id="review-body"
             name="body"
             required
-            minLength={10}
-            maxLength={1000}
+            minLength={MIN_BODY}
+            maxLength={MAX_BODY}
             rows={4}
             placeholder="What was your reading like?"
             className="mt-1.5 w-full resize-y rounded-lg border border-slate-300 px-3 py-2 text-sm text-slate-900 placeholder:text-slate-400 focus:border-slate-400 focus:outline-none focus:ring-2 focus:ring-slate-300"
           />
         </div>
 
-        {state.status === "error" && (
-          <p className="text-sm text-red-600">{state.message}</p>
-        )}
+        {error && <p className="text-sm text-red-600">{error}</p>}
 
         <Button type="submit" disabled={pending} className="w-full">
           {pending ? "Submitting…" : "Submit review"}

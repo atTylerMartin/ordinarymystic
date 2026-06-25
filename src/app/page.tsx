@@ -77,10 +77,7 @@ export const metadata: Metadata = {
 
 const sectionPadding = "py-16 sm:py-20";
 
-// Re-render periodically so newly approved reviews show without a redeploy.
-export const revalidate = 300;
-
-export default async function Home() {
+export default function Home() {
   return (
     <div className="-mt-10 -mb-16 pb-0">
       <ScrollOnHash hash="#book" />
