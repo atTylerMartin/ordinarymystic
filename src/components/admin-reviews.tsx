@@ -226,21 +226,26 @@ function Dashboard({
     );
   }
 
-  const pendingCount = reviews?.filter((r) => r.status === "pending").length ?? 0;
+  const [tab, setTab] = useState<AdminReview["status"]>("pending");
+
+  const counts = {
+    pending: reviews?.filter((r) => r.status === "pending").length ?? 0,
+    approved: reviews?.filter((r) => r.status === "approved").length ?? 0,
+    rejected: reviews?.filter((r) => r.status === "rejected").length ?? 0,
+  };
+  const visible = reviews?.filter((r) => r.status === tab) ?? [];
+
+  const TABS: { key: AdminReview["status"]; label: string }[] = [
+    { key: "pending", label: "Pending" },
+    { key: "approved", label: "Approved" },
+    { key: "rejected", label: "Rejected" },
+  ];
 
   return (
     <div>
       <div className="flex items-center justify-between gap-4">
         <p className="text-sm text-slate-600">
           Signed in as <span className="font-medium text-slate-800">{email}</span>
-          {reviews && (
-            <>
-              {" · "}
-              <span className="font-medium text-amber-700">
-                {pendingCount} pending
-              </span>
-            </>
-          )}
         </p>
         <div className="flex gap-2">
           <Button type="button" variant="outline" size="sm" onClick={load}>
@@ -252,15 +257,36 @@ function Dashboard({
         </div>
       </div>
 
+      {/* Tabs */}
+      <div className="mt-6 flex gap-1 border-b border-slate-200">
+        {TABS.map((t) => (
+          <button
+            key={t.key}
+            type="button"
+            onClick={() => setTab(t.key)}
+            className={`-mb-px cursor-pointer border-b-2 px-4 py-2 text-sm font-medium transition-colors ${
+              tab === t.key
+                ? "border-slate-800 text-slate-900"
+                : "border-transparent text-slate-500 hover:text-slate-700"
+            }`}
+          >
+            {t.label}
+            <span className="ml-1.5 rounded-full bg-slate-100 px-1.5 py-0.5 text-xs text-slate-600">
+              {counts[t.key]}
+            </span>
+          </button>
+        ))}
+      </div>
+
       {error && <p className="mt-4 text-sm text-red-600">{error}</p>}
 
       <div className="mt-6 space-y-4">
         {reviews === null ? (
           <p className="text-sm text-slate-500">Loading reviews…</p>
-        ) : reviews.length === 0 ? (
-          <p className="text-sm text-slate-500">No reviews yet.</p>
+        ) : visible.length === 0 ? (
+          <p className="text-sm text-slate-500">No {tab} reviews.</p>
         ) : (
-          reviews.map((r) => (
+          visible.map((r) => (
             <div
               key={r.id}
               className="rounded-2xl border border-slate-200/80 bg-white p-5 shadow-sm"
