@@ -37,7 +37,7 @@ export function ReviewsSection() {
     >
       <Container className="px-4 sm:px-6">
         <p className="text-center text-sm font-medium uppercase tracking-widest text-slate-500">
-          Reviews
+          Testimonials
         </p>
         <h2 className="mt-2 font-heading text-center text-3xl font-black tracking-tight text-slate-900 sm:text-4xl">
           What People Are Saying
@@ -47,7 +47,7 @@ export function ReviewsSection() {
           <div className="mt-4 flex items-center justify-center gap-2">
             <Stars rating={avg} />
             <span className="text-sm text-slate-600">
-              {avg.toFixed(1)} · {list.length} review
+              {avg.toFixed(1)} · {list.length} testimonial
               {list.length === 1 ? "" : "s"}
             </span>
           </div>
@@ -63,7 +63,7 @@ export function ReviewsSection() {
             {list.length === 0 ? (
               <div className="flex min-h-[8rem] items-center justify-center rounded-2xl border border-dashed border-slate-300 bg-white/40 p-6 text-center">
                 <p className="text-sm text-slate-600">
-                  No reviews yet — be the first to share your experience.
+                  No testimonials yet — be the first to share your experience.
                 </p>
               </div>
             ) : (

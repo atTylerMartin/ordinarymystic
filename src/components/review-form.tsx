@@ -46,13 +46,13 @@ export function ReviewForm({ onSuccess }: { onSuccess?: () => void }) {
       return;
     }
     if (body.length > MAX_BODY) {
-      setError("That review is a little too long.");
+      setError("That testimonial is a little too long.");
       return;
     }
 
     const supabase = getSupabase();
     if (!supabase) {
-      setError("Reviews are temporarily unavailable. Please try again later.");
+      setError("Testimonials are temporarily unavailable. Please try again later.");
       return;
     }
 
@@ -75,7 +75,7 @@ export function ReviewForm({ onSuccess }: { onSuccess?: () => void }) {
     return (
       <div className="text-center">
         <p className="text-sm font-medium text-slate-900">
-          Thank you! Your review was submitted and will appear once approved.
+          Thank you! Your testimonial was submitted and will appear once approved.
         </p>
         {onSuccess && (
           <Button
@@ -94,10 +94,10 @@ export function ReviewForm({ onSuccess }: { onSuccess?: () => void }) {
   return (
     <form onSubmit={handleSubmit}>
       <h3 className="text-base font-semibold text-slate-900">
-        Leave a review
+        Leave a testimonial
       </h3>
       <p className="mt-1 text-sm text-slate-600">
-        Had a reading? Share your experience. Reviews appear after a quick check.
+        Had a reading? Share your experience. Testimonials appear after a quick check.
       </p>
 
       {/* Honeypot — hidden from real users */}
@@ -170,7 +170,7 @@ export function ReviewForm({ onSuccess }: { onSuccess?: () => void }) {
             htmlFor="review-body"
             className="block text-sm font-medium text-slate-700"
           >
-            Your review
+            Your testimonial
           </label>
           <textarea
             id="review-body"
@@ -187,7 +187,7 @@ export function ReviewForm({ onSuccess }: { onSuccess?: () => void }) {
         {error && <p className="text-sm text-red-600">{error}</p>}
 
         <Button type="submit" disabled={pending} className="w-full">
-          {pending ? "Submitting…" : "Submit review"}
+          {pending ? "Submitting…" : "Submit testimonial"}
         </Button>
       </div>
     </form>

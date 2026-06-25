@@ -29,7 +29,7 @@ export function LeaveReviewButton() {
   return (
     <>
       <Button type="button" onClick={() => setOpen(true)}>
-        Leave a review
+        Leave a testimonial
       </Button>
 
       {open && (
@@ -37,7 +37,7 @@ export function LeaveReviewButton() {
           className="fixed inset-0 z-50 flex items-center justify-center p-4"
           role="dialog"
           aria-modal="true"
-          aria-label="Leave a review"
+          aria-label="Leave a testimonial"
         >
           {/* Backdrop */}
           <button
