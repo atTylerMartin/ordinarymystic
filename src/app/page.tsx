@@ -11,6 +11,7 @@ import {
   CardTitle,
 } from "@/components/card";
 import { Container } from "@/components/container";
+import { ReviewsSection } from "@/components/reviews-section";
 import { ScrollOnHash } from "@/components/scroll-on-hash";
 import {
   CONTACT_EMAIL,
@@ -75,6 +76,9 @@ export const metadata: Metadata = {
 };
 
 const sectionPadding = "py-16 sm:py-20";
+
+// Re-render periodically so newly approved reviews show without a redeploy.
+export const revalidate = 300;
 
 export default async function Home() {
   return (
@@ -301,6 +305,9 @@ export default async function Home() {
           </p>
         </Container>
       </section>
+
+      {/* SECTION: Reviews — warm sand */}
+      <ReviewsSection />
 
       {/* SECTION: Tools to Support Your Readings — soft blue-gray */}
       <section
