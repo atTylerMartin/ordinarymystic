@@ -20,3 +20,15 @@
   Approving a review = set its `status` to `approved` in the Supabase dashboard.
 - **Secrets:** only `NEXT_PUBLIC_*` env vars reach the browser/build. The
   service-role key must never be used in client code.
+- **Reviews moderation** lives at `/admin` (Supabase Auth, email+password).
+  Admins are identified by `role: "admin"` in their auth `app_metadata`
+  (`is_admin()` in `supabase/admin-reviews.sql`). New reviews trigger an email
+  via the `notify-review` Edge Function (Resend).
+
+## Long-term plan
+
+See [`plans/product-roadmap.md`](plans/product-roadmap.md) for the multi-phase
+vision (direct Stripe, client accounts + dashboards, video/PDF reading delivery,
+admin CRM, lifecycle automations). Key future decision noted there: **dropping
+static export for a Next.js server runtime on Vercel** once the Stripe/dashboard
+work begins.
