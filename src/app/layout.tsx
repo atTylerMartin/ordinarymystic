@@ -85,10 +85,24 @@ export default function RootLayout({
           </main>
           <footer className="border-t border-white/5 bg-[#0d0c14] py-10">
             <Container className="flex flex-col gap-6 md:flex-row md:items-start md:justify-between">
-              <div className="space-y-2 text-sm text-slate-300">
+              <div className="space-y-3 text-sm text-slate-300">
                 <div className="flex items-center gap-2 font-medium text-white">
                   <BookOpen className="h-4 w-4 text-slate-400" />
                   <span>Ordinary Mystic Readings: Astrology and Tarot Without the Woo</span>
+                </div>
+                <div className="flex flex-wrap gap-x-4 gap-y-1">
+                  <Link
+                    href="/terms"
+                    className="text-slate-200 underline-offset-4 hover:text-white hover:underline"
+                  >
+                    Terms of Service
+                  </Link>
+                  <Link
+                    href="/privacy"
+                    className="text-slate-200 underline-offset-4 hover:text-white hover:underline"
+                  >
+                    Privacy Policy
+                  </Link>
                 </div>
               </div>
               <div className="flex flex-col gap-3 text-sm text-slate-300">
