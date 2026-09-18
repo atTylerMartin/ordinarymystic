@@ -58,7 +58,8 @@ function BookButton({
   );
 }
 
-export function BookingSection() {
+/** The primary offering. Keeps the #book anchor, so nav CTAs land here. */
+export function RecordedSection() {
   const recordedFeatured = RECORDED.find((t) => t.featured) ?? RECORDED[1];
 
   return (
@@ -68,7 +69,6 @@ export function BookingSection() {
       style={{ backgroundColor: "#faf8f6" }}
     >
       <Container className="px-4 sm:px-6">
-        {/* ── Recorded: the primary offering ─────────────────────────────── */}
         <div className="mx-auto max-w-3xl text-center">
           <p className="text-sm font-medium uppercase tracking-widest text-slate-500">
             {RECORDED_COPY.kicker}
@@ -140,9 +140,22 @@ export function BookingSection() {
           Most people start with the {recordedFeatured.minutes}-minute recorded
           reading.
         </p>
+      </Container>
+    </section>
+  );
+}
 
+/** Live, ongoing, payment note, and the Tulsa hand-off. */
+export function LiveAndOngoingSection() {
+  return (
+    <section
+      id="live"
+      className="relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen py-16 sm:py-20"
+      style={{ backgroundColor: "#faf8f6" }}
+    >
+      <Container className="px-4 sm:px-6">
         {/* ── Live: secondary ────────────────────────────────────────────── */}
-        <div className="mx-auto mt-16 max-w-3xl border-t border-slate-200 pt-12 text-center">
+        <div className="mx-auto max-w-3xl text-center">
           <p className="text-sm font-medium uppercase tracking-widest text-slate-500">
             {LIVE_COPY.kicker}
           </p>

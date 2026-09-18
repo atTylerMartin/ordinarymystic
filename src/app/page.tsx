@@ -10,7 +10,10 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/card";
-import { BookingSection } from "@/components/booking-section";
+import {
+  LiveAndOngoingSection,
+  RecordedSection,
+} from "@/components/booking-section";
 import { Container } from "@/components/container";
 import { ReviewsSection } from "@/components/reviews-section";
 import { ScrollOnHash } from "@/components/scroll-on-hash";
@@ -168,10 +171,15 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Recorded first (primary offer), then proof, then the secondary
+          offerings. Testimonials sit one section from the top without pushing
+          the products below the fold. */}
+      <RecordedSection />
+
       {/* SECTION: Reviews — warm sand */}
       <ReviewsSection />
 
-      <BookingSection />
+      <LiveAndOngoingSection />
 
       {/* SECTION: Tools to Support Your Readings — soft blue-gray */}
       <section
