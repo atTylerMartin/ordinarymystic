@@ -80,8 +80,7 @@ export const RECORDED_COPY = {
     "A personalized video walkthrough, not a template.",
     "A written synthesis you can keep and re-read.",
   ],
-  cta: (tier: Tier) =>
-    `Book a ${tier.minutes}-minute recorded reading · $${tier.price}`,
+  cta: "Book Now",
 };
 
 export const LIVE_COPY = {
@@ -91,7 +90,7 @@ export const LIVE_COPY = {
   premium:
     "Live costs more than recorded because you are buying real-time access: a scheduled hour of my attention, your questions answered as they occur to you, and the reading shaped by the conversation rather than delivered to it.",
   standard: "Thirty minutes is the standard session.",
-  cta: (tier: Tier) => `Book ${tier.minutes} minutes live · $${tier.price}`,
+  cta: "Book Now",
 };
 
 export const ONGOING_COPY = {

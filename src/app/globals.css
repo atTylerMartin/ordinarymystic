@@ -99,3 +99,12 @@ body[data-site-live="true"]::before {
   }
 }
 
+
+/* Every section full-bleeds with `w-screen` + `-ml-[50vw]`. 100vw includes the
+   scrollbar while the content box does not, so the page picks up a few pixels
+   of horizontal scroll. `clip` removes it without creating a scroll container —
+   `hidden` would, and that breaks the sticky site header. */
+html,
+body {
+  overflow-x: clip;
+}

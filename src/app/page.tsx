@@ -168,10 +168,10 @@ export default function Home() {
         </div>
       </section>
 
-      <BookingSection />
-
       {/* SECTION: Reviews — warm sand */}
       <ReviewsSection />
+
+      <BookingSection />
 
       {/* SECTION: Tools to Support Your Readings — soft blue-gray */}
       <section

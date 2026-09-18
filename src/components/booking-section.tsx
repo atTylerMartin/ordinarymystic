@@ -52,7 +52,7 @@ function BookButton({
         className={`w-full ${className ?? ""}`}
         leftIcon={pending ? <Mail className="h-4 w-4" /> : undefined}
       >
-        {pending ? `Email to book · $${tier.price}` : label}
+        {pending ? "Email to book" : label}
       </Button>
     </Link>
   );
@@ -68,21 +68,14 @@ export function BookingSection() {
       style={{ backgroundColor: "#faf8f6" }}
     >
       <Container className="px-4 sm:px-6">
-        <p className="text-center text-sm font-medium uppercase tracking-widest text-slate-500">
-          Offerings
-        </p>
-        <h2 className="mt-2 font-heading text-center text-3xl font-black tracking-tight text-slate-900 sm:text-4xl">
-          Book a Reading
-        </h2>
-
         {/* ── Recorded: the primary offering ─────────────────────────────── */}
-        <div className="mx-auto mt-12 max-w-3xl text-center">
-          <p className="text-sm font-medium uppercase tracking-widest text-[#213752]">
+        <div className="mx-auto max-w-3xl text-center">
+          <p className="text-sm font-medium uppercase tracking-widest text-slate-500">
             {RECORDED_COPY.kicker}
           </p>
-          <h3 className="mt-2 font-heading text-2xl font-black tracking-tight text-slate-900 sm:text-3xl">
+          <h2 className="mt-2 font-heading text-3xl font-black tracking-tight text-slate-900 sm:text-4xl">
             {RECORDED_COPY.title}
-          </h3>
+          </h2>
           <p className="mt-4 text-base leading-relaxed text-slate-700">
             {RECORDED_COPY.lede}
           </p>
@@ -135,7 +128,7 @@ export function BookingSection() {
                 <BookButton
                   tier={tier}
                   kind="recorded"
-                  label={RECORDED_COPY.cta(tier)}
+                  label={RECORDED_COPY.cta}
                   variant={tier.featured ? "primary" : "outline"}
                 />
               </div>
@@ -153,9 +146,9 @@ export function BookingSection() {
           <p className="text-sm font-medium uppercase tracking-widest text-slate-500">
             {LIVE_COPY.kicker}
           </p>
-          <h3 className="mt-2 font-heading text-2xl font-black tracking-tight text-slate-900">
+          <h2 className="mt-2 font-heading text-3xl font-black tracking-tight text-slate-900 sm:text-4xl">
             {LIVE_COPY.title}
-          </h3>
+          </h2>
           <p className="mt-4 text-base leading-relaxed text-slate-700">
             {LIVE_COPY.lede}
           </p>
@@ -164,7 +157,7 @@ export function BookingSection() {
           </p>
         </div>
 
-        <div className="mx-auto mt-8 grid max-w-4xl gap-4 md:grid-cols-3">
+        <div className="mx-auto mt-8 grid max-w-5xl gap-4 md:grid-cols-3">
           {LIVE.map((tier) => (
             <div
               key={tier.minutes}
@@ -185,7 +178,7 @@ export function BookingSection() {
                 <BookButton
                   tier={tier}
                   kind="live"
-                  label={LIVE_COPY.cta(tier)}
+                  label={LIVE_COPY.cta}
                   variant="outline"
                 />
               </div>
@@ -194,7 +187,7 @@ export function BookingSection() {
         </div>
 
         {/* ── Ongoing ────────────────────────────────────────────────────── */}
-        <Card className="mx-auto mt-12 max-w-3xl">
+        <Card className="mx-auto mt-12 max-w-5xl">
           <h3 className="font-heading text-xl font-black tracking-tight text-slate-900">
             {ONGOING_COPY.title}
           </h3>
@@ -249,7 +242,7 @@ export function BookingSection() {
         </p>
 
         {/* ── Sibling brand ──────────────────────────────────────────────── */}
-        <div className="mx-auto mt-12 max-w-3xl rounded-2xl border border-slate-200 bg-white/70 px-6 py-5 text-center">
+        <div className="mx-auto mt-12 max-w-5xl rounded-2xl border border-slate-200 bg-white/70 px-6 py-5 text-center">
           <p className="text-sm font-semibold text-slate-900">
             {TULSA_CROSSLINK.title}
           </p>
