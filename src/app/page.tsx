@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import type { Metadata } from "next";
-import { ChevronRight, ExternalLink, Clock } from "lucide-react";
+import { ChevronRight, ExternalLink } from "lucide-react";
 import { Button } from "@/components/button";
 import {
   Card,
@@ -10,69 +10,21 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/card";
+import { BookingSection } from "@/components/booking-section";
 import { Container } from "@/components/container";
 import { ReviewsSection } from "@/components/reviews-section";
 import { ScrollOnHash } from "@/components/scroll-on-hash";
 import {
   CONTACT_EMAIL,
   DIGITAL_TAROT_APP_URL,
-  PRIVATE_15_URL,
-  PRIVATE_30_URL,
-  PRIVATE_60_URL,
-  RECORDED_15_URL,
-  RECORDED_30_URL,
-  RECORDED_60_URL,
   SITE_LIVE_MODE,
   TIKTOK_URL,
 } from "@/lib/config";
 
-type Offering = {
-  duration: string;
-  focus: string;
-  summary: string;
-  liveUrl: string;
-  livePrice: number;
-  recordedUrl: string;
-  recordedPrice: number;
-};
-
-const OFFERINGS: Offering[] = [
-  {
-    duration: "15 minutes",
-    focus: "Tarot",
-    summary:
-      "A focused sit-down for a single question or topic. Tarot only.",
-    liveUrl: PRIVATE_15_URL,
-    livePrice: 25,
-    recordedUrl: RECORDED_15_URL,
-    recordedPrice: 10,
-  },
-  {
-    duration: "30 minutes",
-    focus: "Tarot and/or astrology",
-    summary:
-      "Room to look at a question from a few angles, or cover two related ones.",
-    liveUrl: PRIVATE_30_URL,
-    livePrice: 65,
-    recordedUrl: RECORDED_30_URL,
-    recordedPrice: 25,
-  },
-  {
-    duration: "60 minutes",
-    focus: "Tarot and/or astrology",
-    summary:
-      "A full reading — multiple questions, deeper exploration, no rush.",
-    liveUrl: PRIVATE_60_URL,
-    livePrice: 125,
-    recordedUrl: RECORDED_60_URL,
-    recordedPrice: 50,
-  },
-];
-
 export const metadata: Metadata = {
   title: "Ordinary Mystic Readings – Practical Tarot and Astrology Without the Woo",
   description:
-    "Practical tarot and astrology without the woo. Book a one-on-one reading (Zoom or Tulsa) or a recorded reading — 15, 30, or 60 minutes.",
+    "Practical tarot and astrology without the woo. Book a recorded reading — read privately, delivered as a personalized video walkthrough plus a written synthesis — or a live one-on-one over Zoom. 15, 30, or 60 minutes.",
 };
 
 const sectionPadding = "py-16 sm:py-20";
@@ -216,92 +168,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* SECTION: Book a Reading — warm off-white */}
-      <section
-        id="book"
-        className={`relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen ${sectionPadding}`}
-        style={{ backgroundColor: "#faf8f6" }}
-      >
-        <Container className="px-4 sm:px-6">
-          <p className="text-center text-sm font-medium uppercase tracking-widest text-slate-500">
-            Offerings
-          </p>
-          <h2 className="mt-2 font-heading text-center text-3xl font-black tracking-tight text-slate-900 sm:text-4xl">
-            Book a Reading
-          </h2>
-          <div className="mx-auto mt-10 grid max-w-5xl gap-6 md:grid-cols-3">
-            {OFFERINGS.map((opt) => (
-              <Card key={opt.duration} className="flex flex-col">
-                <CardHeader className="space-y-3">
-                  <div className="flex h-10 w-10 items-center justify-center rounded-full bg-[#2d2a4a] text-white">
-                    <Clock className="h-5 w-5" />
-                  </div>
-                  <CardTitle>{opt.duration}</CardTitle>
-                  <p className="text-xs font-medium uppercase tracking-wide text-slate-500">
-                    {opt.focus}
-                  </p>
-                  <CardDescription>{opt.summary}</CardDescription>
-                </CardHeader>
-                <CardFooter className="mt-auto flex-col justify-start gap-2">
-                  <Link
-                    href={opt.liveUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="w-full"
-                  >
-                    <Button type="button" size="sm" className="w-full">
-                      Book a one-on-one · ${opt.livePrice}
-                    </Button>
-                  </Link>
-                  <Link
-                    href={opt.recordedUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="w-full"
-                  >
-                    <Button
-                      type="button"
-                      size="sm"
-                      variant="outline"
-                      className="w-full"
-                    >
-                      Book a recording · ${opt.recordedPrice}
-                    </Button>
-                  </Link>
-                </CardFooter>
-              </Card>
-            ))}
-          </div>
-          <p className="mt-8 text-center text-sm text-slate-600">
-            Prefer{" "}
-            <a
-              href="https://cash.app/$ordinarymystic"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="font-medium text-slate-800 underline underline-offset-4 hover:text-slate-900"
-            >
-              Cash App
-            </a>{" "}
-            or{" "}
-            <a
-              href="https://paypal.me/ordinarymystic"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="font-medium text-slate-800 underline underline-offset-4 hover:text-slate-900"
-            >
-              PayPal
-            </a>
-            ? That&apos;s fine too. Just{" "}
-            <a
-              href={`mailto:${CONTACT_EMAIL}`}
-              className="font-medium text-slate-800 underline underline-offset-4 hover:text-slate-900"
-            >
-              email me
-            </a>{" "}
-            your details after you submit a payment.
-          </p>
-        </Container>
-      </section>
+      <BookingSection />
 
       {/* SECTION: Reviews — warm sand */}
       <ReviewsSection />

@@ -102,7 +102,10 @@ all via `is_admin()`. Refine when building each table.
 Checkout Session created server-side per reading type; on `checkout.session.completed`
 webhook, fulfill: create the `readings` row, create/find the Supabase user by
 email, send the magic link. Keep Stripe products mapped to the 15/30/60 ×
-live/recorded matrix. Test mode keys already in `.env.local`.
+live/recorded matrix — currently recorded $35/$65/$125 and live $40/$100/$195,
+defined in `src/lib/offerings.ts` (the 30-minute tier is the standard session in
+both). Test mode keys already in `.env.local`. Ongoing readings are quoted by
+email and deliberately have no public price matrix.
 
 ### Client accounts (magic link)
 On first successful booking, create the auth user and email a magic link to

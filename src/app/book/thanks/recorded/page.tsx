@@ -20,6 +20,12 @@ export default function ThanksRecordedPage() {
           follow-up or clarification, I&apos;ll get in touch.
         </p>
         <p>
+          I&apos;ll read privately, off camera, and take the time to sit with the
+          patterns before I say anything about them. You&apos;ll receive a
+          personalized video walkthrough of the reading plus a written synthesis
+          you can keep and come back to.
+        </p>
+        <p>
           If you have questions before you hear from me, reach out at{" "}
           <a
             href={`mailto:${CONTACT_EMAIL}`}

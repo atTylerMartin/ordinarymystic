@@ -5,7 +5,8 @@ import { Geist, Geist_Mono } from "next/font/google";
 import { Montserrat } from "next/font/google";
 import { SiteHeader } from "@/components/site-header";
 import { Container } from "@/components/container";
-import { SITE_LIVE_MODE, TIKTOK_URL } from "@/lib/config";
+import { SITE_LIVE_MODE, SITE_URL, TIKTOK_URL } from "@/lib/config";
+import { TULSA_TAROT_READER_URL } from "@/lib/offerings";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -25,15 +26,16 @@ const montserrat = Montserrat({
 });
 
 const siteName = "Ordinary Mystic";
-const siteUrl = "https://ordinary.local";
+const siteUrl = SITE_URL;
 
 export const metadata: Metadata = {
+  metadataBase: new URL(siteUrl),
   title: {
     default: `${siteName} – Tarot & Astrology Without the Woo`,
     template: `%s | ${siteName}`,
   },
   description:
-    "Tarot and astrology sessions for thoughtful skeptics. Calm, grounded readings focused on clarity, not theatrics.",
+    "Online tarot and astrology for thoughtful skeptics. Recorded readings delivered as a personalized video walkthrough plus a written synthesis, and live one-on-one sessions over Zoom.",
   icons: {
     icon: "/favicon.png",
     shortcut: "/favicon.png",
@@ -42,7 +44,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: `${siteName} – Tarot & Astrology Without the Woo`,
     description:
-      "Tarot and astrology sessions for thoughtful skeptics. Calm, grounded readings focused on clarity, not theatrics.",
+      "Online tarot and astrology for thoughtful skeptics. Recorded readings delivered as a personalized video walkthrough plus a written synthesis, and live one-on-one sessions over Zoom.",
     url: siteUrl,
     siteName,
     type: "website",
@@ -104,6 +106,17 @@ export default function RootLayout({
                     Privacy Policy
                   </Link>
                 </div>
+                <p className="text-slate-400">
+                  In-person readings and events in Tulsa:{" "}
+                  <a
+                    href={TULSA_TAROT_READER_URL}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-slate-200 underline-offset-4 hover:text-white hover:underline"
+                  >
+                    Tulsa Tarot Reader
+                  </a>
+                </p>
               </div>
               <div className="flex flex-col gap-3 text-sm text-slate-300">
                 <div className="flex items-center gap-2 font-medium text-white">

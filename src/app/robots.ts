@@ -1,6 +1,8 @@
 import type { MetadataRoute } from "next";
 
-const baseUrl = "https://ordinary.local";
+import { SITE_URL } from "@/lib/config";
+
+const baseUrl = SITE_URL;
 
 export const dynamic = "force-static";
 

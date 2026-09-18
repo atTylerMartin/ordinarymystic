@@ -25,6 +25,35 @@
   (`is_admin()` in `supabase/admin-reviews.sql`). New reviews trigger an email
   via the `notify-review` Edge Function (Resend).
 
+## Pricing
+
+- **All reading prices and Stripe Payment Links live in `src/lib/offerings.ts`.**
+  Nothing else may hardcode a price or a checkout URL. `src/lib/config.ts` holds
+  non-pricing config only.
+- **Stripe Payment Links are fixed-amount.** A link's price cannot be edited, so
+  every price change requires a brand-new Product + Price + Payment Link. Use
+  `scripts/stripe-payment-links.mjs` (idempotent on product `metadata.om_tier`),
+  paste the new URLs into `offerings.ts`, verify each button, and only then
+  deactivate the old links with `--deactivate-old`. **Never delete Stripe
+  Products or Prices**, and never print a secret key.
+- A tier with an empty `url` renders an "Email to book" mailto fallback, so the
+  site never shows a new price behind an old link.
+
+## Two brands, one reader (Tyler Martin)
+
+- **Ordinary Mystic is the online practice**: recorded readings (prepared
+  privately, delivered as a personalized video walkthrough plus a written
+  synthesis), live one-on-one over Zoom, ongoing readings, written syntheses,
+  digital products, TikTok.
+- **[Tulsa Tarot Reader](https://tulsatarotreader.com) is the in-person
+  practice**: private sittings in Tulsa, parties, weddings, corporate, school
+  and community events, festivals, markets, venue pop-ups.
+- Cross-link, never duplicate. Do not add in-person or event offerings here, and
+  do not chase local in-person search intent — the Tulsa pages here exist for
+  *online* readings and hand local intent off to Tulsa Tarot Reader.
+- Never frame recorded readings as "budget live tarot". Recorded is its own
+  product; live is premium because of real-time access and interaction.
+
 ## Long-term plan
 
 See [`plans/product-roadmap.md`](plans/product-roadmap.md) for the multi-phase

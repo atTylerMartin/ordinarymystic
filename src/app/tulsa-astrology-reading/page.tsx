@@ -1,30 +1,40 @@
 import type { Metadata } from "next";
+import Link from "next/link";
+import { Button } from "@/components/button";
+import { SITE_URL } from "@/lib/config";
+import { TULSA_TAROT_READER_URL } from "@/lib/offerings";
 
 const pageTitle = "Tulsa astrology readings – timing, patterns, and context";
 const pageDescription =
-  "Astrology consultations from Tulsa focused on timing, patterns, and practical choices—serving Downtown, Midtown, Brookside, Cherry Street, Jenks, Bixby, and Broken Arrow.";
+  "Online astrology consultations from Tulsa-based reader Tyler Martin, focused on timing, patterns, and practical choices. Recorded readings and live Zoom sessions.";
 
 export const metadata: Metadata = {
   title: pageTitle,
   description: pageDescription,
+  alternates: { canonical: "/tulsa-astrology-reading" },
 };
 
-const businessSchema = {
+// Delivered online, so this is a Service provided by an Organization rather
+// than a LocalBusiness with a Tulsa service area — local in-person intent
+// belongs to Tulsa Tarot Reader.
+const serviceSchema = {
   "@context": "https://schema.org",
-  "@type": "LocalBusiness",
-  name: "Ordinary Mystic",
-  url: "https://ordinary.local/tulsa-astrology-reading",
-  areaServed: [
-    "Tulsa",
-    "Downtown Tulsa",
-    "Midtown Tulsa",
-    "Brookside",
-    "Cherry Street",
-    "Jenks",
-    "Bixby",
-    "Broken Arrow",
-  ],
+  "@type": "Service",
+  name: "Online astrology readings",
   serviceType: "Astrology reading",
+  url: `${SITE_URL}/tulsa-astrology-reading`,
+  provider: {
+    "@type": "Organization",
+    name: "Ordinary Mystic",
+    url: SITE_URL,
+  },
+  serviceOutput: "A personalized video walkthrough and a written synthesis",
+  availableChannel: {
+    "@type": "ServiceChannel",
+    serviceUrl: `${SITE_URL}/#book`,
+    availableLanguage: "en",
+  },
+  areaServed: { "@type": "Country", name: "United States" },
 };
 
 export default function TulsaAstrologyPage() {
@@ -32,7 +42,7 @@ export default function TulsaAstrologyPage() {
     <>
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(businessSchema) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
       />
       <div className="space-y-6">
         <header className="space-y-3">
@@ -40,37 +50,53 @@ export default function TulsaAstrologyPage() {
             Tulsa astrology readings
           </h1>
           <p className="max-w-2xl text-sm leading-relaxed text-slate-700">
-            Grounded astrology consultations from Tulsa that focus on timing,
-            patterns, and context—not generic horoscopes.
+            Looking for astrology in Tulsa? Ordinary Mystic offers online
+            readings from Tulsa-based reader Tyler Martin — grounded
+            consultations that focus on timing, patterns, and context, not
+            generic horoscopes. For private in-person readings and local events,
+            visit{" "}
+            <a
+              href={TULSA_TAROT_READER_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-medium text-slate-900 underline underline-offset-4"
+            >
+              Tulsa Tarot Reader
+            </a>
+            .
           </p>
         </header>
 
         <section className="space-y-4 text-sm leading-relaxed text-slate-700">
           <p>
-            Ordinary Mystic works with clients across Tulsa—Downtown, Midtown,
-            Brookside, Cherry Street, Jenks, Bixby, and Broken Arrow—to use
-            astrology as a reflective map. Instead of fixed identity labels, we
-            look at how timing and emphasis show up in real life.
+            Readings are delivered online. A recorded reading comes back as a
+            personalized video walkthrough plus a written synthesis, prepared
+            privately after I have had time to sit with your chart. A live
+            reading happens over Zoom, where we can follow a question wherever
+            it goes and a written synthesis follows afterward.
           </p>
           <p>
-            You might book an astrology reading when you&apos;re navigating a
-            job transition, reevaluating relationships, or sensing that a new
-            chapter is opening but can&apos;t quite name what&apos;s shifting.
-            Together we&apos;ll look at your chart for patterns around energy,
+            You might book an astrology reading when you are navigating a job
+            transition, reevaluating relationships, or sensing that a new
+            chapter is opening but cannot quite name what is shifting. Together
+            we will look at your chart for patterns around energy,
             responsibility, growth, and release.
           </p>
           <p>
-            Clients from neighborhoods like Brookside and Cherry Street often
-            pair astrology with creative or entrepreneurial questions, while
-            clients in Jenks, Bixby, and Broken Arrow frequently arrive with
-            questions about long-term stability and direction. Wherever you
-            live in the Tulsa area, the goal is the same: clearer language for
-            what you&apos;re feeling and more confident choices about what
-            comes next.
+            Instead of fixed identity labels, we use the chart as a reflective
+            map. The goal is clearer language for what you are feeling and more
+            confident choices about what comes next.
           </p>
         </section>
+
+        <p>
+          <Link href="/#book">
+            <Button type="button" size="md">
+              Book an online reading
+            </Button>
+          </Link>
+        </p>
       </div>
     </>
   );
 }
-
