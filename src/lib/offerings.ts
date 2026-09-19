@@ -87,9 +87,6 @@ export const LIVE_COPY = {
   kicker: "Live",
   title: "Live Online Readings",
   lede: "A conversational reading that unfolds with you in real time over Zoom. Cards come out while you watch, you hear the thinking as it happens, and you can interrupt, add context, or chase a thread I would not have known to follow. A written synthesis follows afterward, once I have had time to reflect on the full reading.",
-  premium:
-    "Live costs more than recorded because you are buying real-time access: a scheduled hour of my attention, your questions answered as they occur to you, and the reading shaped by the conversation rather than delivered to it.",
-  standard: "Thirty minutes is the standard session.",
   cta: "Book Now",
 };
 

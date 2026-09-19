@@ -165,9 +165,6 @@ export function LiveAndOngoingSection() {
           <p className="mt-4 text-base leading-relaxed text-slate-700">
             {LIVE_COPY.lede}
           </p>
-          <p className="mt-3 text-sm leading-relaxed text-slate-600">
-            {LIVE_COPY.premium} {LIVE_COPY.standard}
-          </p>
         </div>
 
         <div className="mx-auto mt-8 grid max-w-5xl gap-4 md:grid-cols-3">
