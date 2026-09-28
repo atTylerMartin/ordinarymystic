@@ -1,0 +1,67 @@
+Ordinary Mystic
+https://ordinarymysticreadings.com
+
+Tarot and astrology readings, online, from reader Tyler Martin. Recorded
+readings are prepared privately and delivered as a personalized video
+walkthrough plus a written synthesis. Live readings happen one on one over
+Zoom. Payment is by Stripe checkout at the price listed; Cash App and PayPal
+are also accepted.
+
+The practice serves three audiences: clients booking a reading, students who
+will find teaching material here later, and readers using the free tools
+(Querent, the digital tarot deck, Notion templates for tracking a practice).
+
+## Readings
+
+- Recorded, 15 minutes: $35. One question, looked at closely.
+- Recorded, 30 minutes: $65. The standard session. A question from several
+  angles, or two related ones.
+- Recorded, 60 minutes: $125. Multiple questions and the connections between
+  them.
+- Live over Zoom, 15 minutes: $40. A focused sit-down for one question.
+- Live over Zoom, 30 minutes: $100. The standard session. Room to follow the
+  thread.
+- Live over Zoom, 60 minutes: $195. A full hour, no rush, wherever the
+  conversation goes.
+- Ongoing readings: a standing arrangement with a regular cadence. Pricing
+  depends on the cadence and starts with a conversation, not a checkout.
+
+## TikTok live readings
+
+Paid directly through https://ordinarymysticreadings.com/pay instead of
+TikTok coins, for viewers of the live stream only.
+
+- One card: $1 (wallets only, or 100 coins). A flash of intuition: closer to
+  a hunch than an answer.
+- Three cards: $5 (or 500 coins). The hunch, put to the test, from a couple
+  of angles.
+- Full spread: $15 (or 1,500 coins). A structure built for the question:
+  a Celtic Cross for an overview, a Roundabout for advice on what to do
+  next, a This or That for deciding between options.
+
+## Pages
+
+- https://ordinarymysticreadings.com/ : the hub, recorded readings first,
+  live and ongoing, reviews, tools
+- https://ordinarymysticreadings.com/tools : Notion templates and
+  recommended tools for tracking a tarot or astrology practice
+- https://ordinarymysticreadings.com/blog : short essays on tarot, astrology,
+  and reflective practice
+- https://ordinarymysticreadings.com/tulsa-tarot-reading : online tarot
+  readings for people searching Tulsa, with a hand-off to Tulsa Tarot Reader
+- https://ordinarymysticreadings.com/tulsa-astrology-reading : online
+  astrology readings for people searching Tulsa
+- https://ordinarymysticreadings.com/terms : terms of service
+- https://ordinarymysticreadings.com/privacy : privacy policy
+
+## Tools
+
+- everyday-checkin-notion-dashboard : Everyday Check-In Dashboard, a Notion
+  workspace for tracking mood, focus, and energy
+- recorded-reflection-spread-notion-kit : Recorded Reflection Spread Kit, a
+  Notion workspace for organizing recorded tarot readings and reflections
+
+## Related
+
+In-person readings and events in Tulsa are a separate practice, Tulsa Tarot
+Reader: https://tulsatarotreader.com
