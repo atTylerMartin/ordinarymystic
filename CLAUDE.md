@@ -70,6 +70,34 @@
 - Never frame recorded readings as "budget live tarot". Recorded is its own
   product; live is premium because of real-time access and interaction.
 
+## SEO plumbing
+
+- **Every indexable page is registered in `src/lib/routes.ts`** and gets its
+  metadata from `pageMetadata(path)` in `src/lib/metadata.ts`. Never
+  hand-write `openGraph` in a page: Next merges metadata shallowly, so a page
+  that skips this silently canonicalizes to `/`. `src/app/sitemap.ts` maps
+  over the registry; a page cannot appear in the sitemap without a registry
+  entry, and a page cannot get its own canonical without one either.
+- **Never register `/pay`, `/links`, `/admin`, `/book`, `/resources`, or a
+  `thanks` page.** Those carry `NOINDEX` from `src/lib/metadata.ts` instead
+  and stay live for old inbound links or their noindex purpose (`/pay`,
+  `/admin`).
+- **Schema map**: `src/components/structured-data.tsx` renders `Organization`,
+  `Person`, and `WebSite` once, in the root layout. `ReadingServiceSchema`
+  (`kind: "recorded" | "live"`) renders on `/` and the two Tulsa hand-off
+  pages, built from `RECORDED`/`LIVE` in `offerings.ts` so a price is never
+  retyped. `BreadcrumbSchema` and the visible `Breadcrumbs` component
+  (`src/components/breadcrumbs.tsx`) walk the registry's `parent` links and
+  render on every registered page except `/`.
+- **`public/llms.txt`** states prices and tool slugs as literal text, so
+  `scripts/check-llms-txt.mjs` (wired as `prebuild`) fails the build if a
+  price in `offerings.ts` or a tool in `content/tools` is not reflected there.
+- **No em dashes** anywhere in this repo (grep for `\x{2014}` before
+  committing). Plain punctuation only.
+- `main` is archived source material from the previous build. Its content and
+  patterns get ported deliberately (see `plans/om-seo-plan.md`); it does not
+  merge.
+
 ## Long-term plan
 
 See [`plans/product-roadmap.md`](plans/product-roadmap.md) for the multi-phase
