@@ -17,10 +17,11 @@ export async function generateStaticParams() {
 export async function generateMetadata({
   params,
 }: {
-  params: Params;
+  params: Promise<Params>;
 }): Promise<Metadata> {
+  const { slug } = await params;
   const tools = await getAllTools();
-  const match = tools.find((tool) => tool.slug === params.slug);
+  const match = tools.find((tool) => tool.slug === slug);
 
   if (!match) {
     return {
@@ -36,15 +37,20 @@ export async function generateMetadata({
   };
 }
 
-export default async function ToolDetailPage({ params }: { params: Params }) {
+export default async function ToolDetailPage({
+  params,
+}: {
+  params: Promise<Params>;
+}) {
+  const { slug } = await params;
   const tools = await getAllTools();
-  const match = tools.find((tool) => tool.slug === params.slug);
+  const match = tools.find((tool) => tool.slug === slug);
 
   if (!match) {
     notFound();
   }
 
-  const entry = await getEntryBySlug("tools", params.slug);
+  const entry = await getEntryBySlug("tools", slug);
   const fm = entry.frontmatter as any;
 
   return (
