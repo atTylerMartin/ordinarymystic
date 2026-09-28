@@ -145,7 +145,7 @@ export const LIVE_STREAM: StreamTier[] = [
     name: "Three cards",
     price: 5,
     coins: 500,
-    url: "",
+    url: "https://buy.stripe.com/6oU9AV86g9yF4nscw36Zy0S",
     featured: true,
     blurb: "The hunch, put to the test.",
     explain:
@@ -156,7 +156,7 @@ export const LIVE_STREAM: StreamTier[] = [
     name: "Full spread",
     price: 15,
     coins: 1500,
-    url: "",
+    url: "https://buy.stripe.com/fZudRbfyI5ipbPU9jR6Zy0T",
     blurb: "A structure built for your question.",
     explain:
       "A full spread puts the cards into a shape chosen for what you are trying to do. An overview of a situation is a Celtic Cross. Advice on what to do next is a Roundabout. Deciding between options is a This or That. It goes much deeper than one card or three can.",
