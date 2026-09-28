@@ -171,12 +171,8 @@ export const STREAM_COPY = {
   featuredBadge: "Most popular",
   coinsLine: (coins: number) => `or ${coins.toLocaleString("en-US")} coins in Viewer Wishes`,
   cardCta: "Pay with card",
-  walletsTitle: "Cash App or PayPal",
   cashAppCta: "Cash App",
   paypalCta: "PayPal",
-  walletsNote: `Enter the amount for your reading: ${LIVE_STREAM.map((t) => `$${t.price}`)
-    .join(", ")
-    .replace(/, ([^,]+)$/, ", or $1")}.`,
   longerTitle: "Want a longer reading?",
   recordedCta: "Recorded readings",
   liveCta: "Live one-on-one readings",
@@ -185,6 +181,12 @@ export const STREAM_COPY = {
   followTitle: "Follow along",
   tiktokCta: "TikTok",
 };
+
+// Both wallets take the amount in the path (cash.app/$tag/5, paypal.me/name/5), so
+// every tier can open the wallet with its price already filled in.
+export function walletUrl(base: string, amount: number): string {
+  return `${base.replace(/\/$/, "")}/${amount}`;
+}
 
 export const WALLETS = {
   cashApp: "https://cash.app/$ordinarymystic",

@@ -6,7 +6,7 @@ import { Badge } from "@/components/badge";
 import { buttonVariants } from "@/components/button";
 import { Card } from "@/components/card";
 import { TIKTOK_URL } from "@/lib/config";
-import { LIVE_STREAM, STREAM_COPY, WALLETS } from "@/lib/offerings";
+import { LIVE_STREAM, STREAM_COPY, WALLETS, walletUrl } from "@/lib/offerings";
 import { cn } from "@/lib/utils";
 import { PaidNotice } from "./paid-notice";
 
@@ -81,47 +81,41 @@ export default function PayPage() {
           <p className="text-xs text-slate-500">
             {STREAM_COPY.coinsLine(tier.coins)}
           </p>
-          {tier.url ? (
-            <a
-              href={tier.url}
-              {...external}
-              className={cn(
-                buttonVariants({
-                  variant: tier.featured ? "primary" : "outline",
-                  size: "md",
-                }),
-                "w-full",
-              )}
-            >
-              {STREAM_COPY.cardCta}
-            </a>
-          ) : null}
+          <div className="flex flex-col gap-2">
+            {tier.url ? (
+              <a
+                href={tier.url}
+                {...external}
+                className={cn(
+                  buttonVariants({
+                    variant: tier.featured ? "primary" : "outline",
+                    size: "md",
+                  }),
+                  "w-full",
+                )}
+              >
+                {STREAM_COPY.cardCta}
+              </a>
+            ) : null}
+            <div className="grid grid-cols-2 gap-2">
+              <a
+                href={walletUrl(WALLETS.cashApp, tier.price)}
+                {...external}
+                className={cn(buttonVariants({ variant: "outline", size: "md" }), "w-full")}
+              >
+                {STREAM_COPY.cashAppCta}
+              </a>
+              <a
+                href={walletUrl(WALLETS.paypal, tier.price)}
+                {...external}
+                className={cn(buttonVariants({ variant: "outline", size: "md" }), "w-full")}
+              >
+                {STREAM_COPY.paypalCta}
+              </a>
+            </div>
+          </div>
         </Card>
       ))}
-
-      {/* ── Wallets ──────────────────────────────────────────────────────── */}
-      <Card className="flex flex-col gap-3">
-        <h2 className="text-base font-semibold text-slate-900">
-          {STREAM_COPY.walletsTitle}
-        </h2>
-        <div className="grid grid-cols-2 gap-3">
-          <a
-            href={WALLETS.cashApp}
-            {...external}
-            className={cn(buttonVariants({ size: "md" }), "w-full")}
-          >
-            {STREAM_COPY.cashAppCta}
-          </a>
-          <a
-            href={WALLETS.paypal}
-            {...external}
-            className={cn(buttonVariants({ size: "md" }), "w-full")}
-          >
-            {STREAM_COPY.paypalCta}
-          </a>
-        </div>
-        <p className="text-sm text-slate-600">{STREAM_COPY.walletsNote}</p>
-      </Card>
 
       {/* ── Longer readings ──────────────────────────────────────────────── */}
       <Card className="flex flex-col gap-3">
