@@ -1,4 +1,3 @@
-import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
 import { ExternalLink } from "lucide-react";
@@ -10,14 +9,12 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/card";
+import { Breadcrumbs } from "@/components/breadcrumbs";
 import { DIGITAL_TAROT_APP_URL } from "@/lib/config";
+import { pageMetadata } from "@/lib/metadata";
 import { recommendedResources } from "@/data/resources";
 
-export const metadata: Metadata = {
-  title: "Tools & resources",
-  description:
-    "Notion templates and tools that support grounded tarot and astrology practice, plus recommended resources.",
-};
+export const metadata = pageMetadata("/tools");
 
 export default function ToolsIndexPage() {
   const byCategory = recommendedResources.reduce<
@@ -35,6 +32,7 @@ export default function ToolsIndexPage() {
 
   return (
     <div className="space-y-12">
+      <Breadcrumbs path="/tools" />
       <header className="space-y-3">
         <h1 className="font-heading text-3xl font-black tracking-tight text-slate-900 sm:text-4xl">
           Tools & resources
@@ -105,9 +103,9 @@ export default function ToolsIndexPage() {
             <CardHeader className="space-y-2 px-6 pt-4">
               <CardTitle>Complete Tarot Dashboard</CardTitle>
               <CardDescription>
-                Advanced Notion system to track readings in full detail—upright
-                and reversed cards, contextual meanings, and statistics so your
-                practice deepens over time.
+                Advanced Notion system to track readings in full detail:
+                upright and reversed cards, contextual meanings, and statistics
+                so your practice deepens over time.
               </CardDescription>
               <p className="text-xs text-slate-500">
                 Advanced & flexible

@@ -1,57 +1,26 @@
-import type { Metadata } from "next";
 import Link from "next/link";
 import { Button } from "@/components/button";
-import { SITE_URL } from "@/lib/config";
+import { Breadcrumbs } from "@/components/breadcrumbs";
+import { ReadingServiceSchema } from "@/components/structured-data";
+import { pageMetadata } from "@/lib/metadata";
 import { TULSA_TAROT_READER_URL } from "@/lib/offerings";
 
-const pageTitle = "Tulsa astrology readings – timing, patterns, and context";
-const pageDescription =
-  "Online astrology consultations from Tulsa-based reader Tyler Martin, focused on timing, patterns, and practical choices. Recorded readings and live Zoom sessions.";
-
-export const metadata: Metadata = {
-  title: pageTitle,
-  description: pageDescription,
-  alternates: { canonical: "/tulsa-astrology-reading" },
-};
-
-// Delivered online, so this is a Service provided by an Organization rather
-// than a LocalBusiness with a Tulsa service area — local in-person intent
-// belongs to Tulsa Tarot Reader.
-const serviceSchema = {
-  "@context": "https://schema.org",
-  "@type": "Service",
-  name: "Online astrology readings",
-  serviceType: "Astrology reading",
-  url: `${SITE_URL}/tulsa-astrology-reading`,
-  provider: {
-    "@type": "Organization",
-    name: "Ordinary Mystic",
-    url: SITE_URL,
-  },
-  serviceOutput: "A personalized video walkthrough and a written synthesis",
-  availableChannel: {
-    "@type": "ServiceChannel",
-    serviceUrl: `${SITE_URL}/#book`,
-    availableLanguage: "en",
-  },
-  areaServed: { "@type": "Country", name: "United States" },
-};
+export const metadata = pageMetadata("/tulsa-astrology-reading");
 
 export default function TulsaAstrologyPage() {
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
-      />
+      <ReadingServiceSchema kind="recorded" />
+      <ReadingServiceSchema kind="live" />
       <div className="space-y-6">
+        <Breadcrumbs path="/tulsa-astrology-reading" />
         <header className="space-y-3">
           <h1 className="font-heading text-3xl font-black tracking-tight text-slate-900 sm:text-4xl">
             Tulsa astrology readings
           </h1>
           <p className="max-w-2xl text-sm leading-relaxed text-slate-700">
             Looking for astrology in Tulsa? Ordinary Mystic offers online
-            readings from Tulsa-based reader Tyler Martin — grounded
+            readings from Tulsa-based reader Tyler Martin: grounded
             consultations that focus on timing, patterns, and context, not
             generic horoscopes. For private in-person readings and local events,
             visit{" "}

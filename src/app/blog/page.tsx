@@ -1,27 +1,25 @@
-import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
 import { getAllBlogPosts } from "@/lib/content";
 import { Card, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/card";
+import { Breadcrumbs } from "@/components/breadcrumbs";
+import { pageMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
-  title: "Blog",
-  description:
-    "Short, grounded essays on tarot, astrology, and reflective practice—without the theatrics.",
-};
+export const metadata = pageMetadata("/blog");
 
 export default async function BlogIndexPage() {
   const posts = await getAllBlogPosts();
 
   return (
     <div className="space-y-6">
+      <Breadcrumbs path="/blog" />
       <header className="space-y-3">
         <h1 className="font-heading text-3xl font-black tracking-tight text-slate-900 sm:text-4xl">
           Blog
         </h1>
         <p className="max-w-2xl text-sm leading-relaxed text-slate-700">
-          Essays and notes on tarot, astrology, and reflective tools—written for
-          people who like nuance more than predictions.
+          Essays and notes on tarot, astrology, and reflective tools, written
+          for people who like nuance more than predictions.
         </p>
       </header>
 

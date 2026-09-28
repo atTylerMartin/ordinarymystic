@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import { notFound } from "next/navigation";
 import { getAllBlogPosts, getEntryBySlug } from "@/lib/content";
+import { Breadcrumbs } from "@/components/breadcrumbs";
+import { pageMetadata } from "@/lib/metadata";
 
 type Params = {
   slug: string;
@@ -27,12 +29,7 @@ export async function generateMetadata({
     };
   }
 
-  const fm = match.frontmatter;
-
-  return {
-    title: fm.title,
-    description: fm.description,
-  };
+  return pageMetadata(`/blog/${slug}`);
 }
 
 export default async function BlogPostPage({
@@ -53,6 +50,7 @@ export default async function BlogPostPage({
 
   return (
     <article className="space-y-6">
+      <Breadcrumbs path={`/blog/${slug}`} />
       <header className="space-y-3">
         <p className="text-xs font-medium uppercase tracking-wide text-slate-500">
           Blog

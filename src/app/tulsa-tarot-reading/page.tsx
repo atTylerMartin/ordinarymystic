@@ -1,53 +1,22 @@
-import type { Metadata } from "next";
 import Link from "next/link";
 import { Button } from "@/components/button";
-import { SITE_URL } from "@/lib/config";
+import { Breadcrumbs } from "@/components/breadcrumbs";
+import { ReadingServiceSchema } from "@/components/structured-data";
+import { pageMetadata } from "@/lib/metadata";
 import {
   TULSA_TAROT_READER_EVENTS_URL,
   TULSA_TAROT_READER_URL,
 } from "@/lib/offerings";
 
-const pageTitle = "Tulsa tarot readings – online, grounded, practical insight";
-const pageDescription =
-  "Online tarot readings from Tulsa-based reader Tyler Martin. Recorded readings and live Zoom sessions. For in-person readings and events in Tulsa, visit Tulsa Tarot Reader.";
-
-export const metadata: Metadata = {
-  title: pageTitle,
-  description: pageDescription,
-  alternates: { canonical: "/tulsa-tarot-reading" },
-};
-
-// Ordinary Mystic delivers online. Marking it as a LocalBusiness with a Tulsa
-// service area would compete with Tulsa Tarot Reader's local signals, so this
-// is a Service provided by an Organization, delivered online.
-const serviceSchema = {
-  "@context": "https://schema.org",
-  "@type": "Service",
-  name: "Online tarot readings",
-  serviceType: "Tarot reading",
-  url: `${SITE_URL}/tulsa-tarot-reading`,
-  provider: {
-    "@type": "Organization",
-    name: "Ordinary Mystic",
-    url: SITE_URL,
-  },
-  serviceOutput: "A personalized video walkthrough and a written synthesis",
-  availableChannel: {
-    "@type": "ServiceChannel",
-    serviceUrl: `${SITE_URL}/#book`,
-    availableLanguage: "en",
-  },
-  areaServed: { "@type": "Country", name: "United States" },
-};
+export const metadata = pageMetadata("/tulsa-tarot-reading");
 
 export default function TulsaTarotPage() {
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
-      />
+      <ReadingServiceSchema kind="recorded" />
+      <ReadingServiceSchema kind="live" />
       <div className="space-y-6">
+        <Breadcrumbs path="/tulsa-tarot-reading" />
         <header className="space-y-3">
           <h1 className="font-heading text-3xl font-black tracking-tight text-slate-900 sm:text-4xl">
             Tulsa tarot readings

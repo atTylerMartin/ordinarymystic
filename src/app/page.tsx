@@ -1,6 +1,5 @@
 import Link from "next/link";
 import Image from "next/image";
-import type { Metadata } from "next";
 import { ChevronRight, ExternalLink } from "lucide-react";
 import { Button } from "@/components/button";
 import {
@@ -17,18 +16,16 @@ import {
 import { Container } from "@/components/container";
 import { ReviewsSection } from "@/components/reviews-section";
 import { ScrollOnHash } from "@/components/scroll-on-hash";
+import { ReadingServiceSchema } from "@/components/structured-data";
 import {
   CONTACT_EMAIL,
   DIGITAL_TAROT_APP_URL,
   SITE_LIVE_MODE,
   TIKTOK_URL,
 } from "@/lib/config";
+import { pageMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
-  title: "Ordinary Mystic Readings – Practical Tarot and Astrology Without the Woo",
-  description:
-    "Practical tarot and astrology without the woo. Book a recorded reading — read privately, delivered as a personalized video walkthrough plus a written synthesis — or a live one-on-one over Zoom. 15, 30, or 60 minutes.",
-};
+export const metadata = pageMetadata("/");
 
 const sectionPadding = "py-16 sm:py-20";
 
@@ -36,8 +33,10 @@ export default function Home() {
   return (
     <div className="-mt-10 -mb-16 pb-0">
       <ScrollOnHash hash="#book" />
+      <ReadingServiceSchema kind="recorded" />
+      <ReadingServiceSchema kind="live" />
 
-      {/* HERO — full-width gradient #151326 → #213752 */}
+      {/* HERO: full-width gradient #151326 → #213752 */}
       <section
         className={`relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen min-h-[32rem] flex items-center overflow-hidden bg-gradient-to-br from-[#151326] via-[#1a2742] to-[#213752] ${SITE_LIVE_MODE ? "hero-live-pulse" : ""}`}
         aria-label="Hero"
@@ -176,12 +175,12 @@ export default function Home() {
           the products below the fold. */}
       <RecordedSection />
 
-      {/* SECTION: Reviews — warm sand */}
+      {/* SECTION: Reviews, warm sand */}
       <ReviewsSection />
 
       <LiveAndOngoingSection />
 
-      {/* SECTION: Tools to Support Your Readings — soft blue-gray */}
+      {/* SECTION: Tools to Support Your Readings, soft blue-gray */}
       <section
         className={`relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen ${sectionPadding}`}
         style={{ backgroundColor: "#eef1f5" }}

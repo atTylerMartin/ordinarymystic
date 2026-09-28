@@ -115,9 +115,9 @@ export async function getEntryBySlug<T>(
   };
 }
 
-export async function getAllEntries<T>(
-  type: ContentType,
-): Promise<MarkdownListItem<T>[]> {
+// Synchronous: frontmatter only, no markdown rendering. Lets `routes.ts`
+// build the sitemap and registry entries at import time.
+export function getAllEntriesSync<T>(type: ContentType): MarkdownListItem<T>[] {
   const dir = getDirectoryForType(type);
   if (!fs.existsSync(dir)) return [];
 
@@ -169,12 +169,26 @@ export async function getAllEntries<T>(
   return items;
 }
 
+export async function getAllEntries<T>(
+  type: ContentType,
+): Promise<MarkdownListItem<T>[]> {
+  return getAllEntriesSync<T>(type);
+}
+
 export async function getAllBlogPosts() {
   return getAllEntries<BlogPostFrontmatter>("blog");
 }
 
+export function getAllBlogPostsSync() {
+  return getAllEntriesSync<BlogPostFrontmatter>("blog");
+}
+
 export async function getAllTools() {
   return getAllEntries<ToolFrontmatter>("tools");
+}
+
+export function getAllToolsSync() {
+  return getAllEntriesSync<ToolFrontmatter>("tools");
 }
 
 export async function getAllResources() {

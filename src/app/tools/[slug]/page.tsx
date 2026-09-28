@@ -4,6 +4,8 @@ import Image from "next/image";
 import { notFound } from "next/navigation";
 import { getAllTools, getEntryBySlug } from "@/lib/content";
 import { Button } from "@/components/button";
+import { Breadcrumbs } from "@/components/breadcrumbs";
+import { pageMetadata } from "@/lib/metadata";
 
 type Params = {
   slug: string;
@@ -29,12 +31,7 @@ export async function generateMetadata({
     };
   }
 
-  const fm = match.frontmatter;
-
-  return {
-    title: fm.title,
-    description: fm.description,
-  };
+  return pageMetadata(`/tools/${slug}`);
 }
 
 export default async function ToolDetailPage({
@@ -55,6 +52,7 @@ export default async function ToolDetailPage({
 
   return (
     <article className="space-y-6">
+      <Breadcrumbs path={`/tools/${slug}`} />
       <header className="space-y-4 md:flex md:items-start md:justify-between md:gap-8">
         <div className="space-y-3">
           <p className="text-xs font-medium uppercase tracking-wide text-slate-500">
