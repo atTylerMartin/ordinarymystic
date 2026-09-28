@@ -39,6 +39,22 @@
 - A tier with an empty `url` renders an "Email to book" mailto fallback, so the
   site never shows a new price behind an old link.
 
+## The pay page
+
+- **`/pay` is where TikTok live viewers pay for a reading directly** instead of
+  through TikTok coins. Tiers, copy and wallet links are `LIVE_STREAM`,
+  `STREAM_COPY` and `WALLETS` in `src/lib/offerings.ts`. The page is noindex
+  and stays out of the sitemap.
+- **The one-card ($1) tier is wallets-only on purpose**: Stripe's fee would take
+  a third of a dollar. Only three cards and full spread get Payment Links
+  (`om_tier` `stream-3card` / `stream-full`), and those links redirect to
+  `/pay?paid=1`, which shows a thank-you line.
+- **The three `explain` paragraphs are the canonical description** of the three
+  reading sizes (one card, three cards, full spread). Reuse them; do not
+  rewrite them elsewhere.
+- **The URL goes in the TikTok bio and Service+ messages only.** It is never
+  read aloud or shown on screen during a live.
+
 ## Two brands, one reader (Tyler Martin)
 
 - **Ordinary Mystic is the online practice**: recorded readings (prepared

@@ -106,3 +106,87 @@ export const TULSA_CROSSLINK = {
 export const TULSA_TAROT_READER_URL = "https://tulsatarotreader.com";
 export const TULSA_TAROT_READER_EVENTS_URL =
   "https://tulsatarotreader.com/events";
+
+// ─── Live stream readings: the /pay page ─────────────────────────────────────
+//
+// For TikTok live viewers who pay directly instead of in coins. The one-card
+// tier is wallets-only by design: Stripe's fee would take a third of a dollar.
+// The three-card and full-spread links come from
+// `scripts/stripe-payment-links.mjs` (om_tier stream-3card / stream-full) and
+// redirect to /pay?paid=1. A card button only renders once its `url` is set.
+
+export type StreamTier = {
+  key: "one-card" | "three-cards" | "full-spread";
+  name: string;
+  price: number;
+  /** The same reading bought through TikTok Viewer Wishes. */
+  coins: number;
+  url: string;
+  featured?: boolean;
+  /** One line under the name and price. */
+  blurb: string;
+  /** The canonical description of this reading size. */
+  explain: string;
+};
+
+export const LIVE_STREAM: StreamTier[] = [
+  {
+    key: "one-card",
+    name: "One card",
+    price: 1,
+    coins: 100,
+    url: "",
+    blurb: "A flash of intuition.",
+    explain:
+      "One card is a first impression. Closer to a hunch than an answer: the card says one thing about your question and I tell you what it is.",
+  },
+  {
+    key: "three-cards",
+    name: "Three cards",
+    price: 5,
+    coins: 500,
+    url: "",
+    featured: true,
+    blurb: "The hunch, put to the test.",
+    explain:
+      "Three cards take that first impression and poke at it from a couple of angles. It is the right size for starting a real conversation about a question.",
+  },
+  {
+    key: "full-spread",
+    name: "Full spread",
+    price: 15,
+    coins: 1500,
+    url: "",
+    blurb: "A structure built for your question.",
+    explain:
+      "A full spread puts the cards into a shape chosen for what you are trying to do. An overview of a situation is a Celtic Cross. Advice on what to do next is a Roundabout. Deciding between options is a This or That. It goes much deeper than one card or three can.",
+  },
+];
+
+export const STREAM_COPY = {
+  brand: "Ordinary Mystic",
+  title: "Pay for your reading",
+  lede: "Pick the reading you asked for. Card, Cash App, or PayPal.",
+  paid: "Thank you! Your payment came through.",
+  featuredBadge: "Most popular",
+  coinsLine: (coins: number) => `or ${coins.toLocaleString("en-US")} coins in Viewer Wishes`,
+  cardCta: "Pay with card",
+  walletsTitle: "Cash App or PayPal",
+  cashAppCta: "Cash App",
+  paypalCta: "PayPal",
+  walletsNote: `Enter the amount for your reading: ${LIVE_STREAM.map((t) => `$${t.price}`)
+    .join(", ")
+    .replace(/, ([^,]+)$/, ", or $1")}.`,
+  longerTitle: "Want a longer reading?",
+  recordedCta: "Recorded readings",
+  liveCta: "Live one-on-one readings",
+  reviewTitle: "Enjoyed your reading?",
+  reviewCta: "Leave a review",
+  followTitle: "Follow along",
+  tiktokCta: "TikTok",
+};
+
+export const WALLETS = {
+  cashApp: "https://cash.app/$ordinarymystic",
+  paypal: "https://www.paypal.me/ordinarymystic",
+};

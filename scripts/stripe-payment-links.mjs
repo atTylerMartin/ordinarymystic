@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 //
-// Create (or re-find) the six reading Products + Prices + Payment Links in
+// Create (or re-find) the reading Products + Prices + Payment Links in
 // Stripe, and print a block of URLs to paste into `src/lib/offerings.ts`.
 //
 // Plain Node against the Stripe REST API via fetch — no new dependency, and
@@ -34,12 +34,16 @@ const TIERS = [
   { om_tier: "live-15",     name: "Live Online Reading — 15 minutes", amount: 4000,  redirect: `${SITE}/book/thanks/live` },
   { om_tier: "live-30",     name: "Live Online Reading — 30 minutes", amount: 10000, redirect: `${SITE}/book/thanks/live` },
   { om_tier: "live-60",     name: "Live Online Reading — 60 minutes", amount: 19500, redirect: `${SITE}/book/thanks/live` },
+  // TikTok live stream readings, paid on /pay. One card ($1) is wallets-only.
+  { om_tier: "stream-3card", name: "Live Stream Reading: Three Cards", amount: 500,  redirect: `${SITE}/pay?paid=1` },
+  { om_tier: "stream-full",  name: "Live Stream Reading: Full Spread", amount: 1500, redirect: `${SITE}/pay?paid=1` },
 ];
 
 const DESCRIPTIONS = {
   recorded:
     "Prepared privately off camera and delivered as a personalized video walkthrough plus a written synthesis.",
   live: "A live one-on-one reading over Zoom, followed by a written synthesis.",
+  stream: "A tarot reading given during a TikTok live stream.",
 };
 
 // The six Payment Links currently wired into the site, by URL. These are the
@@ -158,12 +162,13 @@ async function listAll(path, params = {}) {
 function dryRun() {
   console.log(`\n${MODE} — nothing will be created.\n`);
   for (const t of TIERS) {
-    console.log(`  ${t.om_tier.padEnd(12)} ${t.name}`);
-    console.log(`  ${" ".repeat(12)} $${(t.amount / 100).toFixed(2)} USD one-time`);
-    console.log(`  ${" ".repeat(12)} redirect → ${t.redirect}`);
-    console.log(`  ${" ".repeat(12)} metadata.om_tier = ${t.om_tier}\n`);
+    console.log(`  ${t.om_tier.padEnd(13)} ${t.name}`);
+    console.log(`  ${" ".repeat(13)} $${(t.amount / 100).toFixed(2)} USD one-time`);
+    console.log(`  ${" ".repeat(13)} redirect → ${t.redirect}`);
+    console.log(`  ${" ".repeat(13)} metadata.om_tier = ${t.om_tier}\n`);
   }
-  console.log("Would create 6 Products, 6 Prices, 6 Payment Links.");
+  const n = TIERS.length;
+  console.log(`At most ${n} Products, ${n} Prices, ${n} Payment Links; existing ones are reused.`);
   console.log("Would deactivate nothing. Re-run without --dry-run to apply.\n");
 }
 
