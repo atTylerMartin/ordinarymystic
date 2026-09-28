@@ -1,10 +1,12 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { CONTACT_EMAIL } from "@/lib/config";
+import { NOINDEX } from "@/lib/metadata";
 
 export const metadata: Metadata = {
   title: "Thanks for booking",
   description: "Your recorded reading is confirmed. You'll receive your video and notes once it's ready.",
+  ...NOINDEX,
 };
 
 export default function ThanksRecordedPage() {
@@ -16,7 +18,7 @@ export default function ThanksRecordedPage() {
       <div className="space-y-4 text-sm leading-relaxed text-slate-700">
         <p>
           Your <strong className="text-slate-900">recorded reading</strong> is
-          confirmed. I should have everything I need from you—if I need any
+          confirmed. I should have everything I need from you; if I need any
           follow-up or clarification, I&apos;ll get in touch.
         </p>
         <p>

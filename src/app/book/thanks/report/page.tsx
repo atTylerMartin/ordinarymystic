@@ -1,10 +1,12 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { CONTACT_EMAIL } from "@/lib/config";
+import { NOINDEX } from "@/lib/metadata";
 
 export const metadata: Metadata = {
   title: "Thanks for your order",
   description: "Your written report order is confirmed. You'll receive your PDF once it's ready.",
+  ...NOINDEX,
 };
 
 export default function ThanksReportPage() {
@@ -16,7 +18,7 @@ export default function ThanksReportPage() {
       <div className="space-y-4 text-sm leading-relaxed text-slate-700">
         <p>
           Your <strong className="text-slate-900">written report</strong> order
-          is confirmed. I should have what I need—if I need any follow-up info,
+          is confirmed. I should have what I need; if I need any follow-up info,
           I&apos;ll get in touch.
         </p>
         <p>

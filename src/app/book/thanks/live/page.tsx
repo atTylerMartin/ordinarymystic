@@ -1,10 +1,12 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { CONTACT_EMAIL } from "@/lib/config";
+import { NOINDEX } from "@/lib/metadata";
 
 export const metadata: Metadata = {
   title: "Thanks for booking",
   description: "Your live reading is confirmed. We'll be in touch to schedule your Zoom session.",
+  ...NOINDEX,
 };
 
 export default function ThanksLivePage() {

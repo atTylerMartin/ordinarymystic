@@ -3,10 +3,12 @@ import Link from "next/link";
 import { CheckCircle } from "lucide-react";
 import { Button } from "@/components/button";
 import { CONTACT_EMAIL } from "@/lib/config";
+import { NOINDEX } from "@/lib/metadata";
 
 export const metadata: Metadata = {
-  title: "Booking Confirmed — Ordinary Mystic",
+  title: "Booking Confirmed",
   description: "Your reading has been booked. I'll be in touch soon.",
+  ...NOINDEX,
 };
 
 export default function ThankYouPage() {
