@@ -1,12 +1,12 @@
 import type { Metadata } from "next";
-import Link from "next/link";
-import { BookOpen, User } from "lucide-react";
 import { Geist, Geist_Mono } from "next/font/google";
 import { Montserrat } from "next/font/google";
 import { SiteHeader } from "@/components/site-header";
+import { SiteFooter } from "@/components/site-footer";
 import { Container } from "@/components/container";
-import { SITE_LIVE_MODE, SITE_URL, TIKTOK_URL } from "@/lib/config";
-import { TULSA_TAROT_READER_URL } from "@/lib/offerings";
+import { StructuredData } from "@/components/structured-data";
+import { SITE_LIVE_MODE, SITE_URL } from "@/lib/config";
+import { OG_DEFAULT } from "@/lib/metadata";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -28,26 +28,48 @@ const montserrat = Montserrat({
 const siteName = "Ordinary Mystic";
 const siteUrl = SITE_URL;
 
+const defaultDescription =
+  "Online tarot and astrology for thoughtful skeptics. Recorded readings delivered as a personalized video walkthrough plus a written synthesis, and live one-on-one sessions over Zoom.";
+
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: `${siteName} – Tarot & Astrology Without the Woo`,
+    default: "Ordinary Mystic | Tarot and Astrology Readings",
     template: `%s | ${siteName}`,
   },
-  description:
-    "Online tarot and astrology for thoughtful skeptics. Recorded readings delivered as a personalized video walkthrough plus a written synthesis, and live one-on-one sessions over Zoom.",
+  description: defaultDescription,
+  alternates: {
+    canonical: "/",
+  },
   icons: {
     icon: "/favicon.png",
     shortcut: "/favicon.png",
     apple: "/favicon.png",
   },
   openGraph: {
-    title: `${siteName} – Tarot & Astrology Without the Woo`,
-    description:
-      "Online tarot and astrology for thoughtful skeptics. Recorded readings delivered as a personalized video walkthrough plus a written synthesis, and live one-on-one sessions over Zoom.",
+    title: "Ordinary Mystic | Tarot and Astrology Readings",
+    description: defaultDescription,
     url: siteUrl,
     siteName,
     type: "website",
+    images: [OG_DEFAULT],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Ordinary Mystic | Tarot and Astrology Readings",
+    description: defaultDescription,
+    images: [OG_DEFAULT.url],
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+      "max-video-preview": -1,
+    },
   },
 };
 
@@ -80,92 +102,13 @@ export default function RootLayout({
         style={{ backgroundColor: "#f5f4f2" }}
         data-site-live={SITE_LIVE_MODE ? "true" : undefined}
       >
+        <StructuredData />
         <div className="flex min-h-screen flex-col">
           <SiteHeader />
           <main className="flex-1 pt-10 pb-16">
             <Container>{children}</Container>
           </main>
-          <footer className="border-t border-white/5 bg-[#0d0c14] py-10">
-            <Container className="flex flex-col gap-6 md:flex-row md:items-start md:justify-between">
-              <div className="space-y-3 text-sm text-slate-300">
-                <div className="flex items-center gap-2 font-medium text-white">
-                  <BookOpen className="h-4 w-4 text-slate-400" />
-                  <span>Ordinary Mystic Readings: Astrology and Tarot Without the Woo</span>
-                </div>
-                <div className="flex flex-wrap gap-x-4 gap-y-1">
-                  <Link
-                    href="/terms"
-                    className="text-slate-200 underline-offset-4 hover:text-white hover:underline"
-                  >
-                    Terms of Service
-                  </Link>
-                  <Link
-                    href="/privacy"
-                    className="text-slate-200 underline-offset-4 hover:text-white hover:underline"
-                  >
-                    Privacy Policy
-                  </Link>
-                </div>
-                <p className="text-slate-400">
-                  In-person readings and events in Tulsa:{" "}
-                  <a
-                    href={TULSA_TAROT_READER_URL}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-slate-200 underline-offset-4 hover:text-white hover:underline"
-                  >
-                    Tulsa Tarot Reader
-                  </a>
-                </p>
-              </div>
-              <div className="flex flex-col gap-3 text-sm text-slate-300">
-                <div className="flex items-center gap-2 font-medium text-white">
-                  <User className="h-4 w-4 text-slate-400" />
-                  <span>Contact</span>
-                </div>
-                <a
-                  href="mailto:ordinarymysticreadings@gmail.com"
-                  className="text-slate-200 underline-offset-4 hover:text-white hover:underline"
-                >
-                  ordinarymysticreadings@gmail.com
-                </a>
-                <div className="flex flex-wrap gap-x-4 gap-y-1">
-                  <a
-                    href="https://www.youtube.com/@OrdinaryMysticReadings"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-slate-200 underline-offset-4 hover:text-white hover:underline"
-                  >
-                    YouTube
-                  </a>
-                  <a
-                    href={TIKTOK_URL}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-slate-200 underline-offset-4 hover:text-white hover:underline"
-                  >
-                    TikTok
-                  </a>
-                  <a
-                    href="https://cash.app/$ordinarymystic"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-slate-200 underline-offset-4 hover:text-white hover:underline"
-                  >
-                    Cash App
-                  </a>
-                  <a
-                    href="https://paypal.me/ordinarymystic"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-slate-200 underline-offset-4 hover:text-white hover:underline"
-                  >
-                    PayPal
-                  </a>
-                </div>
-              </div>
-            </Container>
-          </footer>
+          <SiteFooter />
         </div>
       </body>
     </html>
