@@ -19,9 +19,10 @@ because Next's generated validator does not check the page's own prop annotation
 Confirm before changing anything:
 ```bash
 npm run build
-grep -c "This page could not be found" out/tools/everyday-checkin-notion-dashboard.html
+grep -c '<h1' out/tools/everyday-checkin-notion-dashboard.html
 ```
-That prints `1` today.
+That prints `0` today (the page has no H1 because it is the 404 page). Do not grep for the
+"could not be found" string: it appears in every page's payload and proves nothing.
 
 ## The fix
 In both files, in `generateMetadata` and in the page component:
@@ -36,8 +37,7 @@ leave it alone; WP-2 replaces the blog route entirely.
 ## Verify
 ```bash
 npm run build
-grep -L "This page could not be found" out/tools/*.html      # lists both tool files
-grep -L "This page could not be found" out/blog/*.html       # lists all 30 blog files
+grep -L '<h1' out/tools/*.html out/blog/*.html                  # prints nothing: every page has an H1
 grep -o '<h1[^>]*>[^<]*' out/tools/everyday-checkin-notion-dashboard.html   # shows the tool title
 grep -c 'name="robots" content="noindex' out/tools/everyday-checkin-notion-dashboard.html   # 0
 grep -o '<title>[^<]*' out/blog/clear-questions-grounded-tarot.html   # the post title, not the site default

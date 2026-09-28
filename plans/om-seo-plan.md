@@ -426,8 +426,7 @@ two Payment Links redirect to `/pay?paid=1`, fast-forward, push.
 **WP-0b Hotfix the 404 pages** (Sonnet, branch `fix-params`, ships alone). In
 `src/app/blog/[slug]/page.tsx` and `src/app/tools/[slug]/page.tsx`, type `params` as a
 `Promise` and `await` it in both `generateMetadata` and the page. Verify: `npm run build`,
-then `grep -L "This page could not be found" out/tools/*.html` lists every tool page and
-`grep -o '<h1[^>]*>[^<]*' out/tools/everyday-checkin-notion-dashboard.html` shows the title.
+then every file in `out/tools/` has its own `<h1>` and `<title>` and no `noindex` tag.
 
 **WP-1 Hygiene and plumbing** (Sonnet, branch `seo-hygiene`). Delete `/login` and
 `/account/*` (hard 404 is the right signal; Phase 1 rebuilds them); `NOINDEX` metadata on
@@ -562,8 +561,8 @@ Monthly
 - `grep -rnE '\$(35|65|125|40|100|195)\b' src --include=*.ts --include=*.tsx | grep -v offerings.ts` returns nothing.
 - `out/sitemap.xml`: no `/login`, `/account`, `/blog/`, `/pay`, `/links`, `/admin`; every
   entry has `lastmod`; `<loc>` count equals `routes.length`.
-- `grep -L "This page could not be found" out/tools/*.html out/guides/*.html` lists every
-  file (no page silently prerendered as the 404).
+- Every file in `out/tools/` and `out/guides/` has its own `<h1>` and `<title>` and no `noindex`
+  tag (the "could not be found" string appears in every page's payload, so never grep for it).
 - `grep -o '"price":"[0-9]*"' out/readings/recorded.html | sort -u` matches `RECORDED` exactly;
   `grep -c AggregateRating out/index.html` is 0; `FAQPage` appears in `out/faq.html` only.
 - Each new page: `<link rel="canonical">` is its own URL; one `BreadcrumbList`; the title is
