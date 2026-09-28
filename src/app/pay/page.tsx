@@ -113,6 +113,7 @@ export default function PayPage() {
                 {STREAM_COPY.paypalCta}
               </a>
             </div>
+            <p className="text-xs text-slate-500">{STREAM_COPY.walletNote}</p>
           </div>
         </Card>
       ))}

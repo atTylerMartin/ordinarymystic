@@ -173,6 +173,7 @@ export const STREAM_COPY = {
   cardCta: "Pay with card",
   cashAppCta: "Cash App",
   paypalCta: "PayPal",
+  walletNote: "In the note, put your TikTok name so I can find you in the chat.",
   longerTitle: "Want a longer reading?",
   recordedCta: "Recorded readings",
   liveCta: "Live one-on-one readings",
