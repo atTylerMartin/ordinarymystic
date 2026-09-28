@@ -165,8 +165,8 @@ export const LIVE_STREAM: StreamTier[] = [
 
 export const STREAM_COPY = {
   brand: "Ordinary Mystic",
-  title: "Pay for your reading",
-  lede: "Pick the reading you asked for. Card, Cash App, or PayPal.",
+  title: "TikTok Live Tarot Readings",
+  lede: "Pay for a TikTok live reading using the payment links below.",
   paid: "Thank you! Your payment came through.",
   featuredBadge: "Most popular",
   coinsLine: (coins: number) => `or ${coins.toLocaleString("en-US")} coins in Viewer Wishes`,

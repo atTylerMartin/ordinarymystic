@@ -13,7 +13,7 @@ import { PaidNotice } from "./paid-notice";
 // Linked from the TikTok bio and Service+ messages only. Kept out of search
 // and out of the sitemap.
 export const metadata: Metadata = {
-  title: "Pay for your reading",
+  title: "TikTok Live Tarot Readings",
   robots: { index: false, follow: false },
 };
 
