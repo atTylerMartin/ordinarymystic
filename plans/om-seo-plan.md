@@ -363,6 +363,16 @@ Later: writing city pages that are not doorway pages; a 22-card series as a rele
 what a directory listing needs from a reader; running a drawing from a newsletter segment.
 
 ### Channels (OM owns TikTok and YouTube; TTR owns Instagram and Facebook)
+Decided 2026-09-28: **TikTok owns clients.** The feed stays consumer-facing (readings, the
+question behind the question, transits, proof) at roughly three readings posts to one craft
+post, so the algorithm learns "reader who does readings" and shows the live to buyers.
+**YouTube owns students, with a small consumer playlist.** One channel, two playlists:
+"Readings" (the recorded-reading explainer, a sample walkthrough, a few consumer answers,
+because that is where a Google search for "recorded tarot reading" surfaces a video and
+YouTube mentions are the top AI-citation signal) and "Learning tarot and astrology" (the
+guides and essays as talking heads). Working readers are a segment of the student audience
+and surface from it; the reader wing and, later, an Instagram for readers grow out of
+YouTube, not TikTok.
 Four pillars, each with one consistent visual treatment and one destination:
 | Pillar | What it is | Destination |
 |---|---|---|
