@@ -374,21 +374,33 @@ YouTube mentions are the top AI-citation signal) and "Learning tarot and astrolo
 guides and essays as talking heads). Working readers are a segment of the student audience
 and surface from it; the reader wing and, later, an Instagram for readers grow out of
 YouTube, not TikTok.
-Four pillars, each with one consistent visual treatment and one destination:
-| Pillar | What it is | Destination |
-|---|---|---|
-| Readings in practice | Sample pulls, "the question behind the question", what a recorded walkthrough looks like (60 seconds of a real synthesis, client anonymised and consenting) | `/readings/recorded` |
-| Astrology now | This week's transit, season openers, the forecast guides as talking-head videos | the matching guide, then the astrology page |
-| Craft | Reader-facing: how I prepare a recorded reading, Querent, the Notion tools, a lesson | `/for-readers` |
-| Proof and practice | A testimonial read aloud, behind the scenes, live announcements | `/testimonials`, `/pay` |
+**TikTok buckets (Tyler's, 2026-09-29), each with a job:**
+| Bucket | Share | Job | Destination |
+|---|---|---|---|
+| Live highlights | 50% | Credibility as a reader and as a live creator; cut from the replay the same night | the next live |
+| Pop culture pulls | 20% | Opens the funnel, reach; read the situation, never call the winner; about two a month | the live |
+| Collective readings | 20% | Nurtures current viewers, a taste of a live; read for a situation in the client voice, end on a question, never a prediction | recorded readings ("in the link") |
+| Education for non-readers | 10% | Familiarity and filtering: how to approach a reading, what I do and don't do | the guides |
 
-Sustainable cadence for one person on a week-on, week-off schedule: on an off week, batch
-four TikToks and one YouTube video; every week, one TikTok live (the `/pay` flow) and two
-posted TikToks; every two weeks, one YouTube video (a guide as a video, or the sample
-walkthrough); twice a month, a newsletter (one guide, one transit note, one line about
-booking). YouTube is not optional: it is the top brand-mention signal for AI answers and the
-guides are already the scripts. TikTok Lives carry `/pay` in the bio and in Service+ messages
-only, never on screen.
+Flow: Live highlight, Pop culture, Live highlight, Collective reading, repeating. Tuesdays
+break the pattern for Tarot Tip Tuesday (education), then the pattern resumes Wednesday.
+About three posts a week, sustainable only because highlights come from replays. Outside the
+rotation: three pinned videos, the recorded-reading explainer first, then a reading in
+practice, then a live highlight.
+
+**YouTube buckets:** Pick a Card (collective readings; one video is three or four readings,
+each also cut as a TikTok collective post), Tarot education (card meanings, how to read; the
+essays as talking heads, each also cut as a Tarot Tip Tuesday), Practice education (how to
+start, grow and run a practice; the reader wing and the Tulsa lessons), Astrology (one per
+season and one per major transit; ten of the twenty essays are astrology and season videos
+are what YouTube search returns for a solo creator).
+
+**Tarot Tip Tuesday is the one cross-brand tradition:** OM TikTok (cut from the YouTube
+video), OM YouTube, and the TTR Instagram as a still plus caption in TTR's voice, with no OM
+watermark and no surname, on a grid that stays majority Tulsa.
+
+Once YouTube is running, TikTok needs only the pop-culture pulls made separately; everything
+else is cut from lives and YouTube.
 
 Instagram, when it opens for the reader wing: 3:4 tiles at 1080 x 1350, strict alternation
 photograph / designed tile, each pillar one tile treatment (a single background colour per
