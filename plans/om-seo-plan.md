@@ -379,7 +379,7 @@ YouTube, not TikTok.
 |---|---|---|---|
 | Live highlights | 50% | Credibility as a reader and as a live creator; cut from the replay the same night | the next live |
 | Pop culture pulls | 20% | Opens the funnel, reach; read the situation, never call the winner; about two a month | the live |
-| Collective readings | 20% | Nurtures current viewers, a taste of a live; read for a situation in the client voice, end on a question, never a prediction | recorded readings ("in the link") |
+| Collective readings | 20% | Nurtures current followers, who already know the lives; delivered like a recorded reading in miniature (walkthrough, then a one-line synthesis) so the post is the demo; runs on off weeks with the line "I'm not live this week, but recorded readings don't need me to be"; never a prediction | recorded readings ("in the link") |
 | Education for non-readers | 10% | Familiarity and filtering: how to approach a reading, what I do and don't do | the guides |
 
 Flow: Live highlight, Pop culture, Live highlight, Collective reading, repeating. Tuesdays
