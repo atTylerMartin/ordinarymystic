@@ -65,8 +65,7 @@ Canonical description (write once, paste verbatim; keep it factual and about the
 - [ ] YouTube: channel About uses the description above; links section points to
       `/readings/recorded`, `/about`, `/newsletter`. First video is the recorded-reading
       explainer; then one guide as a video every two weeks. Save the channel URL.
-- [ ] Trustpilot: claim the free business profile (needs only the website). Save URL. Add the
-      review link to the testimonial thank-you and the welcome email in a small follow-up prompt.
+- [ ] Trustpilot: see Reviews below.
 - [ ] Reddit: an account in the practice name whose profile links the site. Answer questions
       on r/tarot and r/astrology; never post links or promote. Reddit is the top Perplexity
       citation source and the subreddits ban advertising.
@@ -76,14 +75,21 @@ Canonical description (write once, paste verbatim; keep it factual and about the
       with the site. Etsy takes about 6.5% plus payment fees. Only if you want the marketplace
       channel; it is a citation either way.
 
-## Reviews
+## Reviews (decided 2026-09-29: Ordinary Mystic clients review Ordinary Mystic only)
 
-- [ ] On-site testimonials remain the primary flow (`/testimonials`, the leave-a-review button,
-      moderation at `/admin`). Ask after every recorded delivery, in the delivery email.
-- [ ] Trustpilot second, from the same email, once the profile exists.
-- [ ] Clients who ask to review on Google: point them at the Tulsa Tarot Reader profile and ask
-      them to describe what they actually did (an online reading with Tyler). Never solicit
-      Yelp reviews.
+Ordinary Mystic is ineligible for a Google Business Profile (online only) and its clients
+are not sent to Tulsa Tarot Reader's Google, Facebook, Yelp or marketplace profiles: a review
+of an online reading does not describe that business and would put a profile already under
+appeal at risk. Only someone who sat with you in person reviews Tulsa Tarot Reader.
+
+- [ ] On-site testimonials are the primary ask (`/testimonials`, the leave-a-review button,
+      moderation at `/admin`). Ask in the delivery email of every recorded reading and after
+      every live one on one.
+- [ ] Trustpilot is the third-party surface. Claim the free profile (needs only the website),
+      then add its link as the second line of the same email. Save URL.
+- [ ] Drop the line in the Tulsa repo's `OFFSITE-CHECKLIST.md` that asks five Ordinary Mystic
+      clients to review on Google. Superseded.
+- [ ] No Facebook or Yelp reviews for Ordinary Mystic.
 
 ## Monthly
 

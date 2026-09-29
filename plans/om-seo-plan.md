@@ -97,8 +97,9 @@ and the revenue; the other two wings grow beside them.
   `llms.txt` is cheap and some crawlers read it.
 - **Google Business Profile is not available to an online-only business** (Google's eligibility
   rules require in-person contact), and it would collide with Tulsa Tarot Reader's profile
-  anyway. Reviews for Ordinary Mystic live on the site (with schema) and on Trustpilot, and OM
-  clients who want to review on Google review the Tulsa profile honestly, as already planned.
+  anyway. Reviews for Ordinary Mystic live on the site and on Trustpilot. OM clients are not sent to
+  Tulsa Tarot Reader's profiles (decided 2026-09-29): a review of an online reading does not
+  describe that business and would put a profile under appeal at risk.
 - **Directories for online readers are thin.** Biddy Tarot's directory requires their
   certification; Tarot Hub and Moonlight are marketplaces with their own listings; the Tarot
   Association and Tarosophy lists are membership-based and low traffic. The useful "directory"
@@ -407,8 +408,7 @@ the on-site reviews stay the primary flow and feed the readings pages, `/testimo
 newsletter and TikTok; Gumroad and GitHub profiles named consistently; Reddit account in the
 brand name that answers questions on r/tarot and r/astrology without links in posts (profile
 carries the site); optional Etsy listing; Facebook placeholder Page; Nextdoor no (local, TTR's).
-OM clients asked for a Google review review the Tulsa profile, describing an online reading
-with Tyler, as already agreed.
+OM clients review OM only; Tulsa Tarot Reader's profiles are for people who sat in person.
 
 ## Part 6: Structural ties to the sister brand
 - **Person**: OM's `Person` (`/about#tyler-martin`, full name) is the canonical node. TTR's
