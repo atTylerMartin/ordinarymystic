@@ -6,11 +6,11 @@
 // Those are kept out of search deliberately (noindex, or a client-side
 // redirect for old inbound links).
 //
-// Tool and blog entries are derived from `content/tools` and `content/blog`
+// Tool and guide entries are derived from `content/tools` and `content/guides`
 // rather than listed by hand. `routes.ts` reads the filesystem through
 // `content.ts`, so no client component may import it.
 
-import { getAllBlogPostsSync, getAllToolsSync } from "@/lib/content";
+import { getAllToolsSync, listGuides } from "@/lib/content";
 
 export type RouteEntry = {
   path: string;
@@ -28,16 +28,16 @@ export type RouteEntry = {
 };
 
 const tools = getAllToolsSync();
-const posts = getAllBlogPostsSync();
+const guides = listGuides("guides");
 
 // ToolFrontmatter carries no date field, so this is hand-maintained; bump it
 // when a tool is added, removed, or its copy changes.
 const toolsUpdated = "2026-09-28";
 
-const blogUpdated = posts.reduce((latest, p) => {
-  const date = p.frontmatter.date;
-  return date > latest ? date : latest;
-}, "2026-09-28");
+const guidesUpdated = guides.reduce(
+  (latest, g) => (g.frontmatter.updated > latest ? g.frontmatter.updated : latest),
+  "",
+);
 
 const staticRoutes: RouteEntry[] = [
   {
@@ -113,16 +113,16 @@ const staticRoutes: RouteEntry[] = [
     audience: "all",
   },
   {
-    path: "/blog",
-    label: "Blog",
-    title: "Blog",
+    path: "/guides",
+    label: "Guides",
+    title: "Guides to Tarot and Astrology",
     description:
-      "Short, grounded essays on tarot, astrology, and reflective practice, without the theatrics.",
-    priority: 0.5,
+      "Grounded guides to tarot and astrology: reading court cards and reversals, keeping a tarot journal, reading a birth chart, the houses, and the year's major transits.",
+    priority: 0.7,
     changeFrequency: "weekly",
-    updated: blogUpdated,
+    updated: guidesUpdated,
     parent: "/",
-    audience: "all",
+    audience: "students",
   },
 ];
 
@@ -138,22 +138,22 @@ const toolRoutes: RouteEntry[] = tools.map((t) => ({
   audience: "readers",
 }));
 
-const blogRoutes: RouteEntry[] = posts.map((p) => ({
-  path: `/blog/${p.slug}`,
-  label: p.frontmatter.title,
-  title: p.frontmatter.title,
-  description: p.frontmatter.description,
-  priority: 0.5,
+const guideRoutes: RouteEntry[] = guides.map((g) => ({
+  path: `/guides/${g.slug}`,
+  label: g.frontmatter.title,
+  title: g.frontmatter.title,
+  description: g.frontmatter.description,
+  priority: 0.6,
   changeFrequency: "monthly",
-  updated: p.frontmatter.date,
-  parent: "/blog",
-  audience: "all",
+  updated: g.frontmatter.updated,
+  parent: "/guides",
+  audience: "students",
 }));
 
 export const routes: RouteEntry[] = [
   ...staticRoutes,
   ...toolRoutes,
-  ...blogRoutes,
+  ...guideRoutes,
 ];
 
 export function getRoute(path: string): RouteEntry {

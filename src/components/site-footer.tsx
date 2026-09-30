@@ -15,6 +15,12 @@ export function SiteFooter() {
           </div>
           <div className="flex flex-wrap gap-x-4 gap-y-1">
             <Link
+              href="/guides"
+              className="text-slate-200 underline-offset-4 hover:text-white hover:underline"
+            >
+              Guides
+            </Link>
+            <Link
               href="/tools"
               className="text-slate-200 underline-offset-4 hover:text-white hover:underline"
             >

@@ -1,6 +1,8 @@
 import { CONTACT_EMAIL, SITE_URL, SOCIALS } from "@/lib/config";
 import { RECORDED, RECORDED_COPY, LIVE, LIVE_COPY, TULSA_TAROT_READER_URL } from "@/lib/offerings";
 import { getRoute } from "@/lib/routes";
+import type { Guide } from "@/lib/content";
+import { OG_DEFAULT } from "@/lib/metadata";
 
 export const ORG_ID = `${SITE_URL}/#organization`;
 export const WEBSITE_ID = `${SITE_URL}/#website`;
@@ -150,6 +152,41 @@ export function BreadcrumbSchema({ path }: { path: string }) {
           name: route.label,
           item: `${SITE_URL}${route.path === "/" ? "" : route.path}`,
         })),
+      }}
+    />
+  );
+}
+
+/** Article for a guide or lesson (not BlogPosting). Author and publisher are
+ * referenced by `@id` so they resolve to the layout's Person and Organization.
+ * Guides never carry FAQPage, even when they show a visible FAQ. */
+export function ArticleSchema({ guide }: { guide: Guide }) {
+  const fm = guide.frontmatter;
+  const url = `${SITE_URL}/${fm.wing}/${guide.slug}`;
+  const keywords = [
+    ...(fm.tags ?? []),
+    ...(fm.planets ?? []),
+    ...(fm.signs ?? []),
+    ...(fm.houses ?? []),
+    ...(fm.cards ?? []),
+  ];
+
+  return (
+    <JsonLd
+      data={{
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "@id": `${url}#article`,
+        headline: fm.title,
+        description: fm.description,
+        datePublished: fm.date,
+        dateModified: fm.updated,
+        author: { "@id": PERSON_ID },
+        publisher: { "@id": ORG_ID },
+        mainEntityOfPage: url,
+        image: `${SITE_URL}${fm.image ?? OG_DEFAULT.url}`,
+        keywords: keywords.length ? keywords.join(", ") : undefined,
+        articleSection: fm.category,
       }}
     />
   );

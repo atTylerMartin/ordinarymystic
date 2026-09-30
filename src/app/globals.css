@@ -46,6 +46,112 @@ body {
   @apply mt-1;
 }
 
+/* Guides: the rest of what ported markdown and its raw HTML contain. */
+.prose-content h2 {
+  @apply mt-10;
+}
+
+.prose-content ol {
+  @apply mt-3 list-decimal pl-5 text-sm text-slate-700;
+}
+
+.prose-content li {
+  @apply leading-relaxed;
+}
+
+.prose-content a {
+  @apply font-medium text-slate-900 underline underline-offset-4 hover:text-[var(--color-brand-accent-hover)];
+}
+
+.prose-content strong {
+  @apply font-semibold text-slate-900;
+}
+
+.prose-content blockquote {
+  @apply mt-4 border-l-2 border-slate-300 pl-4 text-slate-600;
+}
+
+.prose-content hr {
+  @apply my-8 border-slate-200;
+}
+
+.prose-content table {
+  @apply mt-4 block w-full overflow-x-auto border-collapse text-left text-xs text-slate-700 sm:text-sm;
+}
+
+.prose-content th {
+  @apply border-b border-slate-300 px-3 py-2 font-semibold text-slate-900;
+}
+
+.prose-content td {
+  @apply border-b border-slate-200 px-3 py-2 align-top;
+}
+
+.prose-content figure {
+  @apply mt-6;
+}
+
+.prose-content figure img {
+  @apply h-auto w-full rounded-xl;
+}
+
+.prose-content figcaption {
+  @apply mt-2 text-center text-xs text-slate-500;
+}
+
+.prose-content .tarot-card {
+  @apply mx-auto my-8 flex max-w-[220px] flex-col items-center;
+}
+
+.prose-content .tarot-card img {
+  @apply rounded-md shadow-lg;
+}
+
+.prose-content .tarot-card.reversed img {
+  transform: rotate(180deg);
+}
+
+.prose-content .tarot-card figcaption {
+  @apply font-semibold uppercase tracking-widest;
+}
+
+.prose-content details {
+  @apply mt-3 rounded-xl border border-slate-200 bg-white px-4 py-3;
+}
+
+.prose-content summary {
+  @apply flex cursor-pointer items-center justify-between gap-3 text-sm font-medium text-slate-900;
+}
+
+.prose-content .sign-house {
+  @apply rounded-full bg-slate-100 px-2 py-0.5 text-xs font-medium text-slate-600;
+}
+
+.prose-content .sign-details-body,
+.prose-content .faq-details-body {
+  @apply mt-2 border-t border-slate-100 pt-1;
+}
+
+.prose-content .forecast-jumper {
+  @apply mt-6 rounded-2xl border border-slate-200 bg-slate-50 p-5;
+}
+
+.prose-content .forecast-jumper__title {
+  @apply mt-0 font-heading text-base font-bold text-slate-900;
+}
+
+.prose-content .forecast-jumper__subtitle {
+  @apply mt-1 text-xs text-slate-600;
+}
+
+.prose-content .forecast-jumper__grid {
+  @apply mt-3 grid grid-cols-3 gap-2 sm:grid-cols-4;
+}
+
+.prose-content .forecast-jumper__btn {
+  @apply rounded-lg border border-slate-200 bg-white px-2 py-1.5 text-center text-xs font-medium no-underline hover:border-slate-400;
+}
+
 /* Hero background image: set --hero-bg-image in a selector that targets the hero, e.g.:
    :root { --hero-bg-image: url('/images/hero-bg.jpg'); }
    Or add background-image directly to .hero-bg in your own overrides. */
