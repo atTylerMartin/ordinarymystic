@@ -45,14 +45,39 @@ TikTok coins, for viewers of the live stream only.
   live and ongoing, reviews, tools
 - https://ordinarymysticreadings.com/tools : Notion templates and
   recommended tools for tracking a tarot or astrology practice
-- https://ordinarymysticreadings.com/blog : short essays on tarot, astrology,
-  and reflective practice
+- https://ordinarymysticreadings.com/guides : guides to tarot and astrology,
+  listed below
 - https://ordinarymysticreadings.com/tulsa-tarot-reading : online tarot
   readings for people searching Tulsa, with a hand-off to Tulsa Tarot Reader
 - https://ordinarymysticreadings.com/tulsa-astrology-reading : online
   astrology readings for people searching Tulsa
 - https://ordinarymysticreadings.com/terms : terms of service
 - https://ordinarymysticreadings.com/privacy : privacy policy
+
+## Guides
+
+Each is at https://ordinarymysticreadings.com/guides/<slug>.
+
+- aries-season-26 : Aries Season 2026: Dates, Transits & Rising Sign Guide
+- how-to-get-started : Astrology and Tarot: How to Get Started
+- how-to-read-a-birth-chart : How to Read a Birth Chart
+- how-to-read-court-cards : How to Actually Read Court Cards
+- natal-retrograde-planets : Retrograde Planets in a Natal Chart
+- reading-tarot-for-yourself : The Real Challenges of Reading Tarot for Yourself
+- tarot-journal : How to Keep a Tarot Journal That Works
+- taurus-season-26 : Taurus Season 2026: Dates, Transits & Rising Sign Guide
+- the-case-for-one-card : One-Card Tarot: The Case for Less
+- the-conjunction-at-zero : Saturn-Neptune Conjunction at Zero Aries
+- the-last-degree : The Anaretic Degree: Uranus at 29 Taurus
+- the-long-arrivals : Outer Planets in 2026: The Long Arrivals
+- the-scale-is-going-to-tip : The Scale Is Going to Tip
+- the-two-malefics : Mars Conjunct Saturn in Aries: The Two Malefics
+- what-a-tarot-deck-is-for : What a Tarot Deck Is Actually For
+- what-modalities-mean : What the Modalities Actually Mean
+- what-reversals-actually-tell-you : What Reversals Actually Tell You
+- what-the-houses-actually-describe : What the Houses Actually Describe
+- why-birth-time : Why Birth Time Matters in Astrology
+- why-sun-signs-arent-useless : Why Sun Signs Aren't Useless
 
 ## Tools
 
