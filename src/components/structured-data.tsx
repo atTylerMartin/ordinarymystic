@@ -3,6 +3,7 @@ import { RECORDED, RECORDED_COPY, LIVE, LIVE_COPY, TULSA_TAROT_READER_URL } from
 import { getRoute } from "@/lib/routes";
 import type { Guide } from "@/lib/content";
 import { OG_DEFAULT } from "@/lib/metadata";
+import { FAQ_ITEMS } from "@/lib/content/faq";
 
 export const ORG_ID = `${SITE_URL}/#organization`;
 export const WEBSITE_ID = `${SITE_URL}/#website`;
@@ -84,9 +85,10 @@ export function StructuredData() {
   );
 }
 
-/** Service + Offer for a reading kind. Rendered on `/` and on the two Tulsa
- * hand-off pages, which reuse the same `@id` rather than describing their own
- * service. Prices always come from `offerings.ts`, never retyped. */
+/** Service + Offer for a reading kind. Rendered on `/`, `/readings`, the
+ * matching `/readings/*` page, and the two Tulsa hand-off pages, which all
+ * reuse the same `@id` rather than describing their own service. Prices
+ * always come from `offerings.ts`, never retyped. */
 export function ReadingServiceSchema({
   kind,
 }: {
@@ -94,6 +96,7 @@ export function ReadingServiceSchema({
 }) {
   const copy = kind === "recorded" ? RECORDED_COPY : LIVE_COPY;
   const tiers = kind === "recorded" ? RECORDED : LIVE;
+  const pageUrl = `${SITE_URL}/readings/${kind}`;
 
   const data = {
     "@context": "https://schema.org",
@@ -106,7 +109,7 @@ export function ReadingServiceSchema({
     areaServed: { "@type": "Country", name: "United States" },
     availableChannel: {
       "@type": "ServiceChannel",
-      serviceUrl: `${SITE_URL}/#book`,
+      serviceUrl: pageUrl,
     },
     ...(kind === "recorded"
       ? {
@@ -119,7 +122,7 @@ export function ReadingServiceSchema({
       name: `${tier.minutes}-minute ${kind} reading`,
       price: String(tier.price),
       priceCurrency: "USD",
-      url: tier.url || `${SITE_URL}/#book`,
+      url: tier.url || pageUrl,
       availability: "https://schema.org/InStock",
     })),
   };
@@ -187,6 +190,26 @@ export function ArticleSchema({ guide }: { guide: Guide }) {
         image: `${SITE_URL}${fm.image ?? OG_DEFAULT.url}`,
         keywords: keywords.length ? keywords.join(", ") : undefined,
         articleSection: fm.category,
+      }}
+    />
+  );
+}
+
+/** FAQPage from every question in `src/lib/content/faq.ts`. Rendered on /faq
+ * only: it is the site's one FAQPage. Other pages show visible FAQs with no
+ * schema. */
+export function FaqSchema() {
+  return (
+    <JsonLd
+      data={{
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "@id": `${SITE_URL}/faq#faq`,
+        mainEntity: FAQ_ITEMS.map((item) => ({
+          "@type": "Question",
+          name: item.question,
+          acceptedAnswer: { "@type": "Answer", text: item.answer },
+        })),
       }}
     />
   );
