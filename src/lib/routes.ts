@@ -11,6 +11,8 @@
 // `content.ts`, so no client component may import it.
 
 import { getAllToolsSync, listGuides } from "@/lib/content";
+import { priceFrom } from "@/lib/content/readings";
+import { LIVE, RECORDED } from "@/lib/offerings";
 
 export type RouteEntry = {
   path: string;
@@ -51,6 +53,88 @@ const staticRoutes: RouteEntry[] = [
     updated: "2026-09-28",
     absoluteTitle: true,
     audience: "all",
+  },
+  {
+    path: "/readings",
+    label: "Readings",
+    title: "Online Tarot Readings with a Real Person",
+    description:
+      "Online tarot and astrology readings with a real person: recorded video readings, live one-on-one Zoom sessions, and ongoing readings. How to choose.",
+    priority: 0.9,
+    changeFrequency: "weekly",
+    updated: "2026-09-29",
+    parent: "/",
+    audience: "clients",
+  },
+  {
+    path: "/readings/recorded",
+    label: "Recorded",
+    title: "Recorded Tarot Readings by Video",
+    description: `A recorded tarot reading by video, from ${priceFrom(RECORDED)}. I read your question privately and email a video walkthrough plus a written synthesis in three business days.`,
+    priority: 0.9,
+    changeFrequency: "monthly",
+    updated: "2026-09-29",
+    parent: "/readings",
+    audience: "clients",
+  },
+  {
+    path: "/readings/live",
+    label: "Live",
+    title: "Live Tarot Readings Online over Zoom",
+    description: `A live tarot reading online over Zoom, one on one, from ${priceFrom(LIVE)}. Ask questions as the cards come out, then get a written synthesis after the session.`,
+    priority: 0.8,
+    changeFrequency: "monthly",
+    updated: "2026-09-29",
+    parent: "/readings",
+    audience: "clients",
+  },
+  {
+    path: "/readings/astrology",
+    label: "Astrology",
+    title: "Astrology and Birth Chart Readings Online",
+    description:
+      "Birth chart and astrology readings online, recorded or live over Zoom. What a chart reading includes and what to send: date, time and place of birth.",
+    priority: 0.8,
+    changeFrequency: "monthly",
+    updated: "2026-09-29",
+    parent: "/readings",
+    audience: "clients",
+  },
+  {
+    path: "/faq",
+    label: "FAQ",
+    title: "Frequently Asked Questions",
+    description:
+      "Answers about booking a tarot or astrology reading online: prices, recorded and live readings, turnaround, what to send, and in-person readings in Tulsa.",
+    priority: 0.7,
+    changeFrequency: "monthly",
+    updated: "2026-09-29",
+    parent: "/",
+    audience: "clients",
+  },
+  {
+    path: "/about",
+    label: "About",
+    title: "About Tyler Martin, Tarot Reader",
+    description:
+      "Tyler Martin is the tarot reader and astrologer behind Ordinary Mystic, based in Tulsa, Oklahoma. Grounded, conversational readings that do not predict.",
+    priority: 0.8,
+    changeFrequency: "monthly",
+    updated: "2026-09-29",
+    parent: "/",
+    audience: "all",
+  },
+  {
+    path: "/testimonials",
+    label: "Testimonials",
+    title: "Tarot Reading Testimonials",
+    description:
+      "Testimonials from Ordinary Mystic clients after recorded and live tarot and astrology readings, with a link to leave your own after a reading.",
+    priority: 0.6,
+    changeFrequency: "monthly",
+    updated: "2026-09-29",
+    parent: "/",
+    audience: "clients",
   },
   {
     path: "/tools",
