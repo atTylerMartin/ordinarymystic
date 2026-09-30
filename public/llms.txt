@@ -42,7 +42,25 @@ TikTok coins, for viewers of the live stream only.
 ## Pages
 
 - https://ordinarymysticreadings.com/ : the hub, recorded readings first,
-  live and ongoing, reviews, tools
+  testimonials, live readings, the newest guides, tools for readers
+- https://ordinarymysticreadings.com/readings : the readings overview:
+  recorded, live, ongoing and astrology, and how to choose
+- https://ordinarymysticreadings.com/readings/recorded : recorded readings,
+  prices, what arrives (a private YouTube link to the video walkthrough plus
+  a written synthesis, by email, within three business days of receiving
+  the question), how the question is collected, FAQ
+- https://ordinarymysticreadings.com/readings/live : live readings over Zoom,
+  scheduled by email within two business days of booking, and ongoing
+  readings
+- https://ordinarymysticreadings.com/readings/astrology : astrology and
+  birth chart readings, recorded or live; needs date, time and place of
+  birth
+- https://ordinarymysticreadings.com/faq : every question about booking,
+  recorded and live readings, astrology, the reader, and in-person readings
+- https://ordinarymysticreadings.com/about : Tyler Martin, the reader, and
+  the two practices
+- https://ordinarymysticreadings.com/testimonials : approved client
+  testimonials
 - https://ordinarymysticreadings.com/tools : Notion templates and
   recommended tools for tracking a tarot or astrology practice
 - https://ordinarymysticreadings.com/guides : guides to tarot and astrology,

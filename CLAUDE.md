@@ -4,14 +4,14 @@
 
 - **`tiktok-landing` is the production branch right now.** Treat it as the
   source of truth: commit, push, and deploy from `tiktok-landing`.
-- **`main` is being ignored** for the time being — do not open PRs into it or
+- **`main` is being ignored** for the time being; do not open PRs into it or
   merge `tiktok-landing` back into it unless explicitly asked.
 
 ## Architecture
 
 - **This is a fully static site** (`output: "export"` in `next.config.ts`).
   There is no server runtime. **Do not** add Server Actions, API routes, route
-  handlers, middleware, or request-time server fetching — they break the build
+  handlers, middleware, or request-time server fetching; they break the build
   ("Server Actions are not supported with static export"). All dynamic behavior
   must run client-side in the browser.
 - **Supabase is called directly from the browser** with the publishable
@@ -42,8 +42,12 @@
 - **The six reading Payment Links collect two custom fields at checkout** (set 2026-09-29
   with `--set-fields` in the same script, in place, URLs unchanged): `question` (required,
   255 characters) and `birth_data` (optional; needed for astrology). The stream links carry
-  none. `/book/thanks/recorded` asks for context by email; the three business days start
-  when the question is in hand.
+  none. `/book/thanks/recorded` thanks the client, asks for any context by reply to the
+  Stripe receipt or a prefilled `mailto:` (subject "Context for my recorded reading"),
+  states delivery (private YouTube link plus written synthesis, within three business
+  days), and asks astrology clients who left birth data blank to send it; the clock starts
+  when the question (and birth data) is in hand. `/book/thanks/live` says "I'll email
+  within two business days to schedule." Both stay `NOINDEX`.
 
 ## The pay page
 
@@ -71,7 +75,7 @@
   practice**: private sittings in Tulsa, parties, weddings, corporate, school
   and community events, festivals, markets, venue pop-ups.
 - Cross-link, never duplicate. Do not add in-person or event offerings here, and
-  do not chase local in-person search intent — the Tulsa pages here exist for
+  do not chase local in-person search intent. The Tulsa pages here exist for
   *online* readings and hand local intent off to Tulsa Tarot Reader.
 - Never frame recorded readings as "budget live tarot". Recorded is its own
   product; live is premium because of real-time access and interaction.
@@ -90,7 +94,7 @@
   `/admin`).
 - **Schema map**: `src/components/structured-data.tsx` renders `Organization`,
   `Person`, and `WebSite` once, in the root layout. `ReadingServiceSchema`
-  (`kind: "recorded" | "live"`) renders on `/` and the two Tulsa hand-off
+  (`kind: "recorded" | "live"`) renders on `/`, `/readings`, the matching `/readings/*` page, and the two Tulsa hand-off
   pages, built from `RECORDED`/`LIVE` in `offerings.ts` so a price is never
   retyped. `BreadcrumbSchema` and the visible `Breadcrumbs` component
   (`src/components/breadcrumbs.tsx`) walk the registry's `parent` links and
@@ -105,6 +109,28 @@
   patterns get ported deliberately (see `plans/om-seo-plan.md`); it does not
   merge.
 
+## Core pages and copy
+
+- **Page copy lives in `src/lib/content/*`** (`readings.ts`, `faq.ts`, `about.ts`,
+  `testimonials.ts`, `home.ts`, `nav.ts`), one typed module per page. Prices, tiers,
+  blurbs and ledes are imported from `offerings.ts` and turned into text with
+  `priceFrom`, `priceList` and `lengthList` in `readings.ts`; never type a price into a
+  sentence. `RECORDED_TURNAROUND` ("three business days") and `LIVE_SCHEDULING` ("two
+  business days") are the only statements of the two timelines.
+- **Routes**: `/readings` (overview and chooser), `/readings/recorded` (the money page,
+  keeps `#book`), `/readings/live` (keeps `#live`, ongoing card at `#ongoing`),
+  `/readings/astrology`, `/faq`, `/about` (`<section id="tyler-martin">` so `PERSON_ID`
+  resolves), `/testimonials`. The homepage is a hub and still carries `#book`, `#live` and
+  `#reviews` for old links and `/pay`. `/book` redirects to `/readings/recorded`.
+- **`FaqSchema` renders on `/faq` only**, built from every item in `faq.ts`; it is the
+  site's one `FAQPage`. Other pages show a visible FAQ with `FaqList` and
+  `faqItems(ids)`, and no schema. Add a question to `faq.ts` and reference its `id`.
+- **Nav and footer** render from `nav.ts`: Readings, Guides, About, For Readers (points at
+  `/tools` until `/for-readers` exists), a commented Newsletter slot, and the Book button
+  to `/readings/recorded`. Below `lg` the links sit in `MobileNav`.
+- **Testimonials** load client-side (`ReviewsSection`, with `limit`, `fullBleed` and
+  `moreHref`); no review schema anywhere.
+
 ## Guides
 
 - **Guides are markdown in `content/guides/*.md`** (lessons, from WP-7, go in
@@ -116,8 +142,9 @@
   `wing` (`guides` | `lessons`). Optional `kicker` (defaults to the category
   label; the season forecasts use "Season archive"), `tags`, `planets`,
   `signs`, `houses`, `cards` (keywords only, no taxonomy pages), `image` +
-  `imageAlt`, the five `cta*` fields (defaults point at recorded readings, no
-  prices), a visible `faq`, and `sources`.
+  `imageAlt`, the five `cta*` fields (defaults point at recorded readings and
+  `/readings/recorded`, no prices; astrology guides set `ctaUrl` to
+  `/readings/astrology`), a visible `faq`, and `sources`.
 - **`validateGuide()` fails the build** on a missing required field, a date
   that is not `YYYY-MM-DD`, `updated` earlier than `date`, a body under 300
   words, or an em dash anywhere in the file.
