@@ -11,6 +11,8 @@
 //   node scripts/stripe-payment-links.mjs                # STRIPE_SECRET_KEY (LIVE)
 //   node scripts/stripe-payment-links.mjs --deactivate-old   # after the new URLs are live
 //   node scripts/stripe-payment-links.mjs --list         # inventory, changes nothing
+//   node scripts/stripe-payment-links.mjs --set-fields [--dry-run]
+//       # put the question and birth-data custom fields on the six reading links (in place)
 //
 // Idempotent: a product is matched by `metadata.om_tier`, so re-running finds
 // what already exists instead of creating duplicates.
@@ -64,6 +66,7 @@ const DRY_RUN = args.has("--dry-run");
 const TEST_MODE = args.has("--test");
 const DEACTIVATE_OLD = args.has("--deactivate-old");
 const LIST_ONLY = args.has("--list");
+const SET_FIELDS = args.has("--set-fields");
 
 // ── key (read, never printed) ────────────────────────────────────────────────
 
@@ -156,6 +159,28 @@ async function listAll(path, params = {}) {
   }
   return out;
 }
+
+// The two checkout fields on the six reading links (never the stream links).
+// Stripe allows up to three custom fields per Payment Link and updates them in
+// place, so the URLs in offerings.ts never change. Labels max 50 characters,
+// text answers max 255. The full question and any context are asked for by
+// email from /book/thanks/recorded; this is the short version so nothing is lost.
+const CHECKOUT_FIELDS = [
+  {
+    key: "question",
+    label: { type: "custom", custom: "Your question or topic, in a sentence" },
+    type: "text",
+    optional: false,
+    text: { maximum_length: 255 },
+  },
+  {
+    key: "birth_data",
+    label: { type: "custom", custom: "Birth date, time, place (astrology only)" },
+    type: "text",
+    optional: true,
+    text: { maximum_length: 255 },
+  },
+];
 
 // ── actions ──────────────────────────────────────────────────────────────────
 
@@ -289,10 +314,39 @@ async function deactivateOld() {
   console.log("\nProducts and Prices were left untouched. This is reversible.\n");
 }
 
+async function setFields() {
+  const targets = TIERS.filter((t) => !t.om_tier.startsWith("stream-"));
+  console.log(`\n${MODE}: custom fields on ${targets.length} reading links.\n`);
+  for (const f of CHECKOUT_FIELDS) {
+    console.log(`  field ${f.key.padEnd(11)} ${f.optional ? "optional" : "required"}  "${f.label.custom}"`);
+  }
+  console.log("");
+  if (DRY_RUN) {
+    for (const t of targets) console.log(`  would update  ${t.om_tier}`);
+    console.log("\nStream links untouched. Re-run without --dry-run to apply.\n");
+    return;
+  }
+  const links = await listAll("/payment_links", { active: "true" });
+  for (const t of targets) {
+    const link = links.find((l) => l.metadata?.om_tier === t.om_tier);
+    if (!link) {
+      console.error(`  x no active link for ${t.om_tier}; skipped`);
+      continue;
+    }
+    const updated = await stripe("POST", `/payment_links/${link.id}`, {
+      custom_fields: CHECKOUT_FIELDS,
+    });
+    const keys = (updated.custom_fields ?? []).map((f) => f.key).join(", ");
+    console.log(`  . updated  ${t.om_tier.padEnd(12)} ${link.id}  fields: ${keys}`);
+  }
+  console.log("\nURLs unchanged. Open one link and confirm both fields show at checkout.\n");
+}
+
 // ── main ─────────────────────────────────────────────────────────────────────
 
 try {
-  if (DRY_RUN) dryRun();
+  if (SET_FIELDS) await setFields();
+  else if (DRY_RUN) dryRun();
   else if (LIST_ONLY) await inventory();
   else if (DEACTIVATE_OLD) await deactivateOld();
   else await apply();

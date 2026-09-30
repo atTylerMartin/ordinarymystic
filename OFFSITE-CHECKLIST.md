@@ -78,8 +78,7 @@ Content flow
       exists. Drop the file in `public/images/` and tell the session the filename.
 - [x] Terms and Privacy: plain boilerplate approved 2026-09-29.
 - [x] Google Search Console set up, sitemap submitted, indexing requested (2026-09-29).
-- [ ] Bing Webmaster Tools: sign in, "Import from Google Search Console". Bing is what
-      ChatGPT reads.
+- [x] Bing Webmaster Tools: imported from Search Console (2026-09-29).
 - [ ] GA4 (`G-XF047BLMG9` is already installed): after WP-4 deploys, register the custom dimensions (`tier`, `mode`, `label`,
       `campaign`, `source`) and mark `book_click`, `pay_tap`, `newsletter_signup` as key events.
 - [ ] Resend: on the Ordinary Mystic account, verify `tulsatarotreader.com` as a second

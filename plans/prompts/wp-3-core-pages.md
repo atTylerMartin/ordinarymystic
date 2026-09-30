@@ -94,10 +94,12 @@ Register in `src/lib/routes.ts`: `/readings` (0.9, weekly, "clients"), `/reading
 - `/testimonials`: all approved reviews via the existing client-side fetch, the
   `LeaveReviewButton`, a line on how testimonials are collected and moderated. No review
   schema.
-- `/book/thanks/recorded`: rewrite. It currently says "I should have everything I need from
-  you." New copy: thank you; send your question now (a prefilled `mailto:` button with
-  subject "My recorded reading question" and a body prompt for the question and any
-  context); the three business days start when the question arrives; what arrives and how.
+- `/book/thanks/recorded`: rewrite. Checkout now collects a one-sentence question and optional
+  birth data (Stripe custom fields, set 2026-09-29). New copy: thank you; I have your
+  question; if there is context you want me to have, reply to your Stripe receipt or use
+  the prefilled `mailto:` button (subject "Context for my recorded reading"); the reading
+  arrives within three business days as a private YouTube link plus the written synthesis.
+  Astrology: if you left birth data blank, send it now; the clock starts when it arrives.
   Keep `NOINDEX`. `/book/thanks/live`: add "I'll email within two business days to schedule."
 
 ### 4. Nav, footer, header, homepage
