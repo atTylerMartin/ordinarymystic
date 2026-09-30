@@ -89,14 +89,41 @@
   retyped. `BreadcrumbSchema` and the visible `Breadcrumbs` component
   (`src/components/breadcrumbs.tsx`) walk the registry's `parent` links and
   render on every registered page except `/`.
-- **`public/llms.txt`** states prices and tool slugs as literal text, so
-  `scripts/check-llms-txt.mjs` (wired as `prebuild`) fails the build if a
-  price in `offerings.ts` or a tool in `content/tools` is not reflected there.
+- **`public/llms.txt`** states prices, tool slugs, and guide slugs as literal
+  text, so `scripts/check-llms-txt.mjs` (wired as `prebuild`) fails the build
+  if a price in `offerings.ts`, a tool in `content/tools`, or a guide in
+  `content/guides` is not reflected there.
 - **No em dashes** anywhere in this repo (grep for `\x{2014}` before
   committing). Plain punctuation only.
 - `main` is archived source material from the previous build. Its content and
   patterns get ported deliberately (see `plans/om-seo-plan.md`); it does not
   merge.
+
+## Guides
+
+- **Guides are markdown in `content/guides/*.md`** (lessons, from WP-7, go in
+  `content/lessons/`). `listGuides()` and `getGuide()` in `src/lib/content.ts`
+  read them; `routes.ts` registers `/guides` and one entry per guide
+  automatically. There is no CMS.
+- **Frontmatter** (`GuideFrontmatter`): required `title`, `date`, `updated`,
+  `description`, `category` (`tarot` | `astrology` | `general-spirituality`),
+  `wing` (`guides` | `lessons`). Optional `kicker` (defaults to the category
+  label; the season forecasts use "Season archive"), `tags`, `planets`,
+  `signs`, `houses`, `cards` (keywords only, no taxonomy pages), `image` +
+  `imageAlt`, the five `cta*` fields (defaults point at recorded readings, no
+  prices), a visible `faq`, and `sources`.
+- **`validateGuide()` fails the build** on a missing required field, a date
+  that is not `YYYY-MM-DD`, `updated` earlier than `date`, a body under 300
+  words, or an em dash anywhere in the file.
+- **The Updated rule**: bump `updated` only when the copy changes. It drives
+  the visible "Updated Month Year" line, `dateModified`, and the sitemap.
+- **Schema**: every guide renders `ArticleSchema` (author and publisher by
+  `@id`). **No `FAQPage` in guides**, even with a visible FAQ.
+- `/blog` and `/blog/:slug` 308 to `/guides` via `redirects` in
+  `vercel.json` (a platform rule, not Next server code).
+- The twenty guides were ported from the archived `main` branch
+  (`git show origin/main:src/content/blog/<slug>.md`); `main` is source
+  material only and never merges.
 
 ## Long-term plan
 
