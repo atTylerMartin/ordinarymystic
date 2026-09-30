@@ -39,6 +39,12 @@
 - A tier with an empty `url` renders an "Email to book" mailto fallback, so the
   site never shows a new price behind an old link.
 
+- **The six reading Payment Links collect two custom fields at checkout** (set 2026-09-29
+  with `--set-fields` in the same script, in place, URLs unchanged): `question` (required,
+  255 characters) and `birth_data` (optional; needed for astrology). The stream links carry
+  none. `/book/thanks/recorded` asks for context by email; the three business days start
+  when the question is in hand.
+
 ## The pay page
 
 - **`/pay` is where TikTok live viewers pay for a reading directly** instead of
