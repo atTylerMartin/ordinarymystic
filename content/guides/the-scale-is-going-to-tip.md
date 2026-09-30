@@ -17,7 +17,7 @@ ctaEyebrow: "Book a Tarot Reading"
 ctaTitle: "Bring your own question to the cards."
 ctaBody: "I read your question privately and send back a personalized video walkthrough plus a written synthesis."
 ctaLabel: "Book a Reading"
-ctaUrl: "/#book"
+ctaUrl: "/readings/recorded"
 cards:
   - six-of-pentacles
   - knight-of-swords

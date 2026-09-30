@@ -14,7 +14,7 @@ ctaEyebrow: "Curious about your retrogrades?"
 ctaTitle: "Book an astrology reading"
 ctaBody: "I'll walk through your chart in plain English, including any natal retrogrades and what they mean for your specific placements."
 ctaLabel: "Book a Reading"
-ctaUrl: "/#book"
+ctaUrl: "/readings/astrology"
 wing: guides
 ---
 

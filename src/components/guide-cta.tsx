@@ -14,14 +14,14 @@ const DEFAULT_BODY =
     .replace(/\.$/, "") + ".";
 
 /** The booking prompt under every guide. Each field can be overridden from
- * frontmatter; the defaults point at recorded readings. WP-3 moves the
- * default URL to /readings/recorded. No UTM on internal links. */
+ * frontmatter; the defaults point at recorded readings (astrology guides set
+ * ctaUrl to /readings/astrology). No UTM on internal links. */
 export function GuideCta({ fm }: { fm: GuideFrontmatter }) {
   const eyebrow = fm.ctaEyebrow ?? "Want a personal reading?";
   const title = fm.ctaTitle ?? "Book a recorded reading";
   const body = fm.ctaBody ?? DEFAULT_BODY;
   const label = fm.ctaLabel ?? RECORDED_COPY.cta;
-  const url = fm.ctaUrl ?? "/#book";
+  const url = fm.ctaUrl ?? "/readings/recorded";
 
   return (
     <section className="rounded-2xl bg-gradient-to-br from-[var(--color-brand-deep)] to-[var(--color-brand-mid)] p-6 text-white shadow-md sm:p-8">

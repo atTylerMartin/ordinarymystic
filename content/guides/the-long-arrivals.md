@@ -29,7 +29,7 @@ ctaEyebrow: "Want to see where this lands in your chart?"
 ctaTitle: "Book an astrology reading"
 ctaBody: "I'll walk through your chart in plain English, including how these outer-planet sign changes activate your specific placements."
 ctaLabel: "Book a Reading"
-ctaUrl: "/#book"
+ctaUrl: "/readings/astrology"
 wing: guides
 ---
 

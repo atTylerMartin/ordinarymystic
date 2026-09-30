@@ -21,7 +21,7 @@ ctaEyebrow: "Want to see where this lands in your chart?"
 ctaTitle: "Book an astrology reading"
 ctaBody: "I'll walk through your chart in plain English, focusing on the patterns that matter most right now."
 ctaLabel: "Book a Reading"
-ctaUrl: "/#book"
+ctaUrl: "/readings/astrology"
 wing: guides
 ---
 

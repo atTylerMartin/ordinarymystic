@@ -15,7 +15,7 @@ ctaEyebrow: "Ready to go deeper?"
 ctaTitle: "Book an astrology reading"
 ctaBody: "I will walk through your chart in plain English and focus on the patterns that matter most right now."
 ctaLabel: "See Reading Options"
-ctaUrl: "/#book"
+ctaUrl: "/readings/recorded"
 methodology: "Hellenistic whole-sign houses (Chris Brennan / The Astrology Podcast)"
 wing: guides
 ---

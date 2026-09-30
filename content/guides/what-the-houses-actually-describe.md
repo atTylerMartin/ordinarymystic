@@ -14,7 +14,7 @@ ctaEyebrow: "Want to see your houses in action?"
 ctaTitle: "Book an astrology reading"
 ctaBody: "I'll walk through your chart house by house in plain English, focusing on the areas of life that matter most right now."
 ctaLabel: "Book a Reading"
-ctaUrl: "/#book"
+ctaUrl: "/readings/astrology"
 wing: guides
 ---
 

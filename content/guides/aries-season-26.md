@@ -31,7 +31,7 @@ ctaEyebrow: "Want personalized guidance?"
 ctaTitle: "Book an astrology reading"
 ctaBody: "This is a mundane forecast. To understand exactly which house the April pileup activates, which natal planets are in the line of fire, and what your personal timing looks like, book a personal reading."
 ctaLabel: "Book a Reading"
-ctaUrl: "/#book"
+ctaUrl: "/readings/astrology"
 wing: guides
 ---
 

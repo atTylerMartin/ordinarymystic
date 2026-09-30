@@ -13,7 +13,7 @@ ctaEyebrow: "Want to see this in your chart?"
 ctaTitle: "Book an astrology reading"
 ctaBody: "I'll walk through your chart in plain English, including where your modality weight falls and what it means."
 ctaLabel: "Book a Reading"
-ctaUrl: "/#book"
+ctaUrl: "/readings/astrology"
 wing: guides
 ---
 

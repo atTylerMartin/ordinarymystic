@@ -14,7 +14,7 @@ ctaEyebrow: "Want a personal reading?"
 ctaTitle: "Book a recorded reading"
 ctaBody: "I read your question privately and send back a personalized video walkthrough plus a written synthesis."
 ctaLabel: "Book a Reading"
-ctaUrl: "/#book"
+ctaUrl: "/readings/recorded"
 wing: guides
 ---
 

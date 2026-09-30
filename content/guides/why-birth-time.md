@@ -15,7 +15,7 @@ ctaEyebrow: "Have your birth data ready?"
 ctaTitle: "Book an astrology reading"
 ctaBody: "Bring your exact birth time and location, and I will map your chart with practical context you can actually use."
 ctaLabel: "Book a Reading"
-ctaUrl: "/#book"
+ctaUrl: "/readings/astrology"
 methodology: "Hellenistic whole-sign houses (Chris Brennan / The Astrology Podcast)"
 wing: guides
 ---

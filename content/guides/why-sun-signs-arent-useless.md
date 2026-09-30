@@ -14,7 +14,7 @@ ctaEyebrow: "Want to see beyond your sun sign?"
 ctaTitle: "Book an astrology reading"
 ctaBody: "I'll walk through your full chart in plain English, not just the sun sign. The patterns that actually matter."
 ctaLabel: "Book a Reading"
-ctaUrl: "/#book"
+ctaUrl: "/readings/astrology"
 wing: guides
 ---
 
