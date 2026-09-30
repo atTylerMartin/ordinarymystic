@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { Button } from "@/components/button";
 import { Breadcrumbs } from "@/components/breadcrumbs";
+import { ArrowLink } from "@/components/page-parts";
 import { ReadingServiceSchema } from "@/components/structured-data";
 import { pageMetadata } from "@/lib/metadata";
 import {
@@ -91,12 +92,13 @@ export default function TulsaTarotPage() {
           </p>
         </section>
 
-        <p>
-          <Link href="/#book">
+        <p className="flex flex-wrap items-center gap-x-6 gap-y-3">
+          <Link href="/readings/recorded">
             <Button type="button" size="md">
               Book an online reading
             </Button>
           </Link>
+          <ArrowLink href="/readings">Compare recorded and live readings</ArrowLink>
         </p>
       </div>
     </>

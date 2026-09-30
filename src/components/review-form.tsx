@@ -100,7 +100,7 @@ export function ReviewForm({ onSuccess }: { onSuccess?: () => void }) {
         Had a reading? Share your experience. Testimonials appear after a quick check.
       </p>
 
-      {/* Honeypot — hidden from real users */}
+      {/* Honeypot, hidden from real users */}
       <div className="absolute left-[-9999px]" aria-hidden>
         <label>
           Company

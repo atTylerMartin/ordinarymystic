@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { Button } from "@/components/button";
 import { Breadcrumbs } from "@/components/breadcrumbs";
+import { ArrowLink } from "@/components/page-parts";
 import { ReadingServiceSchema } from "@/components/structured-data";
 import { pageMetadata } from "@/lib/metadata";
 import { TULSA_TAROT_READER_URL } from "@/lib/offerings";
@@ -58,12 +59,13 @@ export default function TulsaAstrologyPage() {
           </p>
         </section>
 
-        <p>
-          <Link href="/#book">
+        <p className="flex flex-wrap items-center gap-x-6 gap-y-3">
+          <Link href="/readings/astrology">
             <Button type="button" size="md">
-              Book an online reading
+              Book an online astrology reading
             </Button>
           </Link>
+          <ArrowLink href="/readings/astrology">What a chart reading includes</ArrowLink>
         </p>
       </div>
     </>

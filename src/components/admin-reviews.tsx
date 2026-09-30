@@ -55,7 +55,7 @@ export function AdminReviews() {
     return (
       <Shell>
         <p className="text-sm text-slate-600">
-          Admin is unavailable — Supabase isn’t configured.
+          Admin is unavailable: Supabase isn’t configured.
         </p>
       </Shell>
     );
