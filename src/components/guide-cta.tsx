@@ -7,10 +7,11 @@ import { cn } from "@/lib/utils";
 // One sentence from the recorded-reading lede: the clause that says what
 // comes back. Taken from offerings.ts so the description is never retyped.
 const DEFAULT_BODY =
-  RECORDED_COPY.lede
-    .split(` ${String.fromCharCode(0x2014)}`)[0]
+  (RECORDED_COPY.lede
     .split(/(?<=\.)\s+/)
-    .pop() + ".";
+    .find((sentence) => sentence.startsWith("What comes back")) ?? RECORDED_COPY.lede)
+    .split(",")[0]
+    .replace(/\.$/, "") + ".";
 
 /** The booking prompt under every guide. Each field can be overridden from
  * frontmatter; the defaults point at recorded readings. WP-3 moves the

@@ -17,7 +17,7 @@ export type Tier = {
   minutes: Minutes;
   price: number;
   url: string;
-  /** The standard session — visually promoted. */
+  /** The standard session, visually promoted. */
   featured?: boolean;
   /** One line under the price. */
   blurb: string;
@@ -73,9 +73,9 @@ export const LIVE: Tier[] = [
 export const RECORDED_COPY = {
   kicker: "Start Here",
   title: "Recorded Readings",
-  lede: "You send the question. I read it privately, off camera, and take the time to sit with the patterns before I say anything about them. What comes back is a personalized video walkthrough of the reading plus a written synthesis — yours to watch when you have the attention for it, and to return to a month later when the situation has moved.",
+  lede: "You send the question. I read it privately, off camera, and take the time to sit with the patterns before I say anything about them. What comes back is a personalized video walkthrough of the reading plus a written synthesis, yours to watch when you have the attention for it, and to return to a month later when the situation has moved.",
   bullets: [
-    "Submit your question whenever it occurs to you — no scheduling.",
+    "Book whenever the question occurs to you. No scheduling.",
     "I read privately and sit with it before recording.",
     "A personalized video walkthrough, not a template.",
     "A written synthesis you can keep and re-read.",
@@ -92,7 +92,7 @@ export const LIVE_COPY = {
 
 export const ONGOING_COPY = {
   title: "Ongoing Readings",
-  body: "Some people want a reader who already knows the shape of their situation. Ongoing readings are a standing arrangement — a regular cadence, continuity between sessions, and no re-explaining the backstory every time. Availability is limited and pricing depends on the cadence, so this one starts with a conversation rather than a checkout.",
+  body: "Some people want a reader who already knows the shape of their situation. Ongoing readings are a standing arrangement: a regular cadence, continuity between sessions, and no re-explaining the backstory every time. Availability is limited and pricing depends on the cadence, so this one starts with a conversation rather than a checkout.",
   cta: "Contact me",
 };
 
