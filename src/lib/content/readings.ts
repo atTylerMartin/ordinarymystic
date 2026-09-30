@@ -16,12 +16,12 @@ import {
 export const RECORDED_TURNAROUND = "three business days";
 export const LIVE_SCHEDULING = "two business days";
 
-/** "$35" for the lowest tier. */
+/** The lowest tier as "$N". */
 export function priceFrom(tiers: Tier[]): string {
   return `$${Math.min(...tiers.map((t) => t.price))}`;
 }
 
-/** "$35 for 15 minutes, $65 for 30 minutes, or $125 for 60 minutes" */
+/** "$A for 15 minutes, $B for 30 minutes, or $C for 60 minutes" */
 export function priceList(tiers: Tier[]): string {
   const parts = tiers.map((t) => `$${t.price} for ${t.minutes} minutes`);
   return `${parts.slice(0, -1).join(", ")}, or ${parts[parts.length - 1]}`;
