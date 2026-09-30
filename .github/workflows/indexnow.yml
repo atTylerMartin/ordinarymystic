@@ -1,13 +1,13 @@
 # Notify Bing (and other IndexNow-subscribed engines) of recently updated
-# pages after a deploy. Vercel deploys tiktok-landing on push; this waits for
-# that deploy to land, then submits the sitemap URLs updated in the last 3
-# days. See scripts/indexnow.mjs and the "IndexNow" section of CLAUDE.md.
+# pages after a deploy. Vercel posts a GitHub deployment status when a
+# Production deploy of tiktok-landing finishes; this runs on that success and
+# submits the sitemap URLs updated in the last 3 days. See scripts/indexnow.mjs
+# and the "IndexNow" section of CLAUDE.md.
 
 name: IndexNow
 
 on:
-  push:
-    branches: ["tiktok-landing"]
+  deployment_status:
   workflow_dispatch:
     inputs:
       urls:
@@ -17,6 +17,10 @@ on:
 
 jobs:
   notify:
+    if: >-
+      github.event_name == 'workflow_dispatch' ||
+      (github.event.deployment_status.state == 'success' &&
+       github.event.deployment.environment == 'Production')
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -26,10 +30,6 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: "22"
-          cache: "npm"
-
-      - name: Install dependencies
-        run: npm ci
 
       - name: Require INDEXNOW_KEY
         run: |
@@ -38,23 +38,6 @@ jobs:
             exit 1
           fi
 
-      # Only for a push trigger: Vercel deploys asynchronously, so wait for
-      # the production sitemap to reflect today's build before submitting,
-      # up to five minutes.
-      - name: Wait for the deploy
-        if: github.event_name == 'push'
-        run: |
-          today="$(date -u +%Y-%m-%d)"
-          echo "Waiting for https://ordinarymysticreadings.com/sitemap.xml to show lastmod $today ..."
-          deadline=$((SECONDS + 300))
-          until curl -fsS "https://ordinarymysticreadings.com/sitemap.xml" | grep -q "<lastmod>$today"; do
-            if [ "$SECONDS" -ge "$deadline" ]; then
-              echo "Gave up waiting after 5 minutes; submitting anyway."
-              break
-            fi
-            sleep 15
-          done
-
       - name: Submit specific URLs
         if: github.event_name == 'workflow_dispatch' && inputs.urls != ''
         env:
@@ -62,7 +45,7 @@ jobs:
         run: node scripts/indexnow.mjs ${{ inputs.urls }}
 
       - name: Submit recently updated sitemap URLs
-        if: github.event_name == 'push' || (github.event_name == 'workflow_dispatch' && inputs.urls == '')
+        if: github.event_name == 'deployment_status' || (github.event_name == 'workflow_dispatch' && inputs.urls == '')
         env:
           INDEXNOW_KEY: ${{ secrets.INDEXNOW_KEY }}
         run: node scripts/indexnow.mjs --sitemap --since 3

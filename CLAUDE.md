@@ -133,8 +133,9 @@
 
 ## IndexNow
 
-- **Bing is notified automatically on every push to `tiktok-landing`.**
-  `.github/workflows/indexnow.yml` waits for the Vercel deploy, then runs
+- **Bing is notified automatically after every Production deploy.**
+  `.github/workflows/indexnow.yml` runs on Vercel's GitHub deployment status
+  (success, environment `Production`), then runs
   `node scripts/indexnow.mjs --sitemap --since 3`, which submits only the
   sitemap routes whose `updated` date (from `routes.ts`) falls in the last
   three days. To notify by hand, `npm run indexnow -- /the/path`. The first
