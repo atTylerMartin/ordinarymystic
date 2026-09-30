@@ -131,6 +131,28 @@
 - **Testimonials** load client-side (`ReviewsSection`, with `limit`, `fullBleed` and
   `moreHref`); no review schema anywhere.
 
+## IndexNow
+
+- **Bing is notified automatically on every push to `tiktok-landing`.**
+  `.github/workflows/indexnow.yml` waits for the Vercel deploy, then runs
+  `node scripts/indexnow.mjs --sitemap --since 3`, which submits only the
+  sitemap routes whose `updated` date (from `routes.ts`) falls in the last
+  three days. To notify by hand, `npm run indexnow -- /the/path`. The first
+  run after this ships should be `npm run indexnow -- --sitemap` with no
+  `--since`, so Bing sees every route once. Google has no equivalent: Request
+  Indexing in Search Console stays manual, and is worth doing only for new
+  pages.
+- The three pieces: the key file `public/<key>.txt` (public by design, so it
+  is fine to commit), `scripts/indexnow.mjs` (the submission script, house
+  style borrowed from `scripts/stripe-payment-links.mjs`), and
+  `.github/workflows/indexnow.yml` (the Action).
+- **`INDEXNOW_KEY`**: a repository secret for the Action (Tyler adds it in
+  GitHub Settings > Secrets and variables > Actions), and the same value in
+  `.env.local` for local runs (see `.env.example`). The key itself is public
+  (it lives in `public/<key>.txt`), so there is nothing sensitive about it
+  leaking, but the Action still reads it from a secret rather than hardcoding
+  it in the workflow file.
+
 ## Guides
 
 - **Guides are markdown in `content/guides/*.md`** (lessons, from WP-7, go in
