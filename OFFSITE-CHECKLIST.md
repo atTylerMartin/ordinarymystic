@@ -47,16 +47,16 @@ Profile
       only after five new videos are posted so the top of the grid is the new direction.
 
 Live setup
-- [ ] Viewer Wishes: One card 100, Three cards 500, Full spread 1,500.
-- [ ] Overlay, two lines: the Viewer Wishes tiers, then "Direct pay also available. DM me."
+- [x] Viewer Wishes: One card 100, Three cards 500, Full spread 1,500.
+- [x] Overlay, two lines: the Viewer Wishes tiers, then "Direct pay also available. DM me."
       Never PayPal, Cash App, "link", "bio" or the URL on screen or out loud.
-- [ ] Live title "Live tarot readings, pick your size" and the description from the session
+- [x] Live title "Live tarot readings, pick your size" and the description from the session
       notes.
-- [ ] Service+ card "Pay for a live reading", the auto message with the `/pay` URL, and the
+- [x] Service+ card "Pay for a live reading", the auto message with the `/pay` URL, and the
       four FAQs (direct pay, the three sizes, private readings, recorded readings). The FAQs
       hold prices, so they are on the price-change list along with `llms.txt`.
-- [ ] Open every live with sixty seconds on the sky this week (the Astrology clip), then
-      questions. Download the replay the same night; TikTok keeps it only briefly.
+Habit, not a checkbox: open every live with sixty seconds on the sky this week (the
+Astrology clip), then questions, and download the replay the same night.
 
 Content flow
 - [ ] Buckets: live highlights 50%, pop culture 20%, collective readings 20%, education 10%.
@@ -70,15 +70,14 @@ Content flow
 
 ## Now (before or alongside WP-1 and WP-3)
 
-- [ ] Recorded-reading facts for the readings page: turnaround in business days, how the
-      video is delivered (private YouTube link, Dropbox, email attachment), how the question
-      is collected after checkout today. Send these to the WP-3 session.
-- [ ] Headshot for `/about` (face is allowed here) and a square crop for the schema image and
-      `/links`. Drop them in `public/images/` and tell the session the filenames.
-- [ ] Terms and Privacy: approve the plain boilerplate WP-1 drafts, or supply text.
-- [ ] Google Search Console: domain property for `ordinarymysticreadings.com` (DNS TXT), submit
-      `https://ordinarymysticreadings.com/sitemap.xml`, then URL Inspection on `/` and Request
-      Indexing once WP-1 deploys, so the stale "Practical Spirituality" snapshot refreshes.
+- [x] Recorded-reading facts (2026-09-29): delivered within three business days as a private
+      YouTube link plus the written synthesis; the question is collected right after checkout
+      and clarified by email. Recorded in `plans/om-seo-plan.md` for WP-3.
+- [ ] Headshot: the downtown Tulsa photo is the interim `/about` image (face allowed, same
+      reader on both brands); never the SS&Si LinkedIn one. Replace with the OM reshoot when it
+      exists. Drop the file in `public/images/` and tell the session the filename.
+- [x] Terms and Privacy: plain boilerplate approved 2026-09-29.
+- [x] Google Search Console set up, sitemap submitted, indexing requested (2026-09-29).
 - [ ] Bing Webmaster Tools: sign in, "Import from Google Search Console". Bing is what
       ChatGPT reads.
 - [ ] GA4 (`G-XF047BLMG9` is already installed): after WP-4 deploys, register the custom dimensions (`tier`, `mode`, `label`,

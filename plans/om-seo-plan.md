@@ -205,6 +205,18 @@ client, a booking, or a reading; lessons are about craft, tooling and practice.
 Head terms ("online tarot reading", "tarot reading online") are covered by `/readings` and
 the FAQ but are not a target; the SERP is apps and platforms.
 
+### Recorded-reading facts (Tyler, 2026-09-29; the page states these plainly)
+- Turnaround: within three business days of receiving the question. Say "three business
+  days" on the page, not "usually sooner"; beat it quietly.
+- Delivery: a private YouTube link to the video walkthrough, plus the written synthesis, by
+  email.
+- The question: collected right after checkout. The Stripe Payment Links carry no custom
+  field (see `scripts/stripe-payment-links.mjs`), so `/book/thanks/recorded` is where the
+  question is asked for: a prefilled mailto button and the line that the three days start
+  when the question arrives. Clarifications go by email.
+- The roadmap's client accounts (booking history, past videos and notes, rebooking) remain
+  Phases 1 to 4 of `plans/product-roadmap.md`; nothing in this plan pre-empts them.
+
 ### What the recorded page must contain (the pattern that ranks and that assistants quote)
 Answer in the first 60 words (what it is, price from, turnaround), the three tiers from
 `RECORDED` with the featured tier marked, what arrives (a private video walkthrough plus a
