@@ -1,0 +1,68 @@
+# Notify Bing (and other IndexNow-subscribed engines) of recently updated
+# pages after a deploy. Vercel deploys tiktok-landing on push; this waits for
+# that deploy to land, then submits the sitemap URLs updated in the last 3
+# days. See scripts/indexnow.mjs and the "IndexNow" section of CLAUDE.md.
+
+name: IndexNow
+
+on:
+  push:
+    branches: ["tiktok-landing"]
+  workflow_dispatch:
+    inputs:
+      urls:
+        description: "Specific paths or URLs to submit (space-separated). Leave blank for --sitemap --since 3."
+        required: false
+        type: string
+
+jobs:
+  notify:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: "npm"
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Require INDEXNOW_KEY
+        run: |
+          if [ -z "${{ secrets.INDEXNOW_KEY }}" ]; then
+            echo "::error::INDEXNOW_KEY repository secret is not set. Add it in Settings > Secrets and variables > Actions."
+            exit 1
+          fi
+
+      # Only for a push trigger: Vercel deploys asynchronously, so wait for
+      # the production sitemap to reflect today's build before submitting,
+      # up to five minutes.
+      - name: Wait for the deploy
+        if: github.event_name == 'push'
+        run: |
+          today="$(date -u +%Y-%m-%d)"
+          echo "Waiting for https://ordinarymysticreadings.com/sitemap.xml to show lastmod $today ..."
+          deadline=$((SECONDS + 300))
+          until curl -fsS "https://ordinarymysticreadings.com/sitemap.xml" | grep -q "<lastmod>$today"; do
+            if [ "$SECONDS" -ge "$deadline" ]; then
+              echo "Gave up waiting after 5 minutes; submitting anyway."
+              break
+            fi
+            sleep 15
+          done
+
+      - name: Submit specific URLs
+        if: github.event_name == 'workflow_dispatch' && inputs.urls != ''
+        env:
+          INDEXNOW_KEY: ${{ secrets.INDEXNOW_KEY }}
+        run: node scripts/indexnow.mjs ${{ inputs.urls }}
+
+      - name: Submit recently updated sitemap URLs
+        if: github.event_name == 'push' || (github.event_name == 'workflow_dispatch' && inputs.urls == '')
+        env:
+          INDEXNOW_KEY: ${{ secrets.INDEXNOW_KEY }}
+        run: node scripts/indexnow.mjs --sitemap --since 3
