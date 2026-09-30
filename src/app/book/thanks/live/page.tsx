@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { CONTACT_EMAIL } from "@/lib/config";
+import { THANKS_LIVE } from "@/lib/content/readings";
 import { NOINDEX } from "@/lib/metadata";
 
 export const metadata: Metadata = {
@@ -18,8 +19,8 @@ export default function ThanksLivePage() {
       <div className="space-y-4 text-sm leading-relaxed text-slate-700">
         <p>
           Your <strong className="text-slate-900">live reading</strong> is
-          confirmed. I&apos;ll follow up by email to set a time for our Zoom
-          session and work out any details we need.
+          confirmed. {THANKS_LIVE.scheduling} We&apos;ll set a time for our
+          Zoom session and work out any details we need.
         </p>
         <p>
           We&apos;ll draw the cards together and talk it through as it unfolds.
