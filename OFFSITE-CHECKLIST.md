@@ -79,7 +79,8 @@ Content flow
 - [x] Terms and Privacy: plain boilerplate approved 2026-09-29.
 - [x] Google Search Console set up, sitemap submitted, indexing requested (2026-09-29).
 - [x] Bing Webmaster Tools: imported from Search Console (2026-09-29).
-- [ ] After WP-1b (IndexNow) merges: add the `INDEXNOW_KEY` repository secret in GitHub
+- [ ] WP-1b (IndexNow) merged 2026-10-02 and the full sitemap was submitted once by hand. Add the
+      `INDEXNOW_KEY` repository secret in GitHub so the Action can run
       (Settings, Secrets and variables, Actions). From then on Bing is notified on every
       push; Google indexing requests stay manual and only for new pages.
 - [ ] GA4 (`G-XF047BLMG9` is already installed): after WP-4 deploys, register the custom dimensions (`tier`, `mode`, `label`,
