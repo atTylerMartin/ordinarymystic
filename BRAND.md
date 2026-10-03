@@ -53,14 +53,27 @@ hairlines and small marks, never fills.
   Tyler Martin, the full name, is fine on this brand. (On Tulsa Tarot Reader the surname
   never appears.)
 
-## Tile system for the four TikTok buckets
+## Covers and tiles for the four TikTok buckets (decided 2026-10-03)
 
-| Bucket | Treatment |
-|---|---|
-| Live highlights | Raw video, no tile. Lower-third caption in Geist on a Deep bar |
-| Pop culture | Gradient tile, Montserrat Black hook, the avatar small, bottom right |
-| Collective readings | Deep flat, one card photograph, the question in Montserrat 700 |
-| Education and Tarot Tip Tuesday | Mid flat, kicker "Tarot Tip Tuesday" in Geist 600 caps, the tip in Montserrat Black |
+Every TikTok gets a custom cover: the video frame untouched and full bleed, a solid band
+across the middle third (about 42 to 60 percent of the height, edge to edge, square
+corners), a kicker in Geist 600 caps with 0.16 em tracking, and a two-line title in
+Montserrat Black, sentence case, 72 px margins both sides. Face above the band, cards
+below it when the frame allows. No avatar, handle, logo or URL on a cover. The band
+color is the bucket; the four were checked at grid size and are distinguishable without
+reading the kicker.
+
+| Bucket | Kicker | Band | Text |
+|---|---|---|---|
+| Live highlights | FROM THE LIVE | Deep `#151326`, solid | white, kicker `#e2e8f0` |
+| Collective readings | THREE CARDS (or ONE CARD, FULL SPREAD) | Purple `#3d3a6b`, solid | white, kicker `#e2e8f0` |
+| Pop culture | the show or event | Gradient `#151326` to `#213752`, 135 degrees | white, kicker `#e2e8f0` |
+| Tarot Tip Tuesday | TAROT TIP TUESDAY | Paper `#f5f4f2`, solid, the one light band | title Ink `#0f172a`, kicker Muted `#64748b` |
+
+In-video treatment follows the same colors: captions in Geist 600, white on a Deep bar at
+80 percent opacity; hook cards and title cards on the bucket's band color; the end card is
+the avatar in a circle on the gradient with the handle in Geist 600. Live highlights carry
+no title card, only captions. No colored keyword highlights in captions, ever.
 
 ## Tool setup
 
