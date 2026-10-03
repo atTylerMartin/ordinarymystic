@@ -411,6 +411,14 @@ are what YouTube search returns for a solo creator).
 video), OM YouTube, and the TTR Instagram as a still plus caption in TTR's voice, with no OM
 watermark and no surname, on a grid that stays majority Tulsa.
 
+**What crosses to the TTR Instagram (decided 2026-10-03):** Tarot Tip Tuesday, and at most
+one reading-in-practice clip a week (the reader at the table, no mention of the live or of
+recorded readings). Never live highlights that reference the live, never collective
+readings, pop culture only when Tulsa-relevant. Crossed clips are exported clean from
+Descript, get a TTR cover in TTR's kit, a caption in TTR's voice with the first name only,
+no Ordinary Mystic mark and no OM CTA. TTR's grid stays majority Tulsa. The test: does the
+clip make a host or local client more likely to book a sitting.
+
 Once YouTube is running, TikTok needs only the pop-culture pulls made separately; everything
 else is cut from lives and YouTube.
 
