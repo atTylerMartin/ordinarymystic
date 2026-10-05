@@ -1,5 +1,8 @@
 # CLAUDE.md
 
+**Orchestrating rather than implementing?** Open Claude Code in `orchestrator/` and read
+its `CLAUDE.md`, `STATE.md` and `START.md` first. Implementing sessions start here.
+
 ## Branches
 
 - **`tiktok-landing` is the production branch right now.** Treat it as the
