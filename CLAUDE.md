@@ -1,7 +1,8 @@
 # CLAUDE.md
 
-**Orchestrating rather than implementing?** Open Claude Code in `orchestrator/` and read
-its `CLAUDE.md`, `STATE.md` and `START.md` first. Implementing sessions start here.
+**Orchestrating rather than implementing?** Open Claude Code in `~/Documents/code/ordinary-mystic`,
+the business folder beside this repo, and read its `CLAUDE.md`, `STATE.md` and `START.md`
+first. Implementing sessions start here. Nothing personal or financial goes in this repo: it is public.
 
 ## Branches
 
