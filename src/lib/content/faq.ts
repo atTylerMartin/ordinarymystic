@@ -144,7 +144,7 @@ export const FAQ: FaqGroup[] = [
         id: "who",
         question: "Who does the readings?",
         answer:
-          "I do. I'm Tyler Martin, a tarot reader and astrologer in Tulsa, Oklahoma, three years into this practice. Every reading on this site is mine, start to finish.",
+          "I do. I'm Tyler Martin, a tarot reader in Tulsa, Oklahoma, three years into this practice. Every reading on this site is mine, start to finish.",
       },
       {
         id: "predict",

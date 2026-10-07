@@ -17,7 +17,7 @@ export default function TermsPage() {
 
       <section className="space-y-4 text-sm leading-relaxed text-slate-700">
         <p>
-          Ordinary Mystic offers tarot and astrology readings for
+          Ordinary Mystic offers tarot readings for
           entertainment and reflective purposes. Readings are not medical,
           legal, or financial advice, and no outcome is guaranteed. Use your
           own judgment before acting on anything discussed in a reading.

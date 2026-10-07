@@ -76,7 +76,7 @@ export const READINGS_OVERVIEW = {
 
 export const RECORDED_PAGE = {
   h1: "Recorded tarot readings",
-  answer: `A recorded reading is a tarot or astrology reading I prepare privately, off camera, for your question. Prices start at ${priceFrom(RECORDED)}. Within ${RECORDED_TURNAROUND} of receiving your question, I email you a private YouTube link to a video walkthrough of the reading, plus a written synthesis you can keep.`,
+  answer: `A recorded reading is a tarot reading I prepare privately, off camera, for your question. Prices start at ${priceFrom(RECORDED)}. Within ${RECORDED_TURNAROUND} of receiving your question, I email you a private YouTube link to a video walkthrough of the reading, plus a written synthesis you can keep.`,
   tiersTitle: "Choose a length",
   arrivesTitle: "What arrives",
   arrives: [
@@ -113,7 +113,7 @@ export const RECORDED_PAGE = {
 
 export const LIVE_PAGE = {
   h1: "Live tarot readings over Zoom",
-  answer: `A live reading is a one-on-one tarot or astrology session over Zoom. Sessions run ${lengthList(LIVE)} and start at ${priceFrom(LIVE)}. After you book, I email within ${LIVE_SCHEDULING} to set a time, and a written synthesis follows the session.`,
+  answer: `A live reading is a one-on-one tarot session over Zoom. Sessions run ${lengthList(LIVE)} and start at ${priceFrom(LIVE)}. After you book, I email within ${LIVE_SCHEDULING} to set a time, and a written synthesis follows the session.`,
   tiersTitle: "Choose a length",
   expectTitle: "What to expect",
   expect: [
