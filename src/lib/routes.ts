@@ -175,7 +175,7 @@ const staticRoutes: RouteEntry[] = [
   {
     path: "/newsletter",
     label: "Newsletter",
-    title: "Tarot and Astrology Newsletter",
+    title: "The Ordinary Mystic Newsletter",
     description:
       "A short note twice a month from Tyler Martin: one guide, one note on the sky, and one line about booking. No sharing, no selling, unsubscribe in one tap.",
     priority: 0.5,
