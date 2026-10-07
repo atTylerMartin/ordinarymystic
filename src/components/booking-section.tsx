@@ -1,8 +1,8 @@
-import Link from "next/link";
 import { Check, Clock, Mail } from "lucide-react";
 import { Badge } from "@/components/badge";
 import { Button } from "@/components/button";
 import { Card } from "@/components/card";
+import { TrackedLink } from "@/components/tracked-link";
 import { CONTACT_EMAIL } from "@/lib/config";
 import {
   LIVE,
@@ -41,8 +41,9 @@ function BookButton({
 }) {
   const pending = !tier.url;
   return (
-    <Link
+    <TrackedLink
       href={bookingHref(tier, kind)}
+      event={{ type: "book_click", tier: tier.minutes, mode: kind }}
       {...(pending ? {} : { target: "_blank", rel: "noopener noreferrer" })}
       className="w-full"
     >
@@ -55,7 +56,7 @@ function BookButton({
       >
         {pending ? "Email to book" : label}
       </Button>
-    </Link>
+    </TrackedLink>
   );
 }
 

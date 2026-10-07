@@ -4,6 +4,7 @@ import { useState, type FormEvent } from "react";
 import { Star } from "lucide-react";
 import { Button } from "@/components/button";
 import { cn } from "@/lib/utils";
+import { trackReviewSubmit } from "@/lib/analytics";
 import { getSupabase } from "@/lib/supabase";
 
 const MAX_NAME = 80;
@@ -68,6 +69,7 @@ export function ReviewForm({ onSuccess }: { onSuccess?: () => void }) {
       return;
     }
 
+    trackReviewSubmit({ rating });
     setSubmitted(true);
   }
 

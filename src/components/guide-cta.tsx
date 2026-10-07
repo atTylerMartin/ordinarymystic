@@ -1,7 +1,7 @@
-import Link from "next/link";
 import type { GuideFrontmatter } from "@/lib/content";
 import { RECORDED_COPY } from "@/lib/offerings";
 import { buttonVariants } from "@/components/button";
+import { TrackedLink } from "@/components/tracked-link";
 import { cn } from "@/lib/utils";
 
 // One sentence from the recorded-reading lede: the clause that says what
@@ -16,7 +16,7 @@ const DEFAULT_BODY =
 /** The booking prompt under every guide. Each field can be overridden from
  * frontmatter; the defaults point at recorded readings (astrology guides set
  * ctaUrl to /readings/astrology). No UTM on internal links. */
-export function GuideCta({ fm }: { fm: GuideFrontmatter }) {
+export function GuideCta({ fm, slug }: { fm: GuideFrontmatter; slug: string }) {
   const eyebrow = fm.ctaEyebrow ?? "Want a personal reading?";
   const title = fm.ctaTitle ?? "Book a recorded reading";
   const body = fm.ctaBody ?? DEFAULT_BODY;
@@ -32,15 +32,16 @@ export function GuideCta({ fm }: { fm: GuideFrontmatter }) {
         {title}
       </h2>
       <p className="mt-2 max-w-2xl text-sm leading-relaxed text-slate-200">{body}</p>
-      <Link
+      <TrackedLink
         href={url}
+        event={{ type: "guide_cta", slug, href: url }}
         className={cn(
           buttonVariants(),
           "mt-4 bg-white text-slate-900 hover:bg-slate-200 focus-visible:ring-white",
         )}
       >
         {label}
-      </Link>
+      </TrackedLink>
     </section>
   );
 }

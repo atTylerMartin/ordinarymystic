@@ -2,6 +2,7 @@
 // nowhere else.
 
 import { CONTACT_EMAIL, SOCIALS, TIKTOK_URL } from "@/lib/config";
+import type { SocialLabel } from "@/lib/analytics";
 import { TULSA_TAROT_READER_URL, WALLETS } from "@/lib/offerings";
 
 export type NavLink = {
@@ -10,6 +11,8 @@ export type NavLink = {
   /** Small text after the label, e.g. "in person, Tulsa". */
   note?: string;
   external?: boolean;
+  /** Fires `social_tap` with this label when the link is clicked. */
+  track?: SocialLabel;
 };
 
 export const NAV_LINKS: NavLink[] = [
@@ -51,17 +54,18 @@ export const FOOTER_COLUMNS: { heading: string; links: NavLink[] }[] = [
         label: "Tulsa Tarot Reader",
         note: "in person, Tulsa",
         external: true,
+        track: "tulsa",
       },
     ],
   },
   {
     heading: "Contact",
     links: [
-      { href: `mailto:${CONTACT_EMAIL}`, label: CONTACT_EMAIL },
-      { href: TIKTOK_URL, label: "TikTok", external: true },
-      { href: SOCIALS.youtube, label: "YouTube", external: true },
-      { href: WALLETS.cashApp, label: "Cash App", external: true },
-      { href: WALLETS.paypal, label: "PayPal", external: true },
+      { href: `mailto:${CONTACT_EMAIL}`, label: CONTACT_EMAIL, track: "email" },
+      { href: TIKTOK_URL, label: "TikTok", external: true, track: "tiktok" },
+      { href: SOCIALS.youtube, label: "YouTube", external: true, track: "youtube" },
+      { href: WALLETS.cashApp, label: "Cash App", external: true, track: "cashapp" },
+      { href: WALLETS.paypal, label: "PayPal", external: true, track: "paypal" },
       { href: "/terms", label: "Terms" },
       { href: "/privacy", label: "Privacy" },
     ],

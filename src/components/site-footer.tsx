@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { BookOpen } from "lucide-react";
 import { Container } from "@/components/container";
+import { TrackedLink } from "@/components/tracked-link";
 import { FOOTER_COLUMNS, FOOTER_TAGLINE, type NavLink } from "@/lib/content/nav";
 
 const linkClass = "text-slate-200 underline-offset-4 hover:text-white hover:underline";
@@ -13,6 +14,21 @@ function FooterLink({ link }: { link: NavLink }) {
     </>
   );
 
+  if (link.track) {
+    const external = link.external
+      ? { target: "_blank", rel: "noopener noreferrer" }
+      : {};
+    return (
+      <TrackedLink
+        href={link.href}
+        event={{ type: "social_tap", label: link.track }}
+        className={`${linkClass}${link.href.startsWith("mailto:") ? " break-all" : ""}`}
+        {...external}
+      >
+        {label}
+      </TrackedLink>
+    );
+  }
   if (link.external) {
     return (
       <a href={link.href} target="_blank" rel="noopener noreferrer" className={linkClass}>

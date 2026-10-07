@@ -92,7 +92,7 @@ export default async function GuidePage({ params }: { params: Promise<Params> })
         </section>
       )}
 
-      <GuideCta fm={fm} />
+      <GuideCta fm={fm} slug={slug} />
       <AuthorBox />
     </article>
   );

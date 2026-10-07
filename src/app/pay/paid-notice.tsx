@@ -1,14 +1,26 @@
 "use client";
 
+import { useEffect, useRef } from "react";
 import { useSearchParams } from "next/navigation";
 import { CheckCircle } from "lucide-react";
+import { trackPayPaid } from "@/lib/analytics";
 import { STREAM_COPY } from "@/lib/offerings";
 
 // Stripe Payment Links redirect to /pay?paid=1. Read client-side, since the
 // page is a static export.
 export function PaidNotice() {
   const params = useSearchParams();
-  if (params.get("paid") !== "1") return null;
+  const paid = params.get("paid") === "1";
+  const fired = useRef(false);
+
+  // Once per page load, even if the effect runs twice in development.
+  useEffect(() => {
+    if (!paid || fired.current) return;
+    fired.current = true;
+    trackPayPaid();
+  }, [paid]);
+
+  if (!paid) return null;
 
   return (
     <p

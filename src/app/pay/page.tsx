@@ -5,6 +5,7 @@ import Link from "next/link";
 import { Badge } from "@/components/badge";
 import { buttonVariants } from "@/components/button";
 import { Card } from "@/components/card";
+import { TrackedLink } from "@/components/tracked-link";
 import { TIKTOK_URL } from "@/lib/config";
 import { LIVE_STREAM, STREAM_COPY, WALLETS, walletUrl } from "@/lib/offerings";
 import { cn } from "@/lib/utils";
@@ -83,8 +84,12 @@ export default function PayPage() {
           </p>
           <div className="flex flex-col gap-2">
             {tier.url ? (
-              <a
+              <TrackedLink
                 href={tier.url}
+                event={{
+                  type: "pay_tap",
+                  label: tier.key === "full-spread" ? "stream-full" : "stream-3card",
+                }}
                 {...external}
                 className={cn(
                   buttonVariants({
@@ -95,23 +100,25 @@ export default function PayPage() {
                 )}
               >
                 {STREAM_COPY.cardCta}
-              </a>
+              </TrackedLink>
             ) : null}
             <div className="grid grid-cols-2 gap-2">
-              <a
+              <TrackedLink
                 href={walletUrl(WALLETS.cashApp, tier.price)}
+                event={{ type: "pay_tap", label: "cashapp" }}
                 {...external}
                 className={cn(buttonVariants({ variant: "outline", size: "md" }), "w-full")}
               >
                 {STREAM_COPY.cashAppCta}
-              </a>
-              <a
+              </TrackedLink>
+              <TrackedLink
                 href={walletUrl(WALLETS.paypal, tier.price)}
+                event={{ type: "pay_tap", label: "paypal" }}
                 {...external}
                 className={cn(buttonVariants({ variant: "outline", size: "md" }), "w-full")}
               >
                 {STREAM_COPY.paypalCta}
-              </a>
+              </TrackedLink>
             </div>
             <p className="text-xs text-slate-500">{STREAM_COPY.walletNote}</p>
           </div>
@@ -157,13 +164,14 @@ export default function PayPage() {
         <p className="text-sm font-medium uppercase tracking-widest text-slate-500">
           {STREAM_COPY.followTitle}
         </p>
-        <a
+        <TrackedLink
           href={TIKTOK_URL}
+          event={{ type: "social_tap", label: "tiktok" }}
           {...external}
           className="text-sm font-medium text-slate-800 underline underline-offset-4 hover:text-slate-900"
         >
           {STREAM_COPY.tiktokCta}
-        </a>
+        </TrackedLink>
       </div>
     </div>
   );
