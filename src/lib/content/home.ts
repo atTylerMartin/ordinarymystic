@@ -7,7 +7,7 @@ import { LIVE_SCHEDULING, lengthList, priceFrom } from "@/lib/content/readings";
 
 export const HOME = {
   h1: "Ordinary Mystic Readings",
-  hero: "Grounded tarot and astrology readings with Tyler Martin, recorded for you or live over Zoom.",
+  hero: "Grounded tarot readings with Tyler Martin, recorded for you or live over Zoom.",
   heroPrimary: { href: "/readings/recorded", label: "Book a recorded reading" },
   heroSecondary: { href: "/readings/live", label: "See live readings" },
 

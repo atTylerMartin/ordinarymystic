@@ -53,7 +53,7 @@ function person() {
     "@id": PERSON_ID,
     name: "Tyler Martin",
     alternateName: "Ordinary Mystic",
-    jobTitle: "Tarot and astrology reader",
+    jobTitle: "Tarot reader",
     url: `${SITE_URL}/about`,
     // TODO headshot: swap for a real headshot once one is supplied (WP-3).
     image: `${SITE_URL}/images/profile-img.png`,
@@ -104,7 +104,7 @@ export function ReadingServiceSchema({
     "@id": `${SITE_URL}/#service-${kind}`,
     name: copy.title,
     description: copy.lede,
-    serviceType: "Tarot and astrology reading",
+    serviceType: "Tarot reading",
     provider: { "@id": ORG_ID },
     areaServed: { "@type": "Country", name: "United States" },
     availableChannel: {

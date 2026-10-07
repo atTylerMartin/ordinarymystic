@@ -29,7 +29,7 @@ export const NAV_BOOK: NavLink = {
   label: "Book a reading",
 };
 
-export const FOOTER_TAGLINE = "Ordinary Mystic Readings: tarot and astrology without the woo";
+export const FOOTER_TAGLINE = "Ordinary Mystic Readings: grounded tarot, no theatrics";
 
 export const FOOTER_COLUMNS: { heading: string; links: NavLink[] }[] = [
   {

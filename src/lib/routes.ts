@@ -45,9 +45,9 @@ const staticRoutes: RouteEntry[] = [
   {
     path: "/",
     label: "Home",
-    title: "Ordinary Mystic: Tarot and Astrology Readings",
+    title: "Ordinary Mystic: Tarot Readings",
     description:
-      "Online tarot and astrology readings with Ordinary Mystic. Recorded readings delivered as a personalized video walkthrough plus a written synthesis, and live one-on-one sessions over Zoom.",
+      "Online tarot readings with Ordinary Mystic. Recorded readings delivered as a personalized video walkthrough plus a written synthesis, and live one-on-one sessions over Zoom.",
     priority: 1,
     changeFrequency: "weekly",
     updated: "2026-09-29",
@@ -59,7 +59,7 @@ const staticRoutes: RouteEntry[] = [
     label: "Readings",
     title: "Online Tarot Readings with a Real Person",
     description:
-      "Online tarot and astrology readings with a real person: recorded video readings, live one-on-one Zoom sessions, and ongoing readings. How to choose.",
+      "Online tarot readings with a real person: recorded video readings, live one-on-one Zoom sessions, and ongoing readings. How to choose.",
     priority: 0.9,
     changeFrequency: "weekly",
     updated: "2026-09-29",
@@ -105,7 +105,7 @@ const staticRoutes: RouteEntry[] = [
     label: "FAQ",
     title: "Frequently Asked Questions",
     description:
-      "Answers about booking a tarot or astrology reading online: prices, recorded and live readings, turnaround, what to send, and in-person readings in Tulsa.",
+      "Answers about booking a tarot reading online: prices, recorded and live readings, turnaround, what to send, and in-person readings in Tulsa.",
     priority: 0.7,
     changeFrequency: "monthly",
     updated: "2026-09-29",
@@ -117,7 +117,7 @@ const staticRoutes: RouteEntry[] = [
     label: "About",
     title: "About Tyler Martin, Tarot Reader",
     description:
-      "Tyler Martin is the tarot reader and astrologer behind Ordinary Mystic, based in Tulsa, Oklahoma. Grounded, conversational readings that do not predict.",
+      "Tyler Martin is the tarot reader behind Ordinary Mystic, based in Tulsa, Oklahoma. Grounded, conversational readings that do not predict.",
     priority: 0.8,
     changeFrequency: "monthly",
     updated: "2026-09-29",
@@ -129,7 +129,7 @@ const staticRoutes: RouteEntry[] = [
     label: "Testimonials",
     title: "Tarot Reading Testimonials",
     description:
-      "Testimonials from Ordinary Mystic clients after recorded and live tarot and astrology readings, with a link to leave your own after a reading.",
+      "Testimonials from Ordinary Mystic clients after recorded and live tarot readings, with a link to leave your own after a reading.",
     priority: 0.6,
     changeFrequency: "monthly",
     updated: "2026-09-29",
@@ -141,7 +141,7 @@ const staticRoutes: RouteEntry[] = [
     label: "Tools",
     title: "Tools & Resources",
     description:
-      "Notion templates and tools that support grounded tarot and astrology practice, plus recommended resources.",
+      "Notion templates and tools that support grounded tarot practice, plus recommended resources.",
     priority: 0.7,
     changeFrequency: "monthly",
     updated: toolsUpdated,
@@ -201,7 +201,7 @@ const staticRoutes: RouteEntry[] = [
     label: "Guides",
     title: "Guides to Tarot and Astrology",
     description:
-      "Grounded guides to tarot and astrology: reading court cards and reversals, keeping a tarot journal, reading a birth chart, the houses, and the year's major transits.",
+      "Grounded guides to tarot, with astrology essays alongside: reading court cards and reversals, keeping a tarot journal, reading a birth chart, the houses, and the year's major transits.",
     priority: 0.7,
     changeFrequency: "weekly",
     updated: guidesUpdated,

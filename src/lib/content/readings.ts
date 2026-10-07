@@ -36,7 +36,7 @@ export function lengthList(tiers: Tier[]): string {
 export const READINGS_OVERVIEW = {
   h1: "Online readings with a real person",
   intro:
-    "Every reading here is with me, Tyler Martin, a tarot reader and astrologer in Tulsa. There are three ways to work together, and astrology fits into any of them.",
+    "Every reading here is with me, Tyler Martin, a tarot reader in Tulsa. There are three ways to work together, and when a chart or a transit frames the question, I can read the cards through an astrological lens in any of them.",
   sections: [
     {
       key: "recorded",
@@ -61,8 +61,8 @@ export const READINGS_OVERVIEW = {
     },
     {
       key: "astrology",
-      title: "Astrology readings",
-      body: "A reading of your birth chart, or of the timing around a question, in plain language. It comes recorded or live, at the same prices, and needs your date, time and place of birth.",
+      title: "Reading through astrology",
+      body: "Tarot read through a lens of your birth chart, or of the timing around a question, in plain language. It comes recorded or live, at the same prices, and needs your date, time and place of birth.",
       href: "/readings/astrology",
       cta: "About astrology readings",
     },

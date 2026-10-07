@@ -30,12 +30,12 @@ const siteName = "Ordinary Mystic";
 const siteUrl = SITE_URL;
 
 const defaultDescription =
-  "Online tarot and astrology for thoughtful skeptics. Recorded readings delivered as a personalized video walkthrough plus a written synthesis, and live one-on-one sessions over Zoom.";
+  "Online tarot readings for thoughtful skeptics. Recorded readings delivered as a personalized video walkthrough plus a written synthesis, and live one-on-one sessions over Zoom.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: "Ordinary Mystic | Tarot and Astrology Readings",
+    default: "Ordinary Mystic | Tarot Readings",
     template: `%s | ${siteName}`,
   },
   description: defaultDescription,
@@ -48,7 +48,7 @@ export const metadata: Metadata = {
     apple: "/favicon.png",
   },
   openGraph: {
-    title: "Ordinary Mystic | Tarot and Astrology Readings",
+    title: "Ordinary Mystic | Tarot Readings",
     description: defaultDescription,
     url: siteUrl,
     siteName,
@@ -57,7 +57,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Ordinary Mystic | Tarot and Astrology Readings",
+    title: "Ordinary Mystic | Tarot Readings",
     description: defaultDescription,
     images: [OG_DEFAULT.url],
   },
