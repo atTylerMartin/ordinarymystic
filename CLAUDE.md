@@ -69,6 +69,36 @@ first. Implementing sessions start here. Nothing personal or financial goes in t
 - **The URL goes in the TikTok bio and Service+ messages only.** It is never
   read aloud or shown on screen during a live.
 
+## The links page
+
+- **`/links` is the TikTok bio page.** Rows, copy and the `link_tap` labels are in
+  `src/lib/content/links.ts` (prices only through `offerings.ts` imports). Like `/pay` it is
+  noindex, not in `routes.ts`, not in the sitemap and not in `public/llms.txt`. The newsletter
+  card is a placeholder until WP-5 swaps in the form.
+
+## Attribution and analytics
+
+- **First touch, per session.** `src/lib/attribution.ts` stores `om_attribution` in
+  `sessionStorage` on the first page view of a session: `{ utm_source, utm_medium,
+  utm_campaign }` from the URL, else `{ referrer: hostname }` when the referrer is another
+  host, plus `landing: pathname`. Later page views never overwrite it. With no tags and no
+  referrer, `/links` defaults to `tiktok / social / bio` and `/pay` to `tiktok / social / pay`
+  (TikTok strips referrers; the Service+ URL carries its own `utm_campaign=live`). The
+  `Attribution` component runs it once from the root layout. `attributionSource()` returns
+  `source / medium / campaign`, `referral: host`, or `direct`.
+- **Events** (`src/lib/analytics.ts`, GA4 via the inline gtag snippet; every helper no-ops
+  when `window.gtag` is absent, and every event carries `source`): `book_click` (`tier`,
+  `mode`), `pay_tap` (`label`: `stream-3card`, `stream-full`, `cashapp`, `paypal`; `campaign`),
+  `pay_paid` (`campaign`, once, from `?paid=1`), `social_tap` (`label`), `guide_cta` (`slug`,
+  `href`), `review_submit` (`rating`), `link_tap` (`label`). Server components fire them
+  through `TrackedLink` (`src/components/tracked-link.tsx`), passing the event as plain data.
+  GA4 Admin needs the custom dimensions `tier`, `mode`, `label`, `campaign`, `source`, and
+  `book_click`, `pay_tap`, `pay_paid` marked as key events.
+- **UTM conventions.** TikTok bio: `/links?utm_source=tiktok&utm_medium=social&utm_campaign=bio`.
+  Service+ messages: `/pay?utm_source=tiktok&utm_medium=social&utm_campaign=live`. Newsletter:
+  `utm_source=newsletter&utm_medium=email&utm_campaign=<send-slug>`. **Never put UTMs on
+  internal links**; that starts a new GA session.
+
 ## Two brands, one reader (Tyler Martin)
 
 - **Ordinary Mystic is the online practice**: recorded readings (prepared
@@ -95,7 +125,7 @@ first. Implementing sessions start here. Nothing personal or financial goes in t
 - **Never register `/pay`, `/links`, `/admin`, `/book`, `/resources`, or a
   `thanks` page.** Those carry `NOINDEX` from `src/lib/metadata.ts` instead
   and stay live for old inbound links or their noindex purpose (`/pay`,
-  `/admin`).
+  `/links`, `/admin`).
 - **Schema map**: `src/components/structured-data.tsx` renders `Organization`,
   `Person`, and `WebSite` once, in the root layout. `ReadingServiceSchema`
   (`kind: "recorded" | "live"`) renders on `/`, `/readings`, the matching `/readings/*` page, and the two Tulsa hand-off
