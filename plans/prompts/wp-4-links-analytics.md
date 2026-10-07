@@ -19,16 +19,18 @@ because the newsletter form will consume the attribution and the event helper bu
 - `src/lib/content.ts` (`listGuides`) for the three newest guides on `/links`
 - `vercel.json` (already has the `X-Robots-Tag` rule for `/links`)
 - The sister repo's versions, for shape only (that site runs on a server):
-  `C:/Users/tyler/Documents/My Files/03. Efforts/Code/tulsa-tarot/lib/attribution.ts`,
-  `lib/analytics.ts`, `components/Attribution.tsx`, `app/links/page.tsx`,
-  `lib/content/links.ts`
+  `../tulsa-tarot-reader/lib/attribution.ts`, `lib/analytics.ts`,
+  `components/Attribution.tsx`, `app/links/page.tsx`, `lib/content/links.ts` (on the Mac;
+  on Windows the repo is `C:/Users/tyler/Documents/My Files/03. Efforts/Code/tulsa-tarot`)
 
 ## Questions (one message, then wait; on "go" use the defaults)
-1. `/links` row order. Default, top to bottom: Pay for your live reading (`/pay`), Book a
-   recorded reading (`/readings/recorded`), Newsletter (a placeholder card with one line of
-   copy and no form until WP-5), Free tools (Querent at `https://querent.app`, the digital
-   deck at `DIGITAL_TAROT_APP_URL`), three newest guides, Tulsa Tarot Reader (in person),
-   then TikTok and YouTube.
+1. `/links` row order. Default, top to bottom (decided 2026-10-07: the LIVE is discovery,
+   the recorded reading is the offer, so booking leads): Book a recorded reading
+   (`/readings/recorded`, "from $35" via `RECORDED[0].price`), Live one-on-one over Zoom
+   (`/readings/live`), Pay for your live reading (`/pay`), Newsletter (a placeholder card
+   with one line of copy and no form until WP-5), Free tools (Querent at
+   `https://querent.app`, the digital deck at `DIGITAL_TAROT_APP_URL`), three newest guides,
+   Tulsa Tarot Reader (in person), then TikTok and YouTube.
 2. Headshot on `/links`. Default: `/images/profile-img.png`, ringed, above the name, like
    `/pay`'s masthead.
 3. Anything else on the bio page? Default: no.

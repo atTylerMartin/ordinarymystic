@@ -35,7 +35,9 @@ Profile
 - [x] Name field: `Ordinary Mystic Tarot Readings`.
 - [x] Bio: practical and grounded / live at 8pm CT on my on weeks, recorded on off weeks /
       direct pay and bookings in the link.
-- [x] Bio link: `/pay` for now. Swap to `/links` when WP-4 ships.
+- [ ] Bio link: `/readings/recorded?utm_source=tiktok&utm_medium=social&utm_campaign=bio`
+      as of 2026-10-07 (the LIVE is discovery; the recorded reading is the offer; live viewers
+      get `/pay` through Service+). Swap to `/links` when WP-4 ships.
 - [ ] Profile photo: reshoot for this brand. Same face, deck in hand or on the table, plain
       dark background, warm light. Not the downtown Tulsa shot. Reuse on YouTube, `/about`
       and `/links`.
