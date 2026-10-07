@@ -13,10 +13,6 @@ export const LINKS_COPY = {
   guidesHeading: "Newest guides",
   toolsHeading: "Free tools",
   moreHeading: "More",
-  newsletter: {
-    title: "Newsletter",
-    body: "Twice a month: one guide, one note on the sky, one line about booking. Signup opens soon.",
-  },
 };
 
 export type LinkRow = {

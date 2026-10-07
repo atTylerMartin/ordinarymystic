@@ -21,7 +21,7 @@ export const NAV_LINKS: NavLink[] = [
   { href: "/about", label: "About" },
   // Points at /tools until WP-7 creates /for-readers.
   { href: "/tools", label: "For Readers" },
-  // Newsletter slot: { href: "/newsletter", label: "Newsletter" } (WP-5).
+  { href: "/newsletter", label: "Newsletter" },
 ];
 
 export const NAV_BOOK: NavLink = {
@@ -49,6 +49,7 @@ export const FOOTER_COLUMNS: { heading: string; links: NavLink[] }[] = [
       { href: "/about", label: "About" },
       { href: "/guides", label: "Guides" },
       { href: "/tools", label: "Tools" },
+      { href: "/newsletter", label: "Newsletter" },
       {
         href: TULSA_TAROT_READER_URL,
         label: "Tulsa Tarot Reader",

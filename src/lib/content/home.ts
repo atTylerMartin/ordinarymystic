@@ -2,6 +2,7 @@
 // helpers; nothing here states a number.
 
 import { DIGITAL_TAROT_APP_URL } from "@/lib/config";
+import { NEWSLETTER } from "@/lib/content/newsletter";
 import { LIVE, LIVE_COPY, RECORDED_COPY } from "@/lib/offerings";
 import { LIVE_SCHEDULING, lengthList, priceFrom } from "@/lib/content/readings";
 
@@ -30,6 +31,12 @@ export const HOME = {
     kicker: "Guides",
     title: "Guides to tarot and astrology",
     link: { href: "/guides", label: "All guides" },
+  },
+
+  newsletter: {
+    kicker: "Newsletter",
+    title: "One note, twice a month",
+    body: NEWSLETTER.body,
   },
 
   readers: {

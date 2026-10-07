@@ -3,6 +3,8 @@ import Image from "next/image";
 import { getGuide, listGuides, type GuideFrontmatter } from "@/lib/content";
 import { Breadcrumbs } from "@/components/breadcrumbs";
 import { AuthorBox } from "@/components/author-box";
+import { Card } from "@/components/card";
+import { NewsletterForm } from "@/components/newsletter-form";
 import { GuideCta } from "@/components/guide-cta";
 import { CATEGORY_LABELS, GuideMeta } from "@/components/guide-meta";
 import { ArticleSchema } from "@/components/structured-data";
@@ -93,6 +95,9 @@ export default async function GuidePage({ params }: { params: Promise<Params> })
       )}
 
       <GuideCta fm={fm} slug={slug} />
+      <Card>
+        <NewsletterForm />
+      </Card>
       <AuthorBox />
     </article>
   );

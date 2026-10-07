@@ -6,6 +6,7 @@ import { Button, buttonVariants } from "@/components/button";
 import { Card, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/card";
 import { RecordedTiers, TulsaCrosslink } from "@/components/booking-section";
 import { Container } from "@/components/container";
+import { NewsletterForm } from "@/components/newsletter-form";
 import { CATEGORY_LABELS, GuideMeta } from "@/components/guide-meta";
 import { ArrowLink } from "@/components/page-parts";
 import { ReviewsSection } from "@/components/reviews-section";
@@ -211,6 +212,22 @@ export default function Home() {
             ))}
           </div>
           <TulsaCrosslink className="mt-16" />
+        </Container>
+      </section>
+
+      {/* NEWSLETTER */}
+      <section
+        id="newsletter"
+        className={`${fullBleed} ${sectionPadding}`}
+        style={{ backgroundColor: "#eef1f5" }}
+      >
+        <Container className="px-4 sm:px-6">
+          <SectionIntro kicker={C.newsletter.kicker} title={C.newsletter.title}>
+            <p>{C.newsletter.body}</p>
+          </SectionIntro>
+          <Card className="mx-auto mt-8 max-w-md">
+            <NewsletterForm hideHeading />
+          </Card>
         </Container>
       </section>
     </div>

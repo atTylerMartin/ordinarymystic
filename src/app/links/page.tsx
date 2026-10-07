@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import { ChevronRight } from "lucide-react";
 import { Card } from "@/components/card";
+import { NewsletterForm } from "@/components/newsletter-form";
 import { TrackedLink } from "@/components/tracked-link";
 import { listGuides } from "@/lib/content";
 import {
@@ -84,12 +85,9 @@ export default function LinksPage() {
         ))}
       </div>
 
-      {/* ── Newsletter placeholder (WP-5 replaces this with the form) ────── */}
-      <Card className="flex flex-col gap-1 px-5 py-4">
-        <h2 className="text-base font-semibold text-slate-900">
-          {LINKS_COPY.newsletter.title}
-        </h2>
-        <p className="text-sm leading-snug text-slate-600">{LINKS_COPY.newsletter.body}</p>
+      {/* ── Newsletter ───────────────────────────────────────────────────── */}
+      <Card className="px-5 py-4">
+        <NewsletterForm />
       </Card>
 
       {/* ── Free tools ───────────────────────────────────────────────────── */}
