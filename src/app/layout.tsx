@@ -4,6 +4,7 @@ import { Montserrat } from "next/font/google";
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
 import { Container } from "@/components/container";
+import { Attribution } from "@/components/attribution";
 import { StructuredData } from "@/components/structured-data";
 import { SITE_LIVE_MODE, SITE_URL } from "@/lib/config";
 import { OG_DEFAULT } from "@/lib/metadata";
@@ -103,6 +104,7 @@ export default function RootLayout({
         data-site-live={SITE_LIVE_MODE ? "true" : undefined}
       >
         <StructuredData />
+        <Attribution />
         <div className="flex min-h-screen flex-col">
           <SiteHeader />
           <main className="flex-1 pt-10 pb-16">
