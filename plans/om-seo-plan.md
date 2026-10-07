@@ -210,10 +210,11 @@ the FAQ but are not a target; the SERP is apps and platforms.
   days" on the page, not "usually sooner"; beat it quietly.
 - Delivery: a private YouTube link to the video walkthrough, plus the written synthesis, by
   email.
-- The question: collected right after checkout. The Stripe Payment Links carry no custom
-  field (see `scripts/stripe-payment-links.mjs`), so `/book/thanks/recorded` is where the
-  question is asked for: a prefilled mailto button and the line that the three days start
-  when the question arrives. Clarifications go by email.
+- The question: collected at checkout. Since 2026-09-29 the six reading Payment Links carry
+  a required `question` field and an optional `birth_data` field (set with `--set-fields` in
+  `scripts/stripe-payment-links.mjs`); `/book/thanks/recorded` asks for any further context
+  by reply to the receipt and says the three days start when the question is in hand.
+  Clarifications go by email.
 - The roadmap's client accounts (booking history, past videos and notes, rebooking) remain
   Phases 1 to 4 of `plans/product-roadmap.md`; nothing in this plan pre-empts them.
 
