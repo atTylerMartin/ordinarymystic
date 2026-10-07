@@ -4,8 +4,8 @@
 // `source`, the first-touch attribution string (see `attribution.ts`).
 //
 // GA4 Admin needs the custom dimensions `tier`, `mode`, `label`, `campaign`
-// and `source` registered, and `book_click`, `pay_tap` and `pay_paid` marked
-// as key events.
+// and `source` registered, and `book_click`, `pay_tap`, `pay_paid` and
+// `newsletter_signup` marked as key events.
 
 import { attributionSource, readAttribution } from "@/lib/attribution";
 
@@ -20,7 +20,7 @@ type Params = Record<string, string | number | boolean>;
 export function trackEvent(name: string, params: Params = {}): void {
   try {
     if (typeof window === "undefined" || typeof window.gtag !== "function") return;
-    window.gtag("event", name, { ...params, source: attributionSource() });
+    window.gtag("event", name, { source: attributionSource(), ...params });
   } catch {
     // Analytics is never worth breaking the page for.
   }
@@ -58,6 +58,13 @@ export function trackGuideCta(p: { slug: string; href: string }): void {
 
 export function trackReviewSubmit(p: { rating: number }): void {
   trackEvent("review_submit", { rating: p.rating });
+}
+
+export function trackNewsletterSignup(p: { campaign?: string; source?: string } = {}): void {
+  trackEvent("newsletter_signup", {
+    campaign: p.campaign ?? currentCampaign(),
+    ...(p.source ? { source: p.source } : {}),
+  });
 }
 
 export function trackLinkTap(p: { label: string }): void {
