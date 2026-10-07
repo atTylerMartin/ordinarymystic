@@ -9,7 +9,7 @@ export const QUERENT_URL = "https://querent.app";
 
 export const LINKS_COPY = {
   brand: "Ordinary Mystic",
-  lede: "Tarot and astrology readings, recorded for you or live over Zoom.",
+  lede: "Tarot readings, recorded for you or live over Zoom.",
   guidesHeading: "Newest guides",
   toolsHeading: "Free tools",
   moreHeading: "More",
