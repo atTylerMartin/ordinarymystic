@@ -42,6 +42,11 @@ first. Implementing sessions start here. Nothing personal or financial goes in t
   Products or Prices**, and never print a secret key.
 - A tier with an empty `url` renders an "Email to book" mailto fallback, so the
   site never shows a new price behind an old link.
+- **The price-change list.** A few files cannot import `offerings.ts` and state prices as
+  literal text. Change them in the same commit as any price change: `public/llms.txt`
+  (`scripts/check-llms-txt.mjs` fails the build if it drifts),
+  `content/guides/online-tarot-reading-cost.md` (every recorded, live and TikTok LIVE price;
+  nothing checks it, so grep it), and, outside this repo, the TikTok Service+ FAQs.
 
 - **The six reading Payment Links collect two custom fields at checkout** (set 2026-09-29
   with `--set-fields` in the same script, in place, URLs unchanged): `question` (required,
