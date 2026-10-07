@@ -74,7 +74,31 @@ first. Implementing sessions start here. Nothing personal or financial goes in t
 - **`/links` is the TikTok bio page.** Rows, copy and the `link_tap` labels are in
   `src/lib/content/links.ts` (prices only through `offerings.ts` imports). Like `/pay` it is
   noindex, not in `routes.ts`, not in the sitemap and not in `public/llms.txt`. The newsletter
-  card is a placeholder until WP-5 swaps in the form.
+  card is the live `NewsletterForm` (see "Newsletter").
+
+## Newsletter
+
+- **The list lives in Postgres**: `public.subscribers` (`supabase/subscribers.sql`: unique index
+  on `lower(email)`, RLS with an insert-only policy for `anon` where `brand = 'om'`, no select
+  policy, and a before-insert trigger that refuses when more than 30 rows landed in ten
+  minutes). The browser inserts through `subscribe()` in `src/lib/newsletter.ts` (returns
+  `ok | duplicate | error`, never throws; a filled honeypot returns `ok` without inserting; a
+  unique violation is `duplicate`, shown as success). It must not ask for the row back: there
+  is no select policy. `source`, `campaign` and `landing` come from first-touch attribution.
+- **A Database Webhook on INSERT** calls the Edge Function
+  `supabase/functions/subscribe-welcome` (Deno; "Verify JWT" off; header `x-webhook-secret`).
+  It creates the Resend contact (properties `brand`, `source`, `campaign`, `landing`, retried
+  without them; "already exists" is success) and sends a one-line plain welcome with
+  `utm_source=newsletter&utm_medium=email&utm_campaign=welcome`. Secrets: `RESEND_API_KEY`,
+  `RESEND_AUDIENCE_ID`, `SUBSCRIBE_WEBHOOK_SECRET`; optional `SUBSCRIBE_FROM`,
+  `SUBSCRIBE_REPLY_TO`, `SUBSCRIBE_SITE_URL`. The table is the list of record; Resend is a copy.
+- **One component, five homes**: `NewsletterForm` (`src/components/newsletter-form.tsx`, copy in
+  `src/lib/content/newsletter.ts`) is on `/newsletter` (the registered page), `/links`, under
+  `GuideCta` on every guide, and a band on the homepage hub. The footer ("The Practice") and the
+  header nav link to `/newsletter`. Event: `newsletter_signup` (`campaign`, `source`), fired on
+  a new signup only (not a repeat, not a honeypot hit).
+- **Deploying it is manual** (Supabase and Resend setup is never done from a coding session);
+  the steps are in the WP-5 report and the head comments of `subscribe-welcome/index.ts`.
 
 ## Attribution and analytics
 
@@ -90,10 +114,10 @@ first. Implementing sessions start here. Nothing personal or financial goes in t
   when `window.gtag` is absent, and every event carries `source`): `book_click` (`tier`,
   `mode`), `pay_tap` (`label`: `stream-3card`, `stream-full`, `cashapp`, `paypal`; `campaign`),
   `pay_paid` (`campaign`, once, from `?paid=1`), `social_tap` (`label`), `guide_cta` (`slug`,
-  `href`), `review_submit` (`rating`), `link_tap` (`label`). Server components fire them
+  `href`), `review_submit` (`rating`), `newsletter_signup` (`campaign`), `link_tap` (`label`). Server components fire them
   through `TrackedLink` (`src/components/tracked-link.tsx`), passing the event as plain data.
   GA4 Admin needs the custom dimensions `tier`, `mode`, `label`, `campaign`, `source`, and
-  `book_click`, `pay_tap`, `pay_paid` marked as key events.
+  `book_click`, `pay_tap`, `pay_paid`, `newsletter_signup` marked as key events.
 - **UTM conventions.** TikTok bio: `/links?utm_source=tiktok&utm_medium=social&utm_campaign=bio`.
   Service+ messages: `/pay?utm_source=tiktok&utm_medium=social&utm_campaign=live`. Newsletter:
   `utm_source=newsletter&utm_medium=email&utm_campaign=<send-slug>`. **Never put UTMs on
@@ -160,7 +184,7 @@ first. Implementing sessions start here. Nothing personal or financial goes in t
   site's one `FAQPage`. Other pages show a visible FAQ with `FaqList` and
   `faqItems(ids)`, and no schema. Add a question to `faq.ts` and reference its `id`.
 - **Nav and footer** render from `nav.ts`: Readings, Guides, About, For Readers (points at
-  `/tools` until `/for-readers` exists), a commented Newsletter slot, and the Book button
+  `/tools` until `/for-readers` exists), Newsletter, and the Book button
   to `/readings/recorded`. Below `lg` the links sit in `MobileNav`.
 - **Testimonials** load client-side (`ReviewsSection`, with `limit`, `fullBleed` and
   `moreHref`); no review schema anywhere.
