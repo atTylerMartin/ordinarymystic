@@ -21,10 +21,10 @@ export const NEWSLETTER = {
 export const NEWSLETTER_PAGE = {
   kicker: "Newsletter",
   h1: "The Ordinary Mystic newsletter",
-  lede: "A short note twice a month, from Tyler Martin: tarot and astrology without the woo, and nothing you did not ask for.",
+  lede: "A short note twice a month, from Tyler Martin: grounded tarot, no theatrics, and nothing you did not ask for.",
   expectHeading: "What you get",
   expect: [
-    { title: "One guide", body: "A guide to tarot or astrology worth keeping, with a link to the full piece." },
+    { title: "One guide", body: "A guide worth keeping, with a link to the full piece." },
     { title: "One note on the sky", body: "What the planets are doing and what it does and does not mean." },
     { title: "One line about booking", body: "If a question is already sitting with you, where recorded and live readings are." },
   ],
