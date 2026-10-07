@@ -37,7 +37,7 @@ export function captureAttribution(): void {
     const utm_campaign = clean(params.get("utm_campaign"));
     const path = window.location.pathname.replace(/(.)\/$/, "$1");
 
-    let record: AttributionRecord | undefined;
+    let record: AttributionRecord = {};
 
     if (utm_source || utm_medium || utm_campaign) {
       record = { utm_source, utm_medium, utm_campaign };
@@ -48,16 +48,17 @@ export function captureAttribution(): void {
       }
     }
 
-    if (!record && LANDING_DEFAULTS[path]) {
+    const tagged = Object.keys(record).length > 0;
+    if (!tagged && LANDING_DEFAULTS[path]) {
       record = { ...LANDING_DEFAULTS[path] };
     }
 
-    // A direct visit with nothing to credit stores nothing, so a later page
-    // view in the same session can still be the first real touch.
-    if (record) {
-      record.landing = path;
-      sessionStorage.setItem(STORAGE_KEY, JSON.stringify(record));
-    }
+    // Always store the landing page, even for a direct visit: first touch is
+    // the first page of the session, and later page views never overwrite it.
+    sessionStorage.setItem(
+      STORAGE_KEY,
+      JSON.stringify({ ...record, landing: path } satisfies AttributionRecord),
+    );
   } catch {
     // sessionStorage unavailable (private mode, blocked), or a malformed
     // referrer. Attribution is never worth breaking the page for.
