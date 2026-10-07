@@ -27,15 +27,19 @@ export default function PrivacyPage() {
           never sees or stores your card number.
         </p>
         <p>
-          <strong className="text-slate-900">Reviews and, later,
-          newsletter subscribers.</strong> If you leave a review, it is stored
-          in a database managed by Supabase and shown publicly only after
-          approval. A future newsletter signup will store your email the same
-          way, for sending updates you asked for.
+          <strong className="text-slate-900">Reviews and newsletter
+          subscribers.</strong> If you leave a review, it is stored in a
+          database managed by Supabase and shown publicly only after approval.
+          If you sign up for the newsletter, your email address, your first
+          name if you give it, and the page and source you arrived from are
+          stored the same way, and your address is added to a mailing list at
+          Resend. They are used to send the newsletter you asked for and
+          nothing else. Every email carries an unsubscribe link.
         </p>
         <p>
           <strong className="text-slate-900">Email.</strong> Booking
-          confirmations and review notifications are sent through Resend.
+          confirmations, review notifications and the newsletter are sent
+          through Resend.
         </p>
         <p>
           <strong className="text-slate-900">Analytics.</strong> Google

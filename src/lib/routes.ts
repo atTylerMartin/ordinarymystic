@@ -173,6 +173,18 @@ const staticRoutes: RouteEntry[] = [
     audience: "clients",
   },
   {
+    path: "/newsletter",
+    label: "Newsletter",
+    title: "Tarot and Astrology Newsletter",
+    description:
+      "A short note twice a month from Tyler Martin: one guide, one note on the sky, and one line about booking. No sharing, no selling, unsubscribe in one tap.",
+    priority: 0.5,
+    changeFrequency: "monthly",
+    updated: "2026-10-07",
+    parent: "/",
+    audience: "all",
+  },
+  {
     path: "/terms",
     label: "Terms",
     title: "Terms of Service",
