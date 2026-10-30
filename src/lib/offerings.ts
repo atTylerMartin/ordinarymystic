@@ -110,11 +110,10 @@ export const TULSA_TAROT_READER_EVENTS_URL =
 // ─── Live stream readings: the /pay page ─────────────────────────────────────
 //
 // For TikTok live viewers who pay directly instead of in coins. The one-card
-// and three-card tiers are wallets-only: Stripe's fee would take a third of a
-// dollar, and the $3 tier has no Payment Link yet. The five-card button uses
-// the $5 link from `scripts/stripe-payment-links.mjs` (om_tier stream-3card,
-// the old $5 three-card price), the full spread om_tier stream-full; both
-// redirect to /pay?paid=1. A card button only renders once its `url` is set.
+// tier is wallets-only by design: Stripe's fee would take a third of a dollar.
+// The other links come from `scripts/stripe-payment-links.mjs` (om_tier
+// stream-3card, stream-5card, stream-full) and redirect to /pay?paid=1. A card
+// button only renders once its `url` is set.
 // Menu as of 2026-10-09 (live/config.json): 100, 300, 500, 1500 coins.
 
 export type StreamTier = {
@@ -125,7 +124,7 @@ export type StreamTier = {
   coins: number;
   url: string;
   /** The `pay_tap` label for the card button. */
-  payLabel?: "stream-5card" | "stream-full";
+  payLabel?: "stream-3card" | "stream-5card" | "stream-full";
   featured?: boolean;
   /** One line under the name and price. */
   blurb: string;
@@ -157,7 +156,8 @@ export const LIVE_STREAM: StreamTier[] = [
     name: "Three cards",
     price: 3,
     coins: 300,
-    url: "",
+    url: "https://buy.stripe.com/6oU5kFdqA6mt4nsbrZ6Zy0U",
+    payLabel: "stream-3card",
     featured: true,
     blurb: "The hunch, put to the test.",
     explain:
