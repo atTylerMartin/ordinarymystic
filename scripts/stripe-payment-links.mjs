@@ -37,7 +37,7 @@ const TIERS = [
   { om_tier: "live-30",     name: "Live Online Reading: 30 minutes", amount: 10000, redirect: `${SITE}/book/thanks/live` },
   { om_tier: "live-60",     name: "Live Online Reading: 60 minutes", amount: 19500, redirect: `${SITE}/book/thanks/live` },
   // TikTok live stream readings, paid on /pay. One card ($1) is wallets-only.
-  { om_tier: "stream-3card", name: "Live Stream Reading: Trick & Treat (Three Cards)", amount: 300, redirect: `${SITE}/pay?paid=1` },
+  { om_tier: "stream-3card", name: "Live Stream Reading: Three Cards", amount: 300, redirect: `${SITE}/pay?paid=1` },
   { om_tier: "stream-5card", name: "Live Stream Reading: Five Cards", amount: 500,  redirect: `${SITE}/pay?paid=1` },
   { om_tier: "stream-full",  name: "Live Stream Reading: Full Spread", amount: 1500, redirect: `${SITE}/pay?paid=1` },
 ];

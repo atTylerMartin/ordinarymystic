@@ -145,10 +145,10 @@ export const LIVE_STREAM: StreamTier[] = [
     explain:
       "One card is a first impression. Closer to a hunch than an answer: the card says one thing about your question and I tell you what it is.",
     halloween: {
-      name: "Trick OR Treat",
-      blurb: "One card: which one are you getting?",
+      name: "Trick or Treat",
+      blurb: "One card. You pick: Trick or Treat.",
       explain:
-        "One card for your question. A Treat is what is working for you right now. A Trick is what is working against you. The card decides which one you get.",
+        "Pick your side. A Treat card shows what is working for you right now. A Trick card shows what is working against you. One card, one straight answer.",
     },
   },
   {
@@ -158,16 +158,9 @@ export const LIVE_STREAM: StreamTier[] = [
     coins: 300,
     url: "https://buy.stripe.com/6oU5kFdqA6mt4nsbrZ6Zy0U",
     payLabel: "stream-3card",
-    featured: true,
     blurb: "The hunch, put to the test.",
     explain:
       "Three cards take that first impression and poke at it from a couple of angles. It is the right size for starting a real conversation about a question.",
-    halloween: {
-      name: "Trick & Treat",
-      blurb: "The full Trick or Treat spread, three cards.",
-      explain:
-        "The Treat: what is working for you. The Trick: what is working against you. The third card: how you move forward with both in hand.",
-    },
   },
   {
     key: "five-cards",
@@ -176,9 +169,16 @@ export const LIVE_STREAM: StreamTier[] = [
     coins: 500,
     url: "https://buy.stripe.com/6oU9AV86g9yF4nscw36Zy0S",
     payLabel: "stream-5card",
+    featured: true,
     blurb: "Room for the whole story.",
     explain:
       "Five cards give a question a beginning, a middle and a way forward, with room for the cards to talk to each other. The most a reading can say without a full spread.",
+    halloween: {
+      name: "Trick or Treat Spread",
+      blurb: "Five cards. The spread of the weekend.",
+      explain:
+        "The Treat: what is working for you. The Trick: what is working against you. The hidden Treat: help you are not seeing. The hidden Trick: your blind spot. The last card: how you move forward.",
+    },
   },
   {
     key: "full-spread",
