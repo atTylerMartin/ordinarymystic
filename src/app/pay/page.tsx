@@ -5,6 +5,7 @@ import Link from "next/link";
 import { Badge } from "@/components/badge";
 import { buttonVariants } from "@/components/button";
 import { Card } from "@/components/card";
+import { SaleBanner, SaleKicker, Seasonal } from "@/components/sale";
 import { TrackedLink } from "@/components/tracked-link";
 import { TIKTOK_URL } from "@/lib/config";
 import { LIVE_STREAM, STREAM_COPY, WALLETS, walletUrl } from "@/lib/offerings";
@@ -37,6 +38,7 @@ export default function PayPage() {
             {STREAM_COPY.brand}
           </span>
         </div>
+        <SaleKicker />
         <h1 className="font-heading text-3xl font-black tracking-tight text-slate-900">
           {STREAM_COPY.title}
         </h1>
@@ -67,29 +69,26 @@ export default function PayPage() {
           ) : null}
           <div className="flex items-baseline justify-between gap-2">
             <h2 className="font-heading text-xl font-black tracking-tight text-slate-900">
-              {tier.name}
+              <Seasonal normal={tier.name} halloween={tier.halloween?.name} />
             </h2>
             <p className="font-heading text-2xl font-black tracking-tight text-slate-900">
               ${tier.price}
             </p>
           </div>
           <p className="-mt-2 text-sm font-medium text-slate-600">
-            {tier.blurb}
+            <Seasonal normal={tier.blurb} halloween={tier.halloween?.blurb} />
           </p>
           <p className="text-sm leading-relaxed text-slate-700">
-            {tier.explain}
+            <Seasonal normal={tier.explain} halloween={tier.halloween?.explain} />
           </p>
           <p className="text-xs text-slate-500">
             {STREAM_COPY.coinsLine(tier.coins)}
           </p>
           <div className="flex flex-col gap-2">
-            {tier.url ? (
+            {tier.url && tier.payLabel ? (
               <TrackedLink
                 href={tier.url}
-                event={{
-                  type: "pay_tap",
-                  label: tier.key === "full-spread" ? "stream-full" : "stream-3card",
-                }}
+                event={{ type: "pay_tap", label: tier.payLabel }}
                 {...external}
                 className={cn(
                   buttonVariants({
@@ -124,6 +123,9 @@ export default function PayPage() {
           </div>
         </Card>
       ))}
+
+      {/* ── Sale on recorded readings (hides itself when it ends) ─────────── */}
+      <SaleBanner href="/readings/recorded" />
 
       {/* ── Longer readings ──────────────────────────────────────────────── */}
       <Card className="flex flex-col gap-3">

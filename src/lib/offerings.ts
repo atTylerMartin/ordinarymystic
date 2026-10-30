@@ -110,23 +110,29 @@ export const TULSA_TAROT_READER_EVENTS_URL =
 // ─── Live stream readings: the /pay page ─────────────────────────────────────
 //
 // For TikTok live viewers who pay directly instead of in coins. The one-card
-// tier is wallets-only by design: Stripe's fee would take a third of a dollar.
-// The three-card and full-spread links come from
-// `scripts/stripe-payment-links.mjs` (om_tier stream-3card / stream-full) and
+// and three-card tiers are wallets-only: Stripe's fee would take a third of a
+// dollar, and the $3 tier has no Payment Link yet. The five-card button uses
+// the $5 link from `scripts/stripe-payment-links.mjs` (om_tier stream-3card,
+// the old $5 three-card price), the full spread om_tier stream-full; both
 // redirect to /pay?paid=1. A card button only renders once its `url` is set.
+// Menu as of 2026-10-09 (live/config.json): 100, 300, 500, 1500 coins.
 
 export type StreamTier = {
-  key: "one-card" | "three-cards" | "full-spread";
+  key: "one-card" | "three-cards" | "five-cards" | "full-spread";
   name: string;
   price: number;
   /** The same reading bought through TikTok Viewer Wishes. */
   coins: number;
   url: string;
+  /** The `pay_tap` label for the card button. */
+  payLabel?: "stream-5card" | "stream-full";
   featured?: boolean;
   /** One line under the name and price. */
   blurb: string;
   /** The canonical description of this reading size. */
   explain: string;
+  /** Halloween weekend names and copy, shown while the sale in `sale.ts` runs. */
+  halloween?: { name: string; blurb: string; explain: string };
 };
 
 export const LIVE_STREAM: StreamTier[] = [
@@ -139,17 +145,40 @@ export const LIVE_STREAM: StreamTier[] = [
     blurb: "A flash of intuition.",
     explain:
       "One card is a first impression. Closer to a hunch than an answer: the card says one thing about your question and I tell you what it is.",
+    halloween: {
+      name: "Trick OR Treat",
+      blurb: "One card: which one are you getting?",
+      explain:
+        "One card for your question. A Treat is what is working for you right now. A Trick is what is working against you. The card decides which one you get.",
+    },
   },
   {
     key: "three-cards",
     name: "Three cards",
-    price: 5,
-    coins: 500,
-    url: "https://buy.stripe.com/6oU9AV86g9yF4nscw36Zy0S",
+    price: 3,
+    coins: 300,
+    url: "",
     featured: true,
     blurb: "The hunch, put to the test.",
     explain:
       "Three cards take that first impression and poke at it from a couple of angles. It is the right size for starting a real conversation about a question.",
+    halloween: {
+      name: "Trick & Treat",
+      blurb: "The full Trick or Treat spread, three cards.",
+      explain:
+        "The Treat: what is working for you. The Trick: what is working against you. The third card: how you move forward with both in hand.",
+    },
+  },
+  {
+    key: "five-cards",
+    name: "Five cards",
+    price: 5,
+    coins: 500,
+    url: "https://buy.stripe.com/6oU9AV86g9yF4nscw36Zy0S",
+    payLabel: "stream-5card",
+    blurb: "Room for the whole story.",
+    explain:
+      "Five cards give a question a beginning, a middle and a way forward, with room for the cards to talk to each other. The most a reading can say without a full spread.",
   },
   {
     key: "full-spread",
@@ -157,6 +186,7 @@ export const LIVE_STREAM: StreamTier[] = [
     price: 15,
     coins: 1500,
     url: "https://buy.stripe.com/fZudRbfyI5ipbPU9jR6Zy0T",
+    payLabel: "stream-full",
     blurb: "A structure built for your question.",
     explain:
       "A full spread puts the cards into a shape chosen for what you are trying to do. An overview of a situation is a Celtic Cross. Advice on what to do next is a Roundabout. Deciding between options is a This or That. It goes much deeper than one card or three can.",

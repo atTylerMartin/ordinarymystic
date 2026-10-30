@@ -10,6 +10,7 @@ import { NewsletterForm } from "@/components/newsletter-form";
 import { CATEGORY_LABELS, GuideMeta } from "@/components/guide-meta";
 import { ArrowLink } from "@/components/page-parts";
 import { ReviewsSection } from "@/components/reviews-section";
+import { SaleBanner, SalePill } from "@/components/sale";
 import { ScrollOnHash } from "@/components/scroll-on-hash";
 import { ReadingServiceSchema } from "@/components/structured-data";
 import { listGuides } from "@/lib/content";
@@ -87,6 +88,7 @@ export default function Home() {
               Live on TikTok
             </Link>
           ) : null}
+          <SalePill href="#book" />
           <h1 className="font-heading text-4xl font-black tracking-tight text-white sm:text-5xl lg:text-6xl">
             {C.h1}
           </h1>
@@ -132,6 +134,7 @@ export default function Home() {
           <SectionIntro kicker={C.recorded.kicker} title={C.recorded.title}>
             <p>{C.recorded.lede}</p>
           </SectionIntro>
+          <SaleBanner className="mx-auto mt-8 max-w-md" />
           <RecordedTiers className="mt-10" />
           <p className="mt-4 text-center">
             <ArrowLink href={C.recorded.link.href}>{C.recorded.link.label}</ArrowLink>

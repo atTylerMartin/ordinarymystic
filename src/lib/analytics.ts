@@ -26,7 +26,7 @@ export function trackEvent(name: string, params: Params = {}): void {
   }
 }
 
-export type PayLabel = "stream-3card" | "stream-full" | "cashapp" | "paypal";
+export type PayLabel = "stream-3card" | "stream-5card" | "stream-full" | "cashapp" | "paypal";
 export type SocialLabel = "tiktok" | "youtube" | "tulsa" | "email" | "cashapp" | "paypal";
 
 /** The `utm_campaign` on the current address, else the stored first-touch one. */
