@@ -122,20 +122,4 @@ export function SalePrice({ price, className }: { price: number; className?: str
   );
 }
 
-/** Swaps in the Halloween text while the sale runs. */
-export function Seasonal({ normal, halloween }: { normal: string; halloween?: string }) {
-  const active = useSaleActive();
-  return <>{active && halloween ? halloween : normal}</>;
-}
 
-/** The pay page's Halloween header line, a pill above the title. */
-export function SaleKicker() {
-  const active = useSaleActive();
-  if (!active) return null;
-  return (
-    <p className="inline-flex items-center gap-1.5 rounded-full bg-orange-500 px-3 py-1 text-xs font-semibold uppercase tracking-widest text-white">
-      <Ghost className="h-3.5 w-3.5" aria-hidden />
-      Halloween weekend
-    </p>
-  );
-}

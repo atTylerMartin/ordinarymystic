@@ -130,8 +130,6 @@ export type StreamTier = {
   blurb: string;
   /** The canonical description of this reading size. */
   explain: string;
-  /** Halloween weekend names and copy, shown while the sale in `sale.ts` runs. */
-  halloween?: { name: string; blurb: string; explain: string };
 };
 
 export const LIVE_STREAM: StreamTier[] = [
@@ -144,12 +142,6 @@ export const LIVE_STREAM: StreamTier[] = [
     blurb: "A flash of intuition.",
     explain:
       "One card is a first impression. Closer to a hunch than an answer: the card says one thing about your question and I tell you what it is.",
-    halloween: {
-      name: "Trick or Treat",
-      blurb: "One card. You pick: Trick or Treat.",
-      explain:
-        "Pick your side. A Treat card shows what is working for you right now. A Trick card shows what is working against you. One card, one straight answer.",
-    },
   },
   {
     key: "three-cards",
@@ -173,12 +165,6 @@ export const LIVE_STREAM: StreamTier[] = [
     blurb: "Room for the whole story.",
     explain:
       "Five cards give a question a beginning, a middle and a way forward, with room for the cards to talk to each other. The most a reading can say without a full spread.",
-    halloween: {
-      name: "Trick or Treat Spread",
-      blurb: "Five cards. The spread of the weekend.",
-      explain:
-        "The Treat: what is working for you. The Trick: what is working against you. The hidden Treat: help you are not seeing. The hidden Trick: your blind spot. The last card: how you move forward.",
-    },
   },
   {
     key: "full-spread",
