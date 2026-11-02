@@ -2,7 +2,6 @@ import { Check, Clock, Mail } from "lucide-react";
 import { Badge } from "@/components/badge";
 import { Button } from "@/components/button";
 import { Card } from "@/components/card";
-import { SaleBadge, SalePrice } from "@/components/sale";
 import { TrackedLink } from "@/components/tracked-link";
 import { CONTACT_EMAIL } from "@/lib/config";
 import {
@@ -96,22 +95,18 @@ export function RecordedTiers({ className }: { className?: string }) {
                 <div className="flex h-10 w-10 items-center justify-center rounded-full bg-[#2d2a4a] text-white">
                   <Clock className="h-5 w-5" />
                 </div>
-                <div className="flex items-center gap-2">
-                  <SaleBadge />
-                  {tier.featured ? (
-                    <Badge className="border-[#213752] bg-[#213752] text-white">
-                      Most popular
-                    </Badge>
-                  ) : null}
-                </div>
+                {tier.featured ? (
+                  <Badge className="border-[#213752] bg-[#213752] text-white">
+                    Most popular
+                  </Badge>
+                ) : null}
               </div>
               <h3 className="text-base font-semibold text-slate-900">
                 {tier.minutes} minutes
               </h3>
-              <SalePrice
-                price={tier.price}
-                className="font-heading text-2xl font-black tracking-tight text-slate-900"
-              />
+              <p className="font-heading text-2xl font-black tracking-tight text-slate-900">
+                ${tier.price}
+              </p>
               <p className="text-sm text-slate-600">{tier.blurb}</p>
             </div>
             <div className="mt-auto pt-2">

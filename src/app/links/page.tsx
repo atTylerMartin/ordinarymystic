@@ -3,7 +3,6 @@ import Image from "next/image";
 import { ChevronRight } from "lucide-react";
 import { Card } from "@/components/card";
 import { NewsletterForm } from "@/components/newsletter-form";
-import { SaleBanner } from "@/components/sale";
 import { TrackedLink } from "@/components/tracked-link";
 import { listGuides } from "@/lib/content";
 import {
@@ -78,9 +77,6 @@ export default function LinksPage() {
         </h1>
         <p className="text-base leading-relaxed text-slate-700">{LINKS_COPY.lede}</p>
       </header>
-
-      {/* ── Sale (hides itself when it ends) ─────────────────────────────── */}
-      <SaleBanner href="/readings/recorded" />
 
       {/* ── Booking ──────────────────────────────────────────────────────── */}
       <div className="flex flex-col gap-3">

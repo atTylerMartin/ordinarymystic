@@ -5,7 +5,6 @@ import Link from "next/link";
 import { Badge } from "@/components/badge";
 import { buttonVariants } from "@/components/button";
 import { Card } from "@/components/card";
-import { SaleBanner } from "@/components/sale";
 import { TrackedLink } from "@/components/tracked-link";
 import { TIKTOK_URL } from "@/lib/config";
 import { LIVE_STREAM, STREAM_COPY, WALLETS, walletUrl } from "@/lib/offerings";
@@ -122,9 +121,6 @@ export default function PayPage() {
           </div>
         </Card>
       ))}
-
-      {/* ── Sale on recorded readings (hides itself when it ends) ─────────── */}
-      <SaleBanner href="/readings/recorded" />
 
       {/* ── Longer readings ──────────────────────────────────────────────── */}
       <Card className="flex flex-col gap-3">
